@@ -1,0 +1,45 @@
+class Persona {
+}
+
+class Studente extends Persona {
+}
+
+class Concorso {
+	Persona vincitore() {
+		return null;
+	}
+}
+
+class ConcorsoBorsadiStudio extends Concorso {
+	@Override
+	// Persona vincitore(){return null;}
+	Studente vincitore() {
+		return null;
+	}
+}
+
+public class Covarianza {
+
+	public static void main(String[] args) {
+		Persona[] gente = new Studente[10];
+		System.out.println("Gente: " + gente.getClass());
+
+		Studente[] imieimiglioristudenti = { new Studente(), new Studente() };
+		System.out.println("IMMS: " + imieimiglioristudenti.getClass());
+		
+		gente = imieimiglioristudenti;
+		System.out.println("Gente[0]: " + gente[0].getClass());
+		
+		// Cambio del mio studente nella posizione 0, si nota che cambia in tutti e due
+		gente[0] = new Studente();
+		System.out.println(gente[0]);
+		System.out.println(imieimiglioristudenti[0]);
+		
+		// Inserisco una persona in gente[0], non va bene per IMMS dato che accetta solo studenti (ArrayStoreException)
+		// gente[0] = new Persona();
+
+		Concorso premi = new ConcorsoBorsadiStudio();
+
+		Persona vinc = premi.vincitore();
+	}
+}

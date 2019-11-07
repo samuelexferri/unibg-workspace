@@ -1,0 +1,25 @@
+#include "Studente.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// NodoLista
+typedef struct NodoLista {
+	int val;
+	struct NodoLista *next;
+} ElencoStud;
+
+struct Corso {
+	char nomecorso[30];
+	ElencoStud *listaRef;
+};
+
+corsoRef makeStudent(char *n) {
+	corsoRef cref = malloc(sizeof(struct Corso));
+
+	strcpy(cref->nomecorso, n);
+
+	cref->listaRef = NULL;
+
+	return cref;
+}

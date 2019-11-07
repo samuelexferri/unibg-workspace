@@ -1,0 +1,23 @@
+20:51:48 **** Incremental Build of configuration Debug for project Esercitazione (3) ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
+..\src\Corso.c: In function 'makeCorso':
+..\src\Corso.c:21:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(cref->nomecorso, n);
+  ^~~~~~
+..\src\Corso.c:21:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\Corso.c:21:2: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\Corso.c:6:1:
++#include <string.h>
+ 
+..\src\Corso.c:21:2:
+  strcpy(cref->nomecorso, n);
+  ^~~~~~
+..\src\Corso.c: In function 'printCorso':
+..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
+   printf("%s, ", point->stud);
+           ~^     ~~~~~~~~~~~
+gcc -o "Esercitazione (3).exe" "src\\Corso.o" "src\\Esercitazione (3).o" "src\\Studente.o" 
+
+20:51:48 Build Finished. 0 errors, 3 warnings. (took 526ms)
+

@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "Studente.h" // Importare sempre
+
+int main(void) {
+	char nome[30] = "Gino";
+	char cognome[30] = "Pino";
+
+	studenteRef s = makeStudent(nome, cognome);
+
+	printStudente(s);
+
+	char stampa[100];
+	strcpy(stampa, studentData(s));
+	printf("%s \n", stampa);
+
+	addVoto(s, 10);
+	addVoto(s, 8);
+	addVoto(s, 6);
+
+	stampaMedia(s);
+
+	printf("%p \n", s);
+
+	// Distruttore
+	deleteStudente(&s);
+	printf("%p \n", s);
+
+	return EXIT_SUCCESS;
+}

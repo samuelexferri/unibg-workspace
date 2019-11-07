@@ -1,0 +1,7 @@
+20:04:54 **** Incremental Build of configuration Debug for project M3 (ListaInt) ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ListaInt.o" "..\\src\\ListaInt.c" 
+gcc -o "M3 (ListaInt).exe" "src\\ListaInt.o" "src\\M3 (ListaInt).o" 
+
+20:04:55 Build Finished. 0 errors, 0 warnings. (took 517ms)
+

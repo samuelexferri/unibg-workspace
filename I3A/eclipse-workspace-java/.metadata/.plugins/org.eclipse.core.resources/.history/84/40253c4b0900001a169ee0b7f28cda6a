@@ -1,0 +1,42 @@
+class Persona {
+}
+
+class Studente extends Persona {
+}
+
+class Scuola {
+	void iscrivi(Persona l) {
+		System.out.println("S");
+	}
+}
+
+class Liceo extends Scuola {
+	void iscrivi(Persona l) {
+		System.out.println("L");
+	}
+}
+
+class Università extends Scuola {
+	void iscrivi(Studente l) {
+		System.out.println("U");
+	}
+}
+
+class main {
+	Persona p = new Studente();
+	Studente s = new Studente();
+	Scuola ss = new Scuola();
+	Scuola sl = new Liceo();
+	Scuola su = new Università();
+	
+	// ss.iscrivi(p); -> S
+	// sl.iscrivi(p); -> L
+	// su.iscrivi(p); -> S
+	
+	// ss.iscrivi(s); -> S
+	// sl.iscrivi(s); -> L
+	// su.iscrivi(s); -> S
+	// Quest'ultima da S perchè la segnatura memorizzata è iscrivi(Persona) non essendoci iscrivi(Studente) nella classe Scuola
+
+	// In esecuzione si valuta NEW e si risale la catena se non trova la segnatura decisa in compilazione
+}

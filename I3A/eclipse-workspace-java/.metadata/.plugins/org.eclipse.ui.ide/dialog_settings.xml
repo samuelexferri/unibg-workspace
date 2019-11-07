@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Samuele\Google Drive\Università\Anno IV\Informatica III (B)\Tutorato\Tutorato 3 - Analisi del codice\Esercizi"/>
+		<item value="C:\Users\Samuele\Google Drive\Università\Anno IV\Informatica III (B)\Tutorato\Tutorato 2 - Java GUI 2 (Swing e MVC)\Java GUI"/>
+		<item value="C:\Users\Samuele\Google Drive\Università\Anno IV\Informatica III (B)\Tutorato\Tutorato 2 - Java GUI 2 (Swing e MVC)\MVC"/>
+		<item value="C:\Users\Samuele\Google Drive\Università\Anno IV\Informatica III (B)\Tutorato\Tutorato 2 - Java GUI 2 (Swing e MVC)\Esercizio MVC"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Samuele\Desktop\Tutorato 3"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="433"/>
+		<item key="DIALOG_Y_ORIGIN" value="96"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
+</section>

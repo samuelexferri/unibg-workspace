@@ -1,0 +1,39 @@
+
+class Elaboratore {
+	void setCPU(int l) {
+		System.out.println("E");
+	}
+}
+
+class Phone extends Elaboratore {
+	void setCPU(int l) {
+		System.out.println("P");
+	}
+}
+
+class Computer extends Elaboratore {
+	void setCPU(short l) {
+		System.out.println("C");
+	}
+}
+
+class main {
+	Object oe = new Elaboratore();
+	Elaboratore ee = new Elaboratore();
+	Elaboratore ep = new Phone();
+	Elaboratore ec = new Computer();
+	
+	short myfreq = 30;
+	
+	oe.setCPU(myfreq);
+	ee.setCPU(myfreq);
+	ep.setCPU(myfreq);
+	ec.setCPU(myfreq);
+	
+	// myfreq è short
+	// OE - Errore: durante il early binding (compilazione), il compilatore cerca il metodo nella classe object, setCPU non c'è in object quindi è errore in compilazione
+	// EE - E: il compilatore cerca in elaboratore non lo trova ma fa il cast da short a int e usa setCPU(int l)
+	// EP - P: durante il late binding (esecuzione) lo trova in phone
+	// EC - E: in compilazione cerca in elaboratore e trova setCPU che prende però un intero, non trovando uno short; la segnatura setCPU(int l) non la cambierà e rimane memorizzata; in esecuzione vede che in computer c'è setCPU(short l) ma non va bene perchè non corrisponde con la segnatura memorizzata e scelta in fase di compilazione
+
+}

@@ -1,0 +1,32 @@
+#include "Studente.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct NodoLista {
+	int val;
+	struct ElencoStud *next;
+} ElencoStud;
+
+struct Corso {
+	char nomecorso[30];
+	NodoListaElencoStud *listaRef;
+};
+
+corsoRef makeStudent(char *n) {
+	corsoRef cref = malloc(sizeof(struct Corso));
+
+	strcpy(cref->nomecorso, n);
+
+	listaRef->val = null;
+
+	sref->matricola = numeroprogressivo;
+	numeroprogressivo++;
+
+	for (int i = 0; i < 20; i++)
+		sref->voti[i] = 0;
+
+	sref->votiindexlibero = 0;
+
+	return sref;
+}

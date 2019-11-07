@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;M3 (EredSubtyping) (C++)/EredSubtyping&apos; to &apos;EredSubtyping.cpp&apos;" description="Rename resource &apos;EredSubtyping&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="EredSubtyping" name="EredSubtyping.cpp" stamp="1572461520570" updateReferences="true"/>
+</session>

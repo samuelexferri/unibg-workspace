@@ -1,0 +1,11 @@
+public class A {
+	string name;
+	
+	public A(String s) {
+		name = s;
+	}
+	
+	public boolean equals(A a) {
+		return this.name == a.name;
+	}
+}
