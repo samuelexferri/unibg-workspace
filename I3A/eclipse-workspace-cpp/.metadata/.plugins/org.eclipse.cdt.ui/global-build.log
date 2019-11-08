@@ -1,81 +1,23 @@
-20:50:58 **** Incremental Build of configuration Debug for project Esercitazione (3) ****
+20:45:20 **** Incremental Build of configuration Debug for project Cyclone ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
-..\src\Corso.c: In function 'makeCorso':
-..\src\Corso.c:21:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c:21:2: warning: incompatible implicit declaration of built-in function 'strcpy'
-..\src\Corso.c:21:2: note: include '<string.h>' or provide a declaration of 'strcpy'
-..\src\Corso.c:6:1:
-+#include <string.h>
- 
-..\src\Corso.c:21:2:
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c: In function 'printCorso':
-..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
-   printf("%s ", point->stud);
-           ~^    ~~~~~~~~~~~
-gcc -o "Esercitazione (3).exe" "src\\Corso.o" "src\\Esercitazione (3).o" "src\\Studente.o" 
-Info: Nothing to build for Esercitazione (3)
-20:51:26 **** Incremental Build of configuration Debug for project Esercitazione (3) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
-..\src\Corso.c: In function 'makeCorso':
-..\src\Corso.c:21:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c:21:2: warning: incompatible implicit declaration of built-in function 'strcpy'
-..\src\Corso.c:21:2: note: include '<string.h>' or provide a declaration of 'strcpy'
-..\src\Corso.c:6:1:
-+#include <string.h>
- 
-..\src\Corso.c:21:2:
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c: In function 'printCorso':
-..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
-   printf("%s ", point->stud);
-           ~^    ~~~~~~~~~~~
-gcc -o "Esercitazione (3).exe" "src\\Corso.o" "src\\Esercitazione (3).o" "src\\Studente.o" 
-20:51:33 **** Incremental Build of configuration Debug for project Esercitazione (3) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
-..\src\Corso.c: In function 'makeCorso':
-..\src\Corso.c:21:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c:21:2: warning: incompatible implicit declaration of built-in function 'strcpy'
-..\src\Corso.c:21:2: note: include '<string.h>' or provide a declaration of 'strcpy'
-..\src\Corso.c:6:1:
-+#include <string.h>
- 
-..\src\Corso.c:21:2:
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c: In function 'printCorso':
-..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
-   printf("%s ", point->stud);
-           ~^    ~~~~~~~~~~~
-gcc -o "Esercitazione (3).exe" "src\\Corso.o" "src\\Esercitazione (3).o" "src\\Studente.o" 
-20:51:48 **** Incremental Build of configuration Debug for project Esercitazione (3) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
-..\src\Corso.c: In function 'makeCorso':
-..\src\Corso.c:21:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c:21:2: warning: incompatible implicit declaration of built-in function 'strcpy'
-..\src\Corso.c:21:2: note: include '<string.h>' or provide a declaration of 'strcpy'
-..\src\Corso.c:6:1:
-+#include <string.h>
- 
-..\src\Corso.c:21:2:
-  strcpy(cref->nomecorso, n);
-  ^~~~~~
-..\src\Corso.c: In function 'printCorso':
-..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
-   printf("%s, ", point->stud);
-           ~^     ~~~~~~~~~~~
-gcc -o "Esercitazione (3).exe" "src\\Corso.o" "src\\Esercitazione (3).o" "src\\Studente.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cyclone.o" "..\\src\\Cyclone.c" 
+..\src\Cyclone.c: In function 'main':
+..\src\Cyclone.c:37:2: warning: implicit declaration of function 'close'; did you mean 'pclose'? [-Wimplicit-function-declaration]
+  close(test);
+  ^~~~~
+  pclose
+..\src\Cyclone.c: In function 'keys':
+..\src\Cyclone.c:107:23: warning: comparison between pointer and integer
+  for (int i = 0; e[i] != NULL; i++)
+                       ^~
+..\src\Cyclone.c: In function 'encrypt':
+..\src\Cyclone.c:141:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mcrypted[i]);
+           ~^   ~~~~~~~~~~~
+           %ld
+..\src\Cyclone.c: In function 'decrypt':
+..\src\Cyclone.c:165:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mdecrypted[i]);
+           ~^   ~~~~~~~~~~~~~
+           %ld
+gcc -o Cyclone.exe "src\\Cyclone.o" 
