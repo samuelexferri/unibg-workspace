@@ -10,9 +10,9 @@ public class MainClass {
 
 		list.add(s1);
 		list.add(s2);
-		list.add(s3);
+		// list.add(s3);
 
-		verificaDupInterface<Studente> alg = new verificaDupImpl();
+		verificaDupInterface alg = new verificaDupImpl();
 		boolean result = alg.verificaDup(list);
 
 		System.out.printf("Result: " + result);
