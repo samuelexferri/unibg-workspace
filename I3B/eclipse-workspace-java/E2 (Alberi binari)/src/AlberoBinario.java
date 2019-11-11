@@ -190,10 +190,9 @@ public interface AlberoBinario {
 	 */
 	public List visitaBFS();
 
-	// ESERCITAZIONE:
+	// ESERCITAZIONE
 
 	/**
-	 * 
 	 * Restituisce la profondità (o livello) di un nodo. Ricorda che la profondità
 	 * della radice è 0 e quella di un nodo diverso dalla radice è quella del padre
 	 * del nodo, incrementata di 1.
@@ -206,14 +205,57 @@ public interface AlberoBinario {
 	/**
 	 * Restituisce l’altezza dell’albero binario
 	 * 
-	 * @return altezza
+	 * @return altezza dell'albero
 	 */
 	public int altezza();
 
 	/**
 	 * Restituisce il numero di foglie dell’albero binario.
 	 * 
-	 * @return numero foglie
+	 * @return numero di foglie
 	 */
 	public int numFoglie();
+
+	/**
+	 * Restituisce il numero di nodi interni dell’albero binario. Ricorda che un
+	 * nodo interno è un nodo che NON è foglia.
+	 * 
+	 * @return numero di nodi interni
+	 */
+	public int numNodiInterni();
+
+	/**
+	 * Restituisce true se l’albero (this) e anotherTree (eventualmente vuoti) sono
+	 * uguali (stessa struttura e medesimi contenuti); false, altrimenti.
+	 * 
+	 * @param anotherTree un altro albero
+	 * @return boolean
+	 */
+	public boolean equals(Object anotherTree);
+
+	/**
+	 * Modifica l’albero eliminando tutte le foglie che hanno un valore uguale al
+	 * valore del fratello.
+	 */
+	public void eliminaFoglieUguali();
+
+	/**
+	 * Stabilisce se un elemento appartiene o meno all’albero binario, attraverso
+	 * una visita esaustiva ricorsiva. Il caso base è banale: se l'albero è vuoto,
+	 * si restituisce false (zero). La visita viene interrotta non appena si trova
+	 * l'elemento cercato (la prima occorrenza).
+	 * 
+	 * @param elem nodo da cercare
+	 * @return boolean
+	 */
+	public boolean search(Object elem);
+
+	/**
+	 * In un albero binario T, un nodo u è un nodo cardine se e solo se pu=hu dove
+	 * pu è la profondità di u e hu è l’altezza dell’albero radicato in u. Definire
+	 * un algoritmo ricorsivo che restituisce i nodi cardine di T.
+	 * 
+	 * @return lista di nodi cardine
+	 */
+	public List nodiCardine();
 }

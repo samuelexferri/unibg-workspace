@@ -183,8 +183,10 @@ public class AlberoBinarioImpl implements AlberoBinario {
 		}
 		return output;
 	}
+	
+	// ESERCITAZIONE
 
-	// Restituisce la profondità di un nodo
+	@Override
 	public int level(NodoBinario u) {
 		if (u.padre == null)
 			return 0;
@@ -194,8 +196,11 @@ public class AlberoBinarioImpl implements AlberoBinario {
 
 	@Override
 	public int altezza() {
-		int altezzasx = 1;
-		int altezzadx = 1;
+		if (this == null)
+			return 0;
+		
+		int altezzasx = 0;
+		int altezzadx = 0;
 
 		if (this.radice.sinistro != null) {
 			AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
@@ -209,6 +214,7 @@ public class AlberoBinarioImpl implements AlberoBinario {
 		return max(altezzasx, altezzadx);
 	}
 
+	// Massimo
 	private int max(int altezza1, int altezza2) {
 		if (altezza1 > altezza2)
 			return altezza1;
@@ -216,8 +222,33 @@ public class AlberoBinarioImpl implements AlberoBinario {
 			return altezza2;
 	}
 
+	@Override
 	public int numFoglie() {
-		// TODO
+		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public int numNodiInterni() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void eliminaFoglieUguali() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean search(Object elem) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public List nodiCardine() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

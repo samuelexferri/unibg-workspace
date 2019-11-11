@@ -53,6 +53,8 @@ public class AlberoBinarioDemo {
 		System.out.println("alb8.visitaDFS()");
 		visita = (LinkedList) alb8.visitaDFS();
 		System.out.println(visita.toString());
+		
+		System.out.println("\nESERCITAZIONE:");
 
 		System.out.println("alb1.level(nodo1) = " + alb1.level(nodo4));
 

@@ -1,22 +1,56 @@
-20:45:20 **** Incremental Build of configuration Debug for project Cyclone ****
+20:25:51 **** Incremental Build of configuration Debug for project Cyclone ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cyclone.o" "..\\src\\Cyclone.c" 
-..\src\Cyclone.c: In function 'main':
-..\src\Cyclone.c:37:2: warning: implicit declaration of function 'close'; did you mean 'pclose'? [-Wimplicit-function-declaration]
-  close(test);
-  ^~~~~
-  pclose
-..\src\Cyclone.c: In function 'keys':
-..\src\Cyclone.c:107:23: warning: comparison between pointer and integer
-  for (int i = 0; e[i] != NULL; i++)
-                       ^~
 ..\src\Cyclone.c: In function 'encrypt':
-..\src\Cyclone.c:141:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+..\src\Cyclone.c:153:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
    printf("%c", mcrypted[i]);
            ~^   ~~~~~~~~~~~
            %ld
 ..\src\Cyclone.c: In function 'decrypt':
-..\src\Cyclone.c:165:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+..\src\Cyclone.c:177:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mdecrypted[i]);
+           ~^   ~~~~~~~~~~~~~
+           %ld
+gcc -o Cyclone.exe "src\\Cyclone.o" 
+Info: Nothing to build for Cyclone
+20:26:13 **** Incremental Build of configuration Debug for project Cyclone ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cyclone.o" "..\\src\\Cyclone.c" 
+..\src\Cyclone.c: In function 'encrypt':
+..\src\Cyclone.c:153:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mcrypted[i]);
+           ~^   ~~~~~~~~~~~
+           %ld
+..\src\Cyclone.c: In function 'decrypt':
+..\src\Cyclone.c:177:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mdecrypted[i]);
+           ~^   ~~~~~~~~~~~~~
+           %ld
+gcc -o Cyclone.exe "src\\Cyclone.o" 
+20:26:24 **** Incremental Build of configuration Debug for project Cyclone ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cyclone.o" "..\\src\\Cyclone.c" 
+..\src\Cyclone.c: In function 'encrypt':
+..\src\Cyclone.c:153:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mcrypted[i]);
+           ~^   ~~~~~~~~~~~
+           %ld
+..\src\Cyclone.c: In function 'decrypt':
+..\src\Cyclone.c:177:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mdecrypted[i]);
+           ~^   ~~~~~~~~~~~~~
+           %ld
+gcc -o Cyclone.exe "src\\Cyclone.o" 
+20:26:37 **** Incremental Build of configuration Debug for project Cyclone ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cyclone.o" "..\\src\\Cyclone.c" 
+..\src\Cyclone.c: In function 'encrypt':
+..\src\Cyclone.c:153:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
+   printf("%c", mcrypted[i]);
+           ~^   ~~~~~~~~~~~
+           %ld
+..\src\Cyclone.c: In function 'decrypt':
+..\src\Cyclone.c:177:12: warning: format '%c' expects argument of type 'int', but argument 2 has type 'long int' [-Wformat=]
    printf("%c", mdecrypted[i]);
            ~^   ~~~~~~~~~~~~~
            %ld
