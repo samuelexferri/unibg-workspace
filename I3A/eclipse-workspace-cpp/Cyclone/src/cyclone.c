@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 int e, d, n;
 
@@ -19,6 +18,7 @@ int FindT(int a, int m, int n);
 // Fast Modulo Multiplication
 void FastExponention(int bit, int n, int *y, int *a);
 
+// KEY-ENCRYPTION-DECRYPTION
 void KeyGeneration();
 void Encryption(int value, FILE *out);
 void Decryption(int value, FILE *out);
@@ -159,6 +159,7 @@ void Decryption(int value, FILE *out) {
 
 int main(void) {
 	FILE *inp, *out;
+	char *str = calloc(1000, sizeof(char));
 
 	// Destroy contents of these files (from previous runs, if any)
 	out = fopen("cipher.txt", "w+");
@@ -166,13 +167,12 @@ int main(void) {
 	out = fopen("decipher.txt", "w+");
 	fclose(out);
 
-	KeyGeneration();
+	KeyGeneration(); // Prime numbers random
 
-	inp = fopen("plain.txt", "r+");
-	if (inp == NULL) {
-		printf("Error opening source file\n");
-		exit(1);
-	}
+	// Input
+	printf("Enter message:\n");
+	fflush(stdout);
+	gets(str);
 
 	out = fopen("cipher.txt", "w+");
 	if (out == NULL) {
@@ -181,18 +181,18 @@ int main(void) {
 	}
 
 	// Encryption starts
-	while (1) {
-		char ch = getc(inp);
+	int i = 0;
+	while (str[i] != '\0') {
+		char ch = str[i];
 		if (ch == -1)
 			break;
 		int value = ch;
 		Encryption(value, out);
+		i++;
 	}
 
-	fclose(inp);
 	fclose(out);
 
-	// Decryption starts
 	inp = fopen("cipher.txt", "r");
 	if (inp == NULL) {
 		printf("Error opening cipher text\n");
@@ -205,13 +205,18 @@ int main(void) {
 		exit(1);
 	}
 
+	// Decryption starts
 	while (1) {
 		int cip;
 		if (fscanf(inp, "%d", &cip) == -1)
 			break;
 		Decryption(cip, out);
 	}
+
 	fclose(out);
+
+	// Use only for executable
+	// system("PAUSE");
 
 	return 0;
 }
