@@ -183,7 +183,7 @@ public class AlberoBinarioImpl implements AlberoBinario {
 		}
 		return output;
 	}
-	
+
 	// ESERCITAZIONE
 
 	@Override
@@ -198,7 +198,7 @@ public class AlberoBinarioImpl implements AlberoBinario {
 	public int altezza() {
 		if (this == null)
 			return 0;
-		
+
 		int altezzasx = 0;
 		int altezzadx = 0;
 
@@ -214,7 +214,7 @@ public class AlberoBinarioImpl implements AlberoBinario {
 		return max(altezzasx, altezzadx);
 	}
 
-	// Massimo
+	// Private: Massimo
 	private int max(int altezza1, int altezza2) {
 		if (altezza1 > altezza2)
 			return altezza1;
@@ -224,31 +224,155 @@ public class AlberoBinarioImpl implements AlberoBinario {
 
 	@Override
 	public int numFoglie() {
-		// TODO Auto-generated method stub
+		if (this.radice == null)
+			return 0;
+
+		if (this.radice.sinistro == null && this.radice.destro == null)
+			return 1;
+
+		if (this.radice.sinistro != null && this.radice.destro != null) {
+			AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
+			AlberoBinario clonedx = new AlberoBinarioImpl(this.radice.destro);
+			return clonesx.numFoglie() + clonedx.numFoglie();
+		} else if (this.radice.sinistro != null) {
+			AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
+			return clonesx.numFoglie();
+		} else if (this.radice.destro != null) {
+			AlberoBinario clonedx = new AlberoBinarioImpl(this.radice.destro);
+			return clonedx.numFoglie();
+		}
+
 		return 0;
 	}
 
 	@Override
 	public int numNodiInterni() {
-		// TODO Auto-generated method stub
-		return 0;
+		return this.numNodi() - this.numFoglie();
 	}
 
 	@Override
-	public void eliminaFoglieUguali() {
-		// TODO Auto-generated method stub
-		
-	}
+	public boolean equals(AlberoBinarioImpl another) {
+		if (this.radice.elem == another.radice.elem && this.radice.sinistro == null && another.radice.sinistro == null
+				&& this.radice.destro == null && another.radice.destro == null) {
+			return true;
+		}
 
-	@Override
-	public boolean search(Object elem) {
-		// TODO Auto-generated method stub
+		if (this.radice.elem == another.radice.elem && this.radice.sinistro == another.radice.sinistro
+				&& this.radice.destro == another.radice.destro) {
+			if (this.radice.sinistro != null && this.radice.destro != null) {
+				AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
+				AlberoBinario clonedx = new AlberoBinarioImpl(this.radice.destro);
+				return clonesx.equals(new AlberoBinarioImpl(another.radice.sinistro))
+						&& clonedx.equals(new AlberoBinarioImpl(another.radice.destro));
+			} else if (this.radice.sinistro != null) {
+				AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
+				return clonesx.equals(new AlberoBinarioImpl(another.radice.sinistro));
+			} else if (this.radice.destro != null) {
+				AlberoBinario clonedx = new AlberoBinarioImpl(this.radice.destro);
+				return clonedx.equals(new AlberoBinarioImpl(another.radice.destro));
+			}
+		}
+
+		// Nessun caso precedente
 		return false;
 	}
 
 	@Override
-	public List nodiCardine() {
-		// TODO Auto-generated method stub
-		return null;
+	public void eliminaFoglieUguali() {
+		eliminaFoglieUgualiNodo(this.radice);
+	}
+
+	// Private: Elimina foglie uguali dal nodo
+	private void eliminaFoglieUgualiNodo(NodoBinario p) {
+
+		if (p.sinistro == null && p.destro == null && p.padre != null) {
+
+			if (p == p.padre.sinistro && p.elem == p.padre.destro.elem && p.padre.destro.sinistro == null
+					&& p.padre.destro.destro == null) {
+				p.padre.destro = null;
+				p.padre.sinistro = null;
+				p.padre = null;
+			} else if (p == p.padre.destro && p.elem == p.padre.sinistro.elem && p.padre.sinistro.sinistro == null
+					&& p.padre.sinistro.destro == null) {
+				p.padre.destro = null;
+				p.padre.sinistro = null;
+				p.padre = null;
+			}
+		} else {
+			if (p.sinistro != null) {
+				eliminaFoglieUgualiNodo(p.sinistro);
+			}
+
+			if (p.destro != null) {
+				eliminaFoglieUgualiNodo(p.destro);
+			}
+		}
+
+		return;
+	}
+
+	@Override
+	public boolean search(Object elem) {
+		if (this.radice == null)
+			return false;
+
+		if (this.radice == elem) {
+			return true;
+		}
+
+		if (this.radice.sinistro != null && this.radice.destro != null) {
+			AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
+			AlberoBinario clonedx = new AlberoBinarioImpl(this.radice.destro);
+			return (clonesx.search(elem) || clonedx.search(elem));
+		} else if (this.radice.sinistro != null) {
+			AlberoBinario clonesx = new AlberoBinarioImpl(this.radice.sinistro);
+			return clonesx.search(elem);
+		} else if (this.radice.destro != null) {
+			AlberoBinario clonedx = new AlberoBinarioImpl(this.radice.destro);
+			return clonedx.search(elem);
+		}
+
+		return false;
+	}
+
+	@Override
+	public List<NodoBinario> nodiCardine() {
+		List list = new LinkedList();
+		NodoBinario u;
+
+		if (this.radice == null)
+			return list;
+
+		if (nodiCardineIf(this.radice))
+			list.add(this.radice);
+
+		if (this.radice.sinistro != null && this.radice.destro != null) {
+			u = this.radice.sinistro;
+			if (nodiCardineIf(u))
+				list.add(u);
+			u = this.radice.destro;
+			if (nodiCardineIf(u))
+				list.add(u);
+		} else if (this.radice.sinistro != null) {
+			u = this.radice.sinistro;
+			if (nodiCardineIf(u))
+				list.add(u);
+		} else if (this.radice.destro != null) {
+			u = this.radice.destro;
+			if (nodiCardineIf(u))
+				list.add(u);
+		}
+
+		return list;
+	}
+
+	private boolean nodiCardineIf(NodoBinario u) {
+		int altezzaradicatoinu = (new AlberoBinarioImpl(u)).altezza();
+		int profonditàu = level(u);
+
+		if (altezzaradicatoinu == profonditàu)
+			return true;
+		else
+			return false;
 	}
 }

@@ -231,7 +231,7 @@ public interface AlberoBinario {
 	 * @param anotherTree un altro albero
 	 * @return boolean
 	 */
-	public boolean equals(Object anotherTree);
+	public boolean equals(AlberoBinarioImpl anotherTree);
 
 	/**
 	 * Modifica l’albero eliminando tutte le foglie che hanno un valore uguale al
