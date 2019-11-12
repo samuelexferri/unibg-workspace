@@ -1,178 +1,217 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-const int MAX = 1000; // Buffer maximum dimension
+int e, d, n;
 
-char * mplain;
-long int * e, * d, * mcrypted, * mdecrypted;
-int x, y, n, t;
+// Coprimarity
+int gcd(int a, int b);
 
-// Interface
-int prime(long int);
-long int cd(long int);
-void keys();
-void encrypt();
-void decrypt();
+// Primarity
+int PrimarityTest(int a, int i);
 
-int main() {
-	mplain = malloc(sizeof(char) * MAX);
-	mcrypted = malloc(sizeof(long int) * MAX);
-	mdecrypted = malloc(sizeof(long int) * MAX);
-	e = malloc(sizeof(long int) * MAX);
-	d = malloc(sizeof(long int) * MAX);
+// Inverse of the rest of the Euclidean division
+int inverse(int a, int b);
 
-	// TODO Numelts?
-	// TODO FILE *@notnull test = (FILE@)fopen("test.txt", "r");
+// Find the ciphered/deciphered character
+int FindT(int a, int m, int n);
 
-	FILE *messagefile = fopen("message.txt", "r");
-	if (messagefile == NULL) {
-		printf("Failed to open file!\n");
+// Fast Modulo Multiplication
+void FastExponention(int bit, int n, int *y, int *a);
+
+void KeyGeneration();
+void Encryption(int value, FILE *out);
+void Decryption(int value, FILE *out);
+
+// Coprimarity
+int gcd(int a, int b) {
+	int q, r1, r2, r;
+
+	if (a > b) {
+		r1 = a;
+		r2 = b;
+	} else {
+		r1 = b;
+		r2 = a;
+	}
+
+	while (r2 > 0) {
+		q = r1 / r2;
+		r = r1 - q * r2;
+		r1 = r2;
+		r2 = r;
+	}
+
+	return r1;
+}
+
+// Primarity
+int PrimarityTest(int a, int i) {
+	int n = i - 1;
+	int k = 0;
+	int j, m, T;
+
+	while (n % 2 == 0) {
+		k++;
+		n = n / 2;
+	}
+
+	m = n;
+	T = FindT(a, m, i);
+
+	if (T == 1 || T == i - 1)
 		return 1;
+
+	for (j = 0; j < k; j++) {
+		T = FindT(T, 2, i);
+		if (T == 1)
+			return 0;
+		if (T == i - 1)
+			return 1;
 	}
-
-	char ch;
-	int i = 0;
-
-	while ((ch = (char) fgetc(messagefile)) != EOF) {
-		mplain[i]= ch;
-		i++;
-	}
-	mplain[i] = '\0';
-
-	printf("Message: ");
-	for (int i = 0; mplain[i] != (int) NULL; i++)
-		printf("%c", mplain[i]);
-	printf("\n\n");
-
-	pclose(messagefile);
-
-	printf("Enter first prime number X (ex. 23): ");
-	fflush(stdout);
-	scanf("%d", &x);
-
-	if (prime(x) == 0) {
-		printf("\nInvalid input!\n");
-		exit(0);
-	}
-
-	printf("\nEnter second prime number Y, different from first (ex. 53): ");
-	fflush(stdout);
-	scanf("%d", &y);
-
-	if (prime(y) == 0 || x == y) {
-		printf("\nInvalid input!\n");
-		exit(0);
-	}
-
-	keys();
-
-	encrypt();
-	decrypt();
-
-	printf("\n\n");
-	// system("PAUSE");
-
 	return 0;
 }
 
-int prime(long int primemaybe) {
-	int i;
+// Inverse of the rest of the Euclidean division
+int inverse(int a, int b) {
+	int inv;
+	int q, r, r1 = a, r2 = b, t, t1 = 0, t2 = 1;
 
-	for (i = 2; i <= sqrt(primemaybe); i++) {
-		if (primemaybe % i == 0)
-			return 0;
+	while (r2 > 0) {
+		q = r1 / r2;
+		r = r1 - q * r2;
+		r1 = r2;
+		r2 = r;
+
+		t = t1 - q * t2;
+		t1 = t2;
+		t2 = t;
 	}
 
-	return 1;
+	if (r1 == 1)
+		inv = t1;
+
+	if (inv < 0)
+		inv = inv + a;
+
+	return inv;
 }
 
-// Create the keys
-void keys() {
-	// Calculate N
-	n = x * y;
-	printf("\nN = %d", n);
+// Find the ciphered/deciphered character
+int FindT(int a, int m, int n) {
+	int r;
+	int y = 1;
 
-	// Calculate T
-	t = (x - 1) * (y - 1);
-	printf("\nT = %d", t);
+	while (m > 0) {
+		r = m % 2;
+		FastExponention(r, n, &y, &a);
+		m = m / 2;
+	}
+	return y;
+}
 
-	int k = 0;
+// Fast Modulo Multiplication
+void FastExponention(int bit, int n, int *y, int *a) {
+	if (bit == 1)
+		*y = (*y * (*a)) % n;
 
-	// Calculate E (must be coprime of T and less than T) and D
-	for (int i = 2; i < t; i++) {
-		if (t % i == 0)
-			continue;
+	*a = (*a) * (*a) % n;
+}
 
-		if (prime(i) == 1 && i != x && i != y) {
-			e[k] = i;
-			d[k]= cd(e[k]);
-			k++;
+void KeyGeneration() {
+	int p, q;
+	int phi_n;
 
-			if (k == 99) // Limit the number of the possible pairs
-				break;
-		}
+	do {
+		do
+			p = rand();
+		while (p % 2 == 0);
+
+	} while (!PrimarityTest(2, p));
+
+	do {
+		do
+			q = rand();
+		while (q % 2 == 0);
+	} while (!PrimarityTest(2, q));
+
+	n = p * q;
+	phi_n = (p - 1) * (q - 1);
+
+	do
+		e = rand() % (phi_n - 2) + 2; // 1 < e < phi_n
+	while (gcd(e, phi_n) != 1);
+
+	d = inverse(phi_n, e);
+}
+
+void Encryption(int value, FILE *out) {
+	int cipher;
+	cipher = FindT(value, e, n);
+	fprintf(out, "%d ", cipher);
+}
+
+void Decryption(int value, FILE *out) {
+	int decipher;
+	decipher = FindT(value, d, n);
+	fprintf(out, "%c", decipher);
+}
+
+int main(void) {
+	FILE *inp, *out;
+
+	// Destroy contents of these files (from previous runs, if any)
+	out = fopen("cipher.txt", "w+");
+	fclose(out);
+	out = fopen("decipher.txt", "w+");
+	fclose(out);
+
+	KeyGeneration();
+
+	inp = fopen("plain.txt", "r+");
+	if (inp == NULL) {
+		printf("Error opening source file\n");
+		exit(1);
 	}
 
-	printf("\nPossible values of E and D are:");
-	for (int i = 0; e[i] != (int) NULL; i++)
-		printf("\n %ld \t %ld", e[i], d[i]);
-}
+	out = fopen("cipher.txt", "w+");
+	if (out == NULL) {
+		printf("Error opening destination file\n");
+		exit(1);
+	}
 
-// Calculate D
-long int cd(long int ek) {
-	long int k = 1;
+	// Encryption starts
+	while (1) {
+		char ch = getc(inp);
+		if (ch == -1)
+			break;
+		int value = ch;
+		Encryption(value, out);
+	}
+
+	fclose(inp);
+	fclose(out);
+
+	// Decryption starts
+	inp = fopen("cipher.txt", "r");
+	if (inp == NULL) {
+		printf("Error opening cipher text\n");
+		exit(1);
+	}
+
+	out = fopen("decipher.txt", "w+");
+	if (out == NULL) {
+		printf("Error opening file\n");
+		exit(1);
+	}
 
 	while (1) {
-		k = k + t;
-		if (k % ek == 0)
-			return (k / ek);
+		int cip;
+		if (fscanf(inp, "%d", &cip) == -1)
+			break;
+		Decryption(cip, out);
 	}
-}
+	fclose(out);
 
-// Encrypt
-void encrypt() {
-	int i = 0;
-
-	while (mplain[i] != '\0') {
-		int k = 1;
-
-		for (int j = 0; j < e[0]; j++) { // Key used is E[0]!
-			k = (k * (mplain[i])) % n;
-		}
-
-		mplain[i] = k;
-		i++;
-	}
-
-	mcrypted[i] = -1; // Terminator
-
-	printf("\n\nThe encrypted message is:\n");
-	for (i = 0; mcrypted[i] != -1; i++)
-		printf("%c", mcrypted[i]);
-}
-
-// Decrypt
-void decrypt() {
-	long int key = d[0]; // Key used is D[0]!
-	int i = 0;
-
-	while (mcrypted[i] != -1) {
-		long int cryptedtext = mcrypted[i];
-		int k = 1;
-
-		for (int j = 0; j < key; j++) {
-			k = (k * cryptedtext) % n;
-		}
-
-		mdecrypted[i] = k;
-		i++;
-	}
-
-	mdecrypted[i] = -1; // Terminator
-
-	printf("\n\nThe decrypted message is:\n");
-	for (i = 0; mdecrypted[i] != -1; i++)
-		printf("%c", mdecrypted[i]);
+	return 0;
 }
