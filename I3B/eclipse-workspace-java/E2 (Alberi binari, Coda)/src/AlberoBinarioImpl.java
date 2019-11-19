@@ -1,4 +1,5 @@
 import java.util.List; //Per l'output delle visite
+import java.util.Iterator;
 import java.util.LinkedList; //Per l'output delle visite
 
 import coda.*; //Per la visita BFS (come esempio di struttura dati propria)
@@ -374,5 +375,47 @@ public class AlberoBinarioImpl implements AlberoBinario {
 			return true;
 		else
 			return false;
+	}
+
+	@Override
+	public NodoBinario lca(NodoBinario u, NodoBinario v) {
+		List<NodoBinario> lu = new LinkedList<>();
+		List<NodoBinario> lv = new LinkedList<>();
+
+		if (this.search(u))
+			lu.add(u);
+		else
+			return null;
+
+		if (this.search(v))
+			lv.add(v);
+		else
+			return null;
+
+		while (true) {
+			Iterator<NodoBinario> lu_iter = lu.iterator();
+
+			while (lu_iter.hasNext()) {
+				NodoBinario lu_temp = lu_iter.next();
+				System.out.print(" U" + lu_temp.elem);
+
+				if (lv.contains(lu_temp))
+					return lu_temp;
+			}
+
+			if (u.padre == null && v.padre == null)
+				return null;
+
+			if (u.padre != null) {
+				lu.add(u.padre);
+				u = u.padre;
+			}
+
+			if (v.padre != null) {
+				lv.add(v.padre);
+				v = v.padre;
+			}
+
+		}
 	}
 }

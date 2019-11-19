@@ -114,5 +114,9 @@ public class AlberoBinarioDemo {
 			NodoBinario u = (NodoBinario) o;
 			System.out.println(u.elem + " ");
 		}
+
+		System.out.println("alb3.lca(nodo3,nodo6): ");
+		NodoBinario temp = alb1.lca(nodo3, nodo1);
+		System.out.print(temp.elem);
 	}
 }

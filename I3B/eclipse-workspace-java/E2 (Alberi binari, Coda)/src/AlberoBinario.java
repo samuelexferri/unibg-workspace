@@ -258,4 +258,14 @@ public interface AlberoBinario {
 	 * @return lista di nodi cardine
 	 */
 	public List nodiCardine();
+
+	/**
+	 * Assumendo che ogni nodo ha un puntatore al padre, dati in input due nodi u e
+	 * v dell’albero, l’operazione determina il loro minimo antenato comune
+	 * 
+	 * @param u nodo
+	 * @param v nodo
+	 * @return minimo antenato comune
+	 */
+	public NodoBinario lca(NodoBinario u, NodoBinario v);
 }
