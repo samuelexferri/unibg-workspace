@@ -10,7 +10,7 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:M3 (ListaInt) Debug,org.eclipse.launchbar.core.descriptorType.default\:Esercitazione (3).exe,org.eclipse.launchbar.core.descriptorType.default\:Cyclone.exe
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:M3 (ListaInt) Debug,org.eclipse.launchbar.core.descriptorType.default\:Esercitazione (3).exe,org.eclipse.launchbar.core.descriptorType.default\:Cyclone.exe,org.eclipse.launchbar.core.descriptorType.default\:M5 (Esempi).exe
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:01\ -\ Vocalizza\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:01\ -\ Vocalizza\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

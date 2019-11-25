@@ -1,4 +1,5 @@
-22:26:06 **** Incremental Build of configuration Debug for project Cyclone ****
+18:30:31 **** Incremental Build of configuration Debug for project M5 (Esempi) ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cyclone.o" "..\\src\\cyclone.c" 
-gcc -o Cyclone.exe "src\\cyclone.o" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\redefining.o" "..\\src\\redefining.cpp" 
+g++ -o "M5 (Esempi)" "src\\esempi.o" "src\\redefining.o" 
+src\redefining.o: duplicate section `.rdata$_ZTV4Base[__ZTV4Base]' has different size
