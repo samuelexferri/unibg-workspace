@@ -335,7 +335,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_0X_OoNlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.PackageExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Package Explorer" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/package.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.jdt.ui"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;Aggregate for window 1568734978139&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;Aggregate for window 1568734978139&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;scala.tools.eclipse.javaelements.ScalaElementFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
       <tags>active</tags>
@@ -623,7 +623,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_0LnmkNlhEemm2JVCtQX9cQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_kfDecAriEeqItKQbYEsfhw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_zrn38dlhEemm2JVCtQX9cQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_BYVpsBFAEeqec5weMG1mQw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_zrn38dlhEemm2JVCtQX9cQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_0LnmkdlhEemm2JVCtQX9cQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -654,7 +654,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_0LoNpNlhEemm2JVCtQX9cQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_kfPrsAriEeqItKQbYEsfhw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_zrmC4dlhEemm2JVCtQX9cQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_BYezoBFAEeqec5weMG1mQw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_zrmC4dlhEemm2JVCtQX9cQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_0Lo0sNlhEemm2JVCtQX9cQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1028,6 +1028,11 @@
     <bindings xmi:id="_LM1-oPpgEemXVNypuIFfaw" keySequence="ALT+SHIFT+D E" command="_LLJVnvpgEemXVNypuIFfaw"/>
     <bindings xmi:id="_LM2lsPpgEemXVNypuIFfaw" keySequence="ALT+SHIFT+D O" command="_LLJVi_pgEemXVNypuIFfaw"/>
     <bindings xmi:id="_LM2lsfpgEemXVNypuIFfaw" keySequence="ALT+SHIFT+D P" command="_LLJVmPpgEemXVNypuIFfaw"/>
+    <bindings xmi:id="_A-uP0BFAEeqec5weMG1mQw" keySequence="CTRL+F4" command="_A-AeKhFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-u24BFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+X S" command="_A-AePRFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-vd8BFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+T D" command="_A-AeKBFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-vd8RFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+T R" command="_A-AePhFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-wFABFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+D S" command="_A-AeNBFAEeqec5weMG1mQw"/>
   </bindingTables>
   <bindingTables xmi:id="_zsSmRdlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.classFileEditorScope" bindingContext="_zrvzsdlhEemm2JVCtQX9cQ">
     <bindings xmi:id="_zsTNUNlhEemm2JVCtQX9cQ" keySequence="CTRL+1" command="_zrqUPdlhEemm2JVCtQX9cQ"/>
@@ -1075,6 +1080,7 @@
     <bindings xmi:id="_zsfaltlhEemm2JVCtQX9cQ" keySequence="F6" command="_zrptFtlhEemm2JVCtQX9cQ"/>
     <bindings xmi:id="_zsh20dlhEemm2JVCtQX9cQ" keySequence="CTRL+F2" command="_zrnQ2tlhEemm2JVCtQX9cQ"/>
     <bindings xmi:id="_zsh21NlhEemm2JVCtQX9cQ" keySequence="CTRL+F5" command="_zrptGtlhEemm2JVCtQX9cQ"/>
+    <bindings xmi:id="_A-qlcBFAEeqec5weMG1mQw" keySequence="SHIFT+F5" command="_A-AeNRFAEeqec5weMG1mQw"/>
   </bindingTables>
   <bindingTables xmi:id="_zsYF1tlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.breadcrumbEditorScope" bindingContext="_zrvztdlhEemm2JVCtQX9cQ">
     <bindings xmi:id="_zsYF19lhEemm2JVCtQX9cQ" keySequence="ALT+SHIFT+B" command="_zrq7P9lhEemm2JVCtQX9cQ"/>
@@ -1162,6 +1168,26 @@
   </bindingTables>
   <bindingTables xmi:id="_Lp_NoPpgEemXVNypuIFfaw" bindingContext="_Lp-mkPpgEemXVNypuIFfaw"/>
   <bindingTables xmi:id="_Lp_NovpgEemXVNypuIFfaw" bindingContext="_Lp_NofpgEemXVNypuIFfaw"/>
+  <bindingTables xmi:id="_A-iCkBFAEeqec5weMG1mQw" elementId="scala.tools.eclipse.scalaEditorScope" bindingContext="_A-EvkBFAEeqec5weMG1mQw">
+    <bindings xmi:id="_A-ke0BFAEeqec5weMG1mQw" keySequence="CTRL+1" command="_A-AeKRFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-ke0RFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+Q" command="_A-AeJxFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-lF4BFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+I" command="_A9_3ERFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-ls8BFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+O" command="_A-AeMBFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-mUARFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+G" command="_A9_3GRFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-m7EBFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+E" command="_A-AeLRFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-owQBFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+R" command="_A-AeMhFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-pXUBFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+T" command="_A9_3HBFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-pXURFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+I" command="_A-AeKxFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-pXUhFAEeqec5weMG1mQw" keySequence="ALT+SHIFT+L" command="_A9_3EBFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-p-YBFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+X" command="_A-AeIxFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-qlcRFAEeqec5weMG1mQw" keySequence="ALT+F3" command="_A-AeLxFAEeqec5weMG1mQw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_A-ls8RFAEeqec5weMG1mQw" elementId="org.scalaide.worksheet.editorScope" bindingContext="_A-EvkRFAEeqec5weMG1mQw">
+    <bindings xmi:id="_A-ls8hFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+B" command="_A-AeOBFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-ls8xFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+C" command="_A9_3GhFAEeqec5weMG1mQw"/>
+    <bindings xmi:id="_A-mUABFAEeqec5weMG1mQw" keySequence="CTRL+SHIFT+F" command="_A-AeLBFAEeqec5weMG1mQw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_BVfxERFAEeqec5weMG1mQw" bindingContext="_BVfxEBFAEeqec5weMG1mQw"/>
   <rootContext xmi:id="_zq8ictlhEemm2JVCtQX9cQ" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.platform" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_zq8ic9lhEemm2JVCtQX9cQ" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.platform" name="In Windows" description="A window is open">
       <children xmi:id="_zq8idNlhEemm2JVCtQX9cQ" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.platform" name="%bindingcontext.name.bindingView"/>
@@ -1169,7 +1195,9 @@
       <children xmi:id="_zrvMotlhEemm2JVCtQX9cQ" elementId="org.eclipse.ui.textEditorScope" name="Editing Text" description="Editing Text Context">
         <children xmi:id="_zrvzsNlhEemm2JVCtQX9cQ" elementId="org.eclipse.ui.genericeditor.genericEditorContext" name="in Generic Code Editor" description="When editing in the Generic Code Editor"/>
         <children xmi:id="_zrvzsdlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.classFileEditorScope" name="Browsing attached Java Source" description="Browsing attached Java Source Context"/>
-        <children xmi:id="_zrvzttlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.javaEditorScope" name="Editing Java Source" description="Editing Java Source Context"/>
+        <children xmi:id="_zrvzttlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.javaEditorScope" name="Editing Java Source" description="Editing Java Source Context">
+          <children xmi:id="_A-EvkBFAEeqec5weMG1mQw" elementId="scala.tools.eclipse.scalaEditorScope" name="Editing Scala Source" description="Scala source file editor"/>
+        </children>
         <children xmi:id="_zrvzt9lhEemm2JVCtQX9cQ" elementId="org.eclipse.wst.xsd.ui.text.editor.context" name="Editing XSD context"/>
         <children xmi:id="_zrvzudlhEemm2JVCtQX9cQ" elementId="org.eclipse.mylyn.tasks.ui.editors.task" name="In Tasks Editor"/>
         <children xmi:id="_zrvzutlhEemm2JVCtQX9cQ" elementId="org.eclipse.mylyn.internal.wikitext.ui.editor.basicMarkupSourceContext" name="WikiText Markup Source Context" description="WikiText markup editing context">
@@ -1194,6 +1222,7 @@
         <children xmi:id="_zrvzzdlhEemm2JVCtQX9cQ" elementId="org.eclipse.jdt.ui.propertiesEditorScope" name="Editing Properties Files" description="Editing Properties Files Context"/>
         <children xmi:id="_9yQ7APTcEem8bP3KUGyikA" elementId="org.eclipse.wb.core.java.editorScope" name="WindowBuilder Java scope"/>
         <children xmi:id="_LLQqQPpgEemXVNypuIFfaw" elementId="org.eclipse.pde.ui.pdeEditorContext" name="PDE editor" description="The context used by PDE editors"/>
+        <children xmi:id="_A-EvkRFAEeqec5weMG1mQw" elementId="org.scalaide.worksheet.editorScope" name="Editing Scala Worksheet" description="Scala worksheet editor"/>
       </children>
       <children xmi:id="_zrvMpNlhEemm2JVCtQX9cQ" elementId="org.eclipse.debug.ui.console" name="In I/O Console" description="In I/O console"/>
       <children xmi:id="_zrvMpdlhEemm2JVCtQX9cQ" elementId="org.eclipse.compare.compareEditorScope" name="Comparing in an Editor" description="Comparing in an Editor"/>
@@ -1255,6 +1284,7 @@
   <rootContext xmi:id="_-Qcr0PTcEem8bP3KUGyikA" elementId="org.eclipse.wb.core.ui.actionset" name="Auto::org.eclipse.wb.core.ui.actionset"/>
   <rootContext xmi:id="_Lp-mkPpgEemXVNypuIFfaw" elementId="de.odysseus.stan.eclipse.jdt.launch.actionSet" name="Auto::de.odysseus.stan.eclipse.jdt.launch.actionSet"/>
   <rootContext xmi:id="_Lp_NofpgEemXVNypuIFfaw" elementId="org.eclipse.pde.ui.SearchActionSet" name="Auto::org.eclipse.pde.ui.SearchActionSet"/>
+  <rootContext xmi:id="_BVfxEBFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.ui.scalaMenu.actionSet" name="Auto::org.scala-ide.sdt.ui.scalaMenu.actionSet"/>
   <descriptors xmi:id="_zw29MNlhEemm2JVCtQX9cQ" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
     <tags>Editor</tags>
   </descriptors>
@@ -1754,6 +1784,31 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.pde.ui"/>
     <tags>View</tags>
     <tags>categoryTag:Plug-in Development</tags>
+  </descriptors>
+  <descriptors xmi:id="_BVLA8BFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.core.consoleView" label="Scala Interpreter" iconURI="platform:/plugin/org.scala-ide.sdt.core/icons/full/etool16/scala_app.gif" tooltip="" allowMultiple="true" category="Scala" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.scalaide.ui.internal.repl.ReplConsoleView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.scala-ide.sdt.core"/>
+    <tags>View</tags>
+    <tags>categoryTag:Scala</tags>
+    <tags>NoRestore</tags>
+  </descriptors>
+  <descriptors xmi:id="_BVM2IBFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.debug.asyncView" label="Async Stack" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Scala" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.scalaide.debug.internal.views.AsyncDebugView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.scala-ide.sdt.debug"/>
+    <tags>View</tags>
+    <tags>categoryTag:Scala</tags>
+  </descriptors>
+  <descriptors xmi:id="_BVNdMBFAEeqec5weMG1mQw" elementId="org.scalaide.debug.internal.ui.ExpressionEvaluation" label="Scala Expression Evaluator" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.png" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.scalaide.debug.internal.ui.ExpressionEvaluatorView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.scala-ide.sdt.debug.expression"/>
+    <tags>View</tags>
+    <tags>categoryTag:Debug</tags>
+  </descriptors>
+  <descriptors xmi:id="_BVOEQBFAEeqec5weMG1mQw" elementId="org.scala.tools.eclipse.search.ui.typehiearchy" label="Type Hierarchy" iconURI="platform:/plugin/org.scala.tools.eclipse.search/icons/type-hierarchy-scala.gif" tooltip="" category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.scala.tools.eclipse.search.ui.TypeHierarchyView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.scala.tools.eclipse.search"/>
+    <tags>View</tags>
+    <tags>categoryTag:Other</tags>
   </descriptors>
   <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
     <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
@@ -2787,6 +2842,57 @@
   <commands xmi:id="_Lnuj0PpgEemXVNypuIFfaw" elementId="AUTOGEN:::de.odysseus.stan.eclipse.jdt.launch.actionSet/de.odysseus.stan.eclipse.jdt.launch.action" commandName="STAN" description="Structure Analysis" category="_zreG5tlhEemm2JVCtQX9cQ"/>
   <commands xmi:id="_Lnuj0fpgEemXVNypuIFfaw" elementId="AUTOGEN:::org.eclipse.pde.ui.SearchActionSet/org.eclipse.pde.ui.actions.OpenPluginSearchPage" commandName="Plug-in..." category="_zreG5tlhEemm2JVCtQX9cQ"/>
   <commands xmi:id="_Ln0DYPpgEemXVNypuIFfaw" elementId="AUTOGEN:::org.eclipse.pde.ui.logViewActions/org.eclipse.jdt.debug.ui.LogViewActions.showStackTrace" commandName="Show Stack Trace in Console View" description="Show Stack Trace in Console View" category="_zreG5tlhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_A9_3EBFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.ExtractLocal" commandName="Extract Local" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3ERFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.core.commands.ToggleImplicitsDisplay" commandName="Toggle Implicits Display" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3EhFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.SplitParameterLists" commandName="Split parameter lists" category="_A9-o9hFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3ExFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.InlineLocal" commandName="Scala Quick Assist - Inline Local" description="Shows a proposal to inline local expressions" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3FBFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.core.restartScalaPresentationCompiler" commandName="Restart Scala Presentation Compiler" description="Restarts the Presentation Compiler of the Scala project that belongs to the active selection" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3FRFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.FixTypeMismatch" commandName="Scala Quick Assist - Fix Type Mismatch" description="Shows a proposal to fix a type mismatch error" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3FhFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ExpandCaseClassBinding" commandName="Scala Quick Assist - Expand Case Class Binding" description="Shows a proposal to expand case class bindings in pattern matches" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3FxFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.ChangeParameterOrder" commandName="Change parameter order" category="_A9-o9hFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3GBFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.CreateMethod" commandName="Scala Quick Assist - Create Method" description="Shows a proposal to create a method from a value not found error" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3GRFAEeqec5weMG1mQw" elementId="org.scala.tools.eclipse.search.commands.FindReferences" commandName="Find References of Method" description="Finds all references of a method" category="_A9-o8hFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3GhFAEeqec5weMG1mQw" elementId="org.scalaide.worksheet.commands.clearResults" commandName="Clear Results" category="_A9-o9xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3GxFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.ExpandCaseClassBinding" commandName="Expand Case Class Binding" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A9_3HBFAEeqec5weMG1mQw" elementId="org.scalaide.ui.menu.quickMenu" commandName="Refactor Quick Menu" description="Shows the refactor quick menu" category="_A9-o9BFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeIBFAEeqec5weMG1mQw" elementId="org.scalaide.debug.handler.RunSelectionInExpressionEvaluator" commandName="Send Selection to Scala Expression Evaluator" category="_zrdf59lhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_A-AeIRFAEeqec5weMG1mQw" elementId="org.scalaide.core.handler.indentGuide" commandName="Show Indent Guide" description="Show Indent Guide" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeIhFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ImplAbstractMembers" commandName="Scala Quick Assist - Implement Abstract Members" description="Shows a proposal to add abstract members" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeIxFAEeqec5weMG1mQw" elementId="org.scalaide.core.handler.RunSelectionInInterpreter" commandName="Send Selection to Scala Interpreter" category="_zrdf59lhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_A-AeJBFAEeqec5weMG1mQw" elementId="org.scalaide.core.handler.showInferredSemicolons" commandName="Show inferred semicolons" description="Show inferred semicolons in all text editors" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeJRFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.core.toggleMarkOccurences" commandName="Toggle Mark Occurrences" description="Toggle Mark Occurences" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeJhFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.MergeParameterLists" commandName="Merge parameter lists" category="_A9-o9hFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeJxFAEeqec5weMG1mQw" elementId="scala.tools.eclipse.editor.ShowTypeOfSelection" commandName="Show Type" description="Shows the type of the current selection" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeKBFAEeqec5weMG1mQw" elementId="org.eclipse.shortcut.scala.junit.debug" commandName="Debug Scala JUnit Test" description="Debug Scala JUnit Test" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeKRFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist" commandName="Scala Quick Assist" description="Opens the Scala Quick Assist dialog" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeKhFAEeqec5weMG1mQw" elementId="org.scala.tools.eclipse.search.commands.OpenTypeHierarchy" commandName="Open Type Hierarchy" description="Open Type Hierarchy" category="_A9-o8hFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeKxFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.InlineLocal" commandName="Inline Local" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeLBFAEeqec5weMG1mQw" elementId="org.scalaide.worksheet.commands.format" commandName="Format" category="_A9-o9xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeLRFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.Extract" commandName="Extract..." category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeLhFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.MoveClass" commandName="Move Class/Object/Trait" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeLxFAEeqec5weMG1mQw" elementId="scala.tools.eclipse.editor.OpenImplicit" commandName="Open Implicit" description="Open an editor on the selected implicit conversion" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeMBFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.OrganizeImports" commandName="Organize Imports" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeMRFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.ExtractTrait" commandName="Extract Trait" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeMhFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.Rename" commandName="Rename" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeMxFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ExtractExpressions" commandName="Scala Quick Assist - Extract Expressions" description="Shows a proposal to extract expressions" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeNBFAEeqec5weMG1mQw" elementId="org.eclipse.shortcut.scala.debug" commandName="Debug Scala Application" description="Debug Scala Application" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeNRFAEeqec5weMG1mQw" elementId="org.scalaide.debug.async.stepMessageOut" commandName="Step Message Out" category="_A9-o9RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeNhFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ImportMissingMember" commandName="Scala Quick Assist - Import Missing Member" description="Shows a proposal to import a missing member" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeNxFAEeqec5weMG1mQw" elementId="org.scalaide.debug.async.stopOnDeadLetters" commandName="Break on DeadLetter" description="Break execution when a message is sent to dead letters" category="_A9-o9RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeOBFAEeqec5weMG1mQw" elementId="org.scalaide.worksheet.commands.evalScript" commandName="Evaluate Script" category="_A9-o9xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeORFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ChangeCase" commandName="Scala Quick Assist - Change Case" description="Shows a proposal to change the case of an identifier" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeOhFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ExpandImplicits" commandName="Scala Quick Assist - Expand Implicits" description="Shows a proposal to expand implicit conversion and arguments" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AeOxFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.CreateClass" commandName="Scala Quick Assist - Create Class" description="Shows a proposal to create a class from a missing type error" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AePBFAEeqec5weMG1mQw" elementId="org.scalaide.core.quickassist.ExplicitReturnType" commandName="Scala Quick Assist - Explicit Return Type" description="Shows a proposal to add the return type" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AePRFAEeqec5weMG1mQw" elementId="org.eclipse.shortcut.scala.run" commandName="Run Scala Application" description="Run Scala Application" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AePhFAEeqec5weMG1mQw" elementId="org.eclipse.shortcut.scala.junit.run" commandName="Run Scala JUnit Test" description="Run Scala JUnit Test" category="_A9-o8RFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_A-AePxFAEeqec5weMG1mQw" elementId="org.scalaide.refactoring.MoveConstructorToCompanionObject" commandName="Move constructor to companion object" category="_A9-o8xFAEeqec5weMG1mQw"/>
+  <commands xmi:id="_BEYy8BFAEeqec5weMG1mQw" elementId="org.scala-ide.sdt.debug.stopOnDeadLetters" commandName="org.scala-ide.sdt.debug.stopOnDeadLetters"/>
+  <commands xmi:id="_BUbaEBFAEeqec5weMG1mQw" elementId="AUTOGEN:::org.scala-ide.sdt.ui.scalaMenu.actionSet/org.scala-ide.sdt.ui.runDiag.action" commandName="Run Setup Diagnostics" description="Verify that Scala configuration is correct" category="_zreG5tlhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_BUcBIBFAEeqec5weMG1mQw" elementId="AUTOGEN:::org.scala-ide.sdt.ui.scalaMenu.actionSet/org.scala-ide.sdt.ui.reportBug.action" commandName="Report a Bug" description="Report a bug in the Scala Development Tools" category="_zreG5tlhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_BUcBIRFAEeqec5weMG1mQw" elementId="AUTOGEN:::org.scala-ide.sdt.ui.scalaMenu.actionSet/org.scala-ide.sdt.ui.openLogFile.action" commandName="Open the Log" description="Open the Log file in an editor" category="_zreG5tlhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_BUdPQBFAEeqec5weMG1mQw" elementId="AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.internal.ui.javaeditor.BookmarkRulerAction" commandName="Scala Editor Bookmark Ruler Action" category="_zreG5tlhEemm2JVCtQX9cQ"/>
+  <commands xmi:id="_BUdPQRFAEeqec5weMG1mQw" elementId="AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.internal.ui.javaeditor.JavaSelectRulerAction" commandName="Scala Editor Ruler Single-Click" category="_zreG5tlhEemm2JVCtQX9cQ"/>
   <addons xmi:id="_zq8idtlhEemm2JVCtQX9cQ" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_zq8id9lhEemm2JVCtQX9cQ" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_zq8ieNlhEemm2JVCtQX9cQ" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -2839,4 +2945,11 @@
   <categories xmi:id="_LLDO4fpgEemXVNypuIFfaw" elementId="org.eclipse.pde.genericeditor.extension.category.source" name="Target Definition Source" description="Target Definition Source Page actions"/>
   <categories xmi:id="_LLDO4vpgEemXVNypuIFfaw" elementId="org.eclipse.pde.runtime.spy.commands.category" name="Spy"/>
   <categories xmi:id="_LLDO4_pgEemXVNypuIFfaw" elementId="org.eclipse.pde.ui.category.source" name="Manifest Editor Source" description="PDE Source Page actions"/>
+  <categories xmi:id="_A9-o8RFAEeqec5weMG1mQw" elementId="scala.tools.eclipse.category" name="Scala Editor" description="Scala editor category"/>
+  <categories xmi:id="_A9-o8hFAEeqec5weMG1mQw" elementId="org.scala.tools.eclipse.search.commands" name="Search - Scala" description="Search - Scala"/>
+  <categories xmi:id="_A9-o8xFAEeqec5weMG1mQw" elementId="org.scalaide.ui.menu.refactoring" name="Refactor - Scala" description="Refactorings"/>
+  <categories xmi:id="_A9-o9BFAEeqec5weMG1mQw" elementId="org.scalaide.ui.menu" name="Menu - Scala"/>
+  <categories xmi:id="_A9-o9RFAEeqec5weMG1mQw" elementId="org.scalaide.debug" name="Scala Debugger" description="Scala Debugger category"/>
+  <categories xmi:id="_A9-o9hFAEeqec5weMG1mQw" elementId="org.scalaide.ui.menu.refactoring.methodsignature" name="Method Signature Refactoring - Scala" description="Method Signature Refactorings"/>
+  <categories xmi:id="_A9-o9xFAEeqec5weMG1mQw" elementId="org.scalaide.worksheet.commands.category" name="Worksheet commands"/>
 </application:Application>

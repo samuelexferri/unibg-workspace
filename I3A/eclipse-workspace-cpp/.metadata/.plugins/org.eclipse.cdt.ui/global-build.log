@@ -1,5 +1,16 @@
-18:30:31 **** Incremental Build of configuration Debug for project M5 (Esempi) ****
+19:01:29 **** Incremental Build of configuration Debug for project M5 (Template) ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\redefining.o" "..\\src\\redefining.cpp" 
-g++ -o "M5 (Esempi)" "src\\esempi.o" "src\\redefining.o" 
-src\redefining.o: duplicate section `.rdata$_ZTV4Base[__ZTV4Base]' has different size
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\useSTL.o" "..\\src\\useSTL.cpp" 
+..\src\useSTL.cpp: In function 'int main3()':
+..\src\useSTL.cpp:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\template.o" "..\\src\\template.cpp" 
+..\src\template.cpp: In function 'int main2()':
+..\src\template.cpp:23:8: warning: unused variable 'd' [-Wunused-variable]
+  float d;
+        ^
+..\src\template.cpp:26:4: warning: unused variable 'a' [-Wunused-variable]
+  A a;
+    ^
+g++ -o "M5 (Template).exe" "src\\STLEred.o" "src\\template.o" "src\\useSTL.o" 
