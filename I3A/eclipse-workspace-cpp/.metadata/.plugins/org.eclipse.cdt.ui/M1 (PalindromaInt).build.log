@@ -1,1 +1,7 @@
-Info: Nothing to build for M1 (PalindromaInt)
+15:13:41 **** Rebuild of configuration Debug for project M1 (PalindromaInt) ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (1) (PalindromaInt).o" "..\\src\\Esercitazione (1) (PalindromaInt).c" 
+gcc -o "M1 (PalindromaInt).exe" "src\\Esercitazione (1) (PalindromaInt).o" 
+
+15:13:42 Build Finished. 0 errors, 0 warnings. (took 595ms)
+

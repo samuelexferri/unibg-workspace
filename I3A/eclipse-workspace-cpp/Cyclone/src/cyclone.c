@@ -216,7 +216,7 @@ int main(void) {
 	fclose(out);
 
 	// Use only for executable
-	// system("PAUSE");
+	system("PAUSE");
 
 	return 0;
 }

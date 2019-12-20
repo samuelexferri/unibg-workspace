@@ -1,1 +1,7 @@
-Info: Nothing to build for M1 (Vocalizza)
+15:13:42 **** Rebuild of configuration Debug for project M1 (Vocalizza) ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M1 (Vocalizza).o" "..\\src\\M1 (Vocalizza).c" 
+gcc -o "M1 (Vocalizza).exe" "src\\M1 (Vocalizza).o" 
+
+15:13:42 Build Finished. 0 errors, 0 warnings. (took 600ms)
+

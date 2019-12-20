@@ -25,7 +25,7 @@ int main() {
 	Pila p;
 	p.insert_tail();
 	p.remove_tail();
-	l = p;
+	// l = p;
 
 	return 0;
 }

@@ -1,4 +1,4 @@
-17:10:18 **** Rebuild of configuration Debug for project M3 (CoppiaInt) ****
+15:13:42 **** Rebuild of configuration Debug for project M3 (CoppiaInt) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CoppiaInt.o" "..\\src\\CoppiaInt.c" 
 ..\src\CoppiaInt.c: In function 'toString':
@@ -16,5 +16,5 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CoppiaInt.o" "..\\src\\CoppiaIn
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (CoppiaInt).o" "..\\src\\M3 (CoppiaInt).c" 
 gcc -o "M3 (CoppiaInt).exe" "src\\CoppiaInt.o" "src\\M3 (CoppiaInt).o" 
 
-17:10:19 Build Finished. 0 errors, 2 warnings. (took 1s.112ms)
+15:13:43 Build Finished. 0 errors, 2 warnings. (took 880ms)
 
