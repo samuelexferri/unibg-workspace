@@ -1,12 +1,12 @@
-15:13:36 **** Rebuild of configuration Debug for project Cyclone ****
+17:04:33 **** Rebuild of configuration Debug for project Cyclone ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cyclone.o" "..\\src\\cyclone.c" 
 gcc -o Cyclone.exe "src\\cyclone.o" 
-15:13:37 **** Rebuild of configuration Debug for project Esercitazione (1) ****
+17:04:36 **** Rebuild of configuration Debug for project Esercitazione (1) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (1).o" "..\\src\\Esercitazione (1).c" 
 gcc -o "Esercitazione (1).exe" "src\\Esercitazione (1).o" 
-15:13:38 **** Rebuild of configuration Debug for project Esercitazione (2) ****
+17:04:37 **** Rebuild of configuration Debug for project Esercitazione (2) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (2).o" "..\\src\\Esercitazione (2).c" 
 ..\src\Esercitazione (2).c: In function 'makeStudent1':
@@ -62,7 +62,7 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (2).o" "..\\src\\
   char n[]= "Gino";
        ^
 gcc -o "Esercitazione (2).exe" "src\\Esercitazione (2).o" 
-15:13:38 **** Rebuild of configuration Debug for project Esercitazione (3) ****
+17:04:38 **** Rebuild of configuration Debug for project Esercitazione (3) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (3).o" "..\\src\\Esercitazione (3).c" 
 ..\src\Esercitazione (3).c: In function 'main':
@@ -76,6 +76,19 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (3).o" "..\\src\\
  
 ..\src\Esercitazione (3).c:17:2:
   strcpy(stampa, studentData(s1));
+  ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Studente.o" "..\\src\\Studente.c" 
+..\src\Studente.c: In function 'makeStudent':
+..\src\Studente.c:19:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(sref->nome, n);
+  ^~~~~~
+..\src\Studente.c:19:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\Studente.c:19:2: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\Studente.c:5:1:
++#include <string.h>
+ 
+..\src\Studente.c:19:2:
+  strcpy(sref->nome, n);
   ^~~~~~
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
 ..\src\Corso.c: In function 'makeCorso':
@@ -94,33 +107,20 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c"
 ..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
    printf("%s, ", point->stud);
            ~^     ~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Studente.o" "..\\src\\Studente.c" 
-..\src\Studente.c: In function 'makeStudent':
-..\src\Studente.c:19:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
-  strcpy(sref->nome, n);
-  ^~~~~~
-..\src\Studente.c:19:2: warning: incompatible implicit declaration of built-in function 'strcpy'
-..\src\Studente.c:19:2: note: include '<string.h>' or provide a declaration of 'strcpy'
-..\src\Studente.c:5:1:
-+#include <string.h>
- 
-..\src\Studente.c:19:2:
-  strcpy(sref->nome, n);
-  ^~~~~~
 gcc -o "Esercitazione (3).exe" "src\\Corso.o" "src\\Esercitazione (3).o" "src\\Studente.o" 
-15:13:40 **** Rebuild of configuration Debug for project Esercitazione (5) ****
+17:04:39 **** Rebuild of configuration Debug for project Esercitazione (5) ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Es1.o" "..\\src\\Es1.cpp" 
 g++ -o "Esercitazione (5).exe" "src\\Es1.o" 
-15:13:41 **** Rebuild of configuration Debug for project M1 (PalindromaInt) ****
+17:04:41 **** Rebuild of configuration Debug for project M1 (PalindromaInt) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (1) (PalindromaInt).o" "..\\src\\Esercitazione (1) (PalindromaInt).c" 
 gcc -o "M1 (PalindromaInt).exe" "src\\Esercitazione (1) (PalindromaInt).o" 
-15:13:42 **** Rebuild of configuration Debug for project M1 (Vocalizza) ****
+17:04:42 **** Rebuild of configuration Debug for project M1 (Vocalizza) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M1 (Vocalizza).o" "..\\src\\M1 (Vocalizza).c" 
 gcc -o "M1 (Vocalizza).exe" "src\\M1 (Vocalizza).o" 
-15:13:42 **** Rebuild of configuration Debug for project M3 (CoppiaInt) ****
+17:04:43 **** Rebuild of configuration Debug for project M3 (CoppiaInt) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CoppiaInt.o" "..\\src\\CoppiaInt.c" 
 ..\src\CoppiaInt.c: In function 'toString':
@@ -137,7 +137,7 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CoppiaInt.o" "..\\src\\CoppiaIn
   ^~~~~~~
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (CoppiaInt).o" "..\\src\\M3 (CoppiaInt).c" 
 gcc -o "M3 (CoppiaInt).exe" "src\\CoppiaInt.o" "src\\M3 (CoppiaInt).o" 
-15:13:43 **** Rebuild of configuration Debug for project M3 (EredSubtyping) (C++) ****
+17:04:43 **** Rebuild of configuration Debug for project M3 (EredSubtyping) (C++) ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (EredSubtyping) (C++).o" "..\\src\\M3 (EredSubtyping) (C++).cpp" 
 g++ -o "M3 (EredSubtyping) (C++).exe" "src\\M3 (EredSubtyping) (C++).o" 
@@ -145,12 +145,12 @@ c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: src\M3 (Er
 C:\GitHub\workspace\I3A\eclipse-workspace-cpp\M3 (EredSubtyping) (C++)\Debug/../src/M3 (EredSubtyping) (C++).cpp:26: undefined reference to `Pila::insert_tail()'
 c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: C:\GitHub\workspace\I3A\eclipse-workspace-cpp\M3 (EredSubtyping) (C++)\Debug/../src/M3 (EredSubtyping) (C++).cpp:27: undefined reference to `Pila::remove_tail()'
 collect2.exe: error: ld returned 1 exit status
-15:13:44 **** Rebuild of configuration Debug for project M3 (ListaInt) ****
+17:04:45 **** Rebuild of configuration Debug for project M3 (ListaInt) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (ListaInt).o" "..\\src\\M3 (ListaInt).c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ListaInt.o" "..\\src\\ListaInt.c" 
 gcc -o "M3 (ListaInt).exe" "src\\ListaInt.o" "src\\M3 (ListaInt).o" 
-15:13:45 **** Rebuild of configuration Debug for project M5 (Esempi 1) ****
+17:04:45 **** Rebuild of configuration Debug for project M5 (Esempi 1) ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\redefining.o" "..\\src\\redefining.cpp" 
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempi.o" "..\\src\\esempi.cpp" 
@@ -159,29 +159,8 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempi.o" "..\\src\\esempi.cpp"
   ^~~~
 g++ -o "M5 (Esempi 1)" "src\\esempi.o" "src\\redefining.o" 
 src\redefining.o: duplicate section `.rdata$_ZTV4Base[__ZTV4Base]' has different size
-15:13:47 **** Rebuild of configuration Debug for project M5 (Esempi 2) ****
+17:04:47 **** Rebuild of configuration Debug for project M5 (Esempi 2) ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\usorefs.o" "..\\src\\usorefs.cpp" 
-..\src\usorefs.cpp: In function 'int hhhh()':
-..\src\usorefs.cpp:22:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\copyconstr.o" "..\\src\\copyconstr.cpp" 
-..\src\copyconstr.cpp: In function 'int main1()':
-..\src\copyconstr.cpp:21:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\slicing.o" "..\\src\\slicing.cpp" 
-..\src\slicing.cpp: In function 'int main5()':
-..\src\slicing.cpp:29:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempi.o" "..\\src\\esempi.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\defaultaerguments.o" "..\\src\\defaultaerguments.cpp" 
-..\src\defaultaerguments.cpp: In function 'int main2()':
-..\src\defaultaerguments.cpp:11:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ovmpri.o" "..\\src\\ovmpri.cpp" 
 ..\src\ovmpri.cpp: In function 'int main4()':
 ..\src\ovmpri.cpp:30:9: warning: deleting object of polymorphic class type 'A' which has non-virtual destructor might cause undefined behavior [-Wdelete-non-virtual-dtor]
@@ -196,18 +175,35 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ovmpri.o" "..\\src\\ovmpri.cpp"
 ..\src\ovmpri.cpp:40:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempi.o" "..\\src\\esempi.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\slicing.o" "..\\src\\slicing.cpp" 
+..\src\slicing.cpp: In function 'int main5()':
+..\src\slicing.cpp:29:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\usorefs.o" "..\\src\\usorefs.cpp" 
+..\src\usorefs.cpp: In function 'int hhhh()':
+..\src\usorefs.cpp:22:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\defaultaerguments.o" "..\\src\\defaultaerguments.cpp" 
+..\src\defaultaerguments.cpp: In function 'int main2()':
+..\src\defaultaerguments.cpp:11:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\copyconstr.o" "..\\src\\copyconstr.cpp" 
+..\src\copyconstr.cpp: In function 'int main1()':
+..\src\copyconstr.cpp:21:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
 g++ -o "M5 (Esempi 2)" "src\\copyconstr.o" "src\\defaultaerguments.o" "src\\esempi.o" "src\\ovmpri.o" "src\\slicing.o" "src\\usorefs.o" 
 src\ovmpri.o: duplicate section `.rdata$_ZTV1B[__ZTV1B]' has different size
 src\ovmpri.o: duplicate section `.rdata$_ZTV1A[__ZTV1A]' has different size
 c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../libmingw32.a(main.o):(.text.startup+0xb0): undefined reference to `WinMain@16'
 collect2.exe: error: ld returned 1 exit status
-15:13:52 **** Rebuild of configuration Debug for project M5 (Inizio) ****
+17:04:51 **** Rebuild of configuration Debug for project M5 (Inizio) ****
 Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempio_distruttore.o" "..\\src\\esempio_distruttore.cpp" 
-..\src\esempio_distruttore.cpp: In function 'int mainmmm()':
-..\src\esempio_distruttore.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Time.o" "..\\src\\Time.cpp" 
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\costanti.o" "..\\src\\costanti.cpp" 
 ..\src\costanti.cpp:8:12: warning: 'max_age' defined but not used [-Wunused-variable]
  static int max_age = 115;  // Campi static messi in comune per tutte le istanze della classe
@@ -221,16 +217,14 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempi_19.o" "..\\src\\esempi_1
   Time notte = Time(22);
        ^~~~~
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\usostatic.o" "..\\src\\usostatic.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Time.o" "..\\src\\Time.cpp" 
-g++ -o "M5 (Inizio).exe" "src\\Time.o" "src\\costanti.o" "src\\esempi_19.o" "src\\esempio_distruttore.o" "src\\usostatic.o" 
-15:13:55 **** Rebuild of configuration Debug for project M5 (Template) ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\useSTL.o" "..\\src\\useSTL.cpp" 
-..\src\useSTL.cpp: In function 'int main3()':
-..\src\useSTL.cpp:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\esempio_distruttore.o" "..\\src\\esempio_distruttore.cpp" 
+..\src\esempio_distruttore.cpp: In function 'int mainmmm()':
+..\src\esempio_distruttore.cpp:31:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\STLEred.o" "..\\src\\STLEred.cpp" 
+g++ -o "M5 (Inizio).exe" "src\\Time.o" "src\\costanti.o" "src\\esempi_19.o" "src\\esempio_distruttore.o" "src\\usostatic.o" 
+17:04:54 **** Rebuild of configuration Debug for project M5 (Template) ****
+Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\template.o" "..\\src\\template.cpp" 
 ..\src\template.cpp: In function 'int main2()':
 ..\src\template.cpp:23:8: warning: unused variable 'd' [-Wunused-variable]
@@ -239,4 +233,10 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\template.o" "..\\src\\template.
 ..\src\template.cpp:26:4: warning: unused variable 'a' [-Wunused-variable]
   A a;
     ^
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\STLEred.o" "..\\src\\STLEred.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\useSTL.o" "..\\src\\useSTL.cpp" 
+..\src\useSTL.cpp: In function 'int main3()':
+..\src\useSTL.cpp:25:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
 g++ -o "M5 (Template).exe" "src\\STLEred.o" "src\\template.o" "src\\useSTL.o" 
