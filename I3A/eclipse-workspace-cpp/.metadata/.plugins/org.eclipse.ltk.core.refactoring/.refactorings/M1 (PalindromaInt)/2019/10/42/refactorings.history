@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Esercitazione (1) (PalindromaInt)/src/02 - PalindromaInt.c&apos; to &apos;Esercitazione (1) (PalindromaInt).c&apos;" description="Rename resource &apos;02 - PalindromaInt.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/02 - PalindromaInt.c" name="Esercitazione (1) (PalindromaInt).c" stamp="1571388738180" updateReferences="true"/>
-</session>

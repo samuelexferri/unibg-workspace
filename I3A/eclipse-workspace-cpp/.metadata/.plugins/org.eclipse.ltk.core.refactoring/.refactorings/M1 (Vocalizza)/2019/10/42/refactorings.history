@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;01 - Vocalizza/src/01 - Vocalizza.c&apos; to &apos;Esercitazione (1) (Vocalizza).c&apos;" description="Rename resource &apos;01 - Vocalizza.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/01 - Vocalizza.c" name="Esercitazione (1) (Vocalizza).c" stamp="1571388758901" updateReferences="true"/>
-</session>

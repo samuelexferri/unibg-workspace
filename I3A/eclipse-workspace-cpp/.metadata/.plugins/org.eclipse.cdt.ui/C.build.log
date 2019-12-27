@@ -1,9 +1,0 @@
-22:10:12 **** Incremental Build of configuration Debug for project C ****
-make all 
-Cannot run program "make": Launching failed
-
-Error: Program "make" not found in PATH
-PATH=[C:/Program Files/Java/jre1.8.0_221/bin/server;C:/Program Files/Java/jre1.8.0_221/bin;C:/Program Files/Java/jre1.8.0_221/lib/amd64;C:\Python\Python37;C:\Python\Python37\Scripts;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\Samuele\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\BaseX\bin;C:\Program Files\MATLAB\R2019b\bin;C:\MinGW\bin;C:\Python\Python37\Scripts\;C:\Python\Python37\;C:\Ruby\bin;C:\Ruby26-x64\bin;C:\Users\Samuele\AppData\Local\Microsoft\WindowsApps;C:\Users\Samuele\AppData\Local\GitHubDesktop\bin;C:\Users\Samuele\AppData\Local\Pandoc\;C:\Users\Samuele\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\x64\;C:\Users\Samuele\AppData\Local\Microsoft\WindowsApps;C:\Users\Samuele\AppData\Local\atom\bin;C:\WINDOWS\System32]
-
-22:10:12 Build Failed. 1 errors, 0 warnings. (took 112ms)
-
