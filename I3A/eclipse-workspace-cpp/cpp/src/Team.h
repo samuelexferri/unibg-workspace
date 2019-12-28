@@ -1,11 +1,10 @@
 /*
  * Team.h
- *
  */
 
 #include <iostream>
 #include <string>
-#include <vector>
+#include <list>
 
 #include "Ciclista.h"
 
@@ -14,20 +13,21 @@
 
 class Team {
 protected:
-	// Inizializzazione di vector con elementi della classe Ciclista
-	std::vector<Ciclista*> l;
+	std::list<Ciclista*> l; // STL: List
 private:
 	string nomesquadra;
 	string origine;
 public:
 	// Costruttore
 	Team(string ns, string o);
+
+	// Metodi
 	virtual ~Team(); // Distruttore
-	void aggiungi(Ciclista *p);
+	string getNomeSquadra();
+	void aggiungi(Ciclista *c);
 	void stampa();
 	float etaMedia();
 	void stampaNaz(string naz);
-	void piuPresenze();
 };
 
 #endif /* TEAM_H_ */

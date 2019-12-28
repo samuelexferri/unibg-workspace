@@ -38,7 +38,7 @@ int mainnn() {
 	Base *pdpu = new DerivataPub;
 	pdpu->m();
 
-	// Non DerivataPri non Ã¨ sottotipo di Base
+	// Non DerivataPri non è sottotipo di Base
 	// Base *pdpr = new DerivataPri;
 	// pdpr.m();
 
