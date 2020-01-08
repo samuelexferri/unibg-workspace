@@ -2,7 +2,6 @@
  * Passista.h
  */
 
-#include <vector>
 using namespace std;
 
 #include "Ciclista.h"
@@ -14,6 +13,7 @@ using namespace std;
 class Passista: virtual public Ciclista { // Eredita pubblicamente da Ciclista (Inizialization List, Virtual)
 protected:
 	int numeropodi;
+
 public:
 	// Costruttore
 	Passista(string n, string c, string naz, float a, tipociclismo disc, int podi);

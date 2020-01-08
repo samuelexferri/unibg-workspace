@@ -2,9 +2,9 @@
  * Ciclista.h
  */
 
-#include <string>
 using namespace std;
 
+#include <string>
 #include "TemplateStringify.h" // Template per la conversione di interi in stringhe
 
 #ifndef CICLISTA_H_

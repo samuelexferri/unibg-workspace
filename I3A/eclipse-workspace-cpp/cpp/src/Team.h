@@ -14,9 +14,11 @@
 class Team {
 protected:
 	std::list<Ciclista*> l; // STL: List
+
 private:
 	string nomesquadra;
 	string origine;
+
 public:
 	// Costruttore
 	Team(string ns, string o);

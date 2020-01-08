@@ -1,9 +1,9 @@
-16:44:26 **** Rebuild of configuration Debug for project cpp ****
+21:05:30 **** Incremental Build of configuration Debug for project cpp ****
 Info: Internal Builder is used for build
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\VelocistaPassista.o" "..\\src\\VelocistaPassista.cpp" 
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Team.o" "..\\src\\Team.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passista.o" "..\\src\\Passista.cpp" 
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ciclista.o" "..\\src\\Ciclista.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Velocista.o" "..\\src\\Velocista.cpp" 
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Main.o" "..\\src\\Main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Passista.o" "..\\src\\Passista.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Velocista.o" "..\\src\\Velocista.cpp" 
 g++ -o cpp.exe "src\\Ciclista.o" "src\\Main.o" "src\\Passista.o" "src\\Team.o" "src\\Velocista.o" "src\\VelocistaPassista.o" 

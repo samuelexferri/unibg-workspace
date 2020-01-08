@@ -1,8 +1,10 @@
 /*
  * VelocistaPassista.h
  */
-#include <vector>
+
 using namespace std;
+
+#include <vector>
 
 #include "Passista.h"
 #include "Velocista.h"

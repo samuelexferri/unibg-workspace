@@ -1,8 +1,9 @@
 /*
  * Velocista.h
  */
-#include <vector>
 using namespace std;
+
+#include <vector>
 
 #include "Ciclista.h"
 #include "Time.h"
