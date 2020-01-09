@@ -3,6 +3,8 @@
 
 #include "VelocistaPassista.h"
 
+const char* VPCONST = "VP";
+
 VelocistaPassista::VelocistaPassista(string n, string c, string naz, float a,
 		tipociclismo disc, int podi) :
 		Ciclista(n, c, naz, a, disc), Passista(n, c, naz, a, disc, podi), Velocista(
@@ -19,4 +21,9 @@ string VelocistaPassista::toString() {
 	return "[" + this->Ciclista::getIDString() + "] VelocistaPassista " + nome
 			+ " " + cognome + " " + nazionalita + " " + this->getDisciplina()
 			+ " " + this->getPodi() + " podi";
+}
+
+string VelocistaPassista::getIDString() {
+	std::string s = stringify(thisid); // Uso il TemplateStringify per la conversione da int a string
+	return VPCONST + s;
 }

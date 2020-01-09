@@ -13,6 +13,8 @@ using namespace std;
 #ifndef VELOCISTAPASSISTA_H_
 #define VELOCISTAPASSISTA_H_
 
+extern const char* VPCONST;
+
 // Ereditarietà multipla (Diamante)
 class VelocistaPassista: public Passista, public Velocista {
 public:
@@ -23,6 +25,7 @@ public:
 	// Metodi
 	virtual ~VelocistaPassista(); // Distruttore
 	string toString();
+	string getIDString();
 };
 
 #endif /* VELOCISTAPASSISTA_H_ */

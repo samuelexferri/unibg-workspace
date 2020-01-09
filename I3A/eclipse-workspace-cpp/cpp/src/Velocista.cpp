@@ -4,6 +4,8 @@
 
 #include "Velocista.h"
 
+const char* VCONST = "V";
+
 Velocista::Velocista(string n, string c, string naz, float a, tipociclismo disc) :
 		Ciclista(n, c, naz, a, disc) { // Estende il costruttore di Ciclista
 }
@@ -20,7 +22,7 @@ string Velocista::toString() {
 
 string Velocista::getIDString() {
 	std::string s = stringify(thisid); // Uso il TemplateStringify per la conversione da int a string
-	return "V" + s;
+	return VCONST + s;
 }
 
 void Velocista::addGara(int km, Time tempo) {

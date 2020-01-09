@@ -11,6 +11,8 @@ using namespace std;
 #ifndef VELOCISTA_H_
 #define VELOCISTA_H_
 
+extern const char* VCONST;
+
 class Velocista: virtual public Ciclista { // Eredita pubblicamente da Ciclista (Inizialization List, Virtual)
 protected:
 	// Inizializzazione di vector con elementi di classe Calciatore

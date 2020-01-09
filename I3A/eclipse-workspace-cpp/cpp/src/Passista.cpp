@@ -3,6 +3,8 @@
 
 #include "Passista.h"
 
+const char* PCONST = "P";
+
 Passista::Passista(string n, string c, string naz, float a, tipociclismo disc,
 		int podi) :
 		Ciclista(n, c, naz, a, disc) { // Estende il costruttore di Ciclista
@@ -20,7 +22,7 @@ string Passista::toString() {
 
 string Passista::getIDString() {
 	std::string s = stringify(thisid); // Uso il TemplateStringify per la conversione da int a string
-	return "P" + s;
+	return PCONST + s;
 }
 
 string Passista::getPodi() {

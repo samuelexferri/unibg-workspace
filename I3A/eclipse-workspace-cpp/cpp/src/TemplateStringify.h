@@ -9,7 +9,7 @@
 #ifndef TEMPLATESTRINGIFY_H_
 #define TEMPLATESTRINGIFY_H_
 
-// Template per la conversione di interi in stringhe
+// Template per la conversione di interi in stringhe ad esempio
 template<typename T>
 inline std::string stringify(const T &t) { // Inline
 	std::stringstream string_stream;

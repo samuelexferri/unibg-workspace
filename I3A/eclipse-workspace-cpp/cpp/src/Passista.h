@@ -5,10 +5,11 @@
 using namespace std;
 
 #include "Ciclista.h"
-#include "Time.h"
 
 #ifndef PASSISTA_H_
 #define PASSISTA_H_
+
+extern const char* PCONST;
 
 class Passista: virtual public Ciclista { // Eredita pubblicamente da Ciclista (Inizialization List, Virtual)
 protected:
