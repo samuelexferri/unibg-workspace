@@ -6,9 +6,8 @@ signature:
 	// DOMAINS
 	domain SoldiDomain subsetof Integer
 
-	enum domain Stato = { START | MENU | PAGAMENTO | LAVORAZIONE | ERRORE }
+	enum domain Stato = { START | MENU | PAGAMENTO | LAVORAZIONE | FRISCIAQUO | FRULLI | FCERCHI | FASCIUGATURA }
 	enum domain Selezione = { RISCIAQUO | RULLI | CERCHI | ASCIUGATURA | FINESELEZIONE }
-	//enum domain Continua = { CONTINUA }
 	
 	// FUNCTIONS
 	dynamic controlled stato : Stato
@@ -17,7 +16,6 @@ signature:
 	dynamic controlled costotot : Integer
 	
 	monitored selezione : Selezione
-	//monitored continua : Continua
 	monitored soldi : SoldiDomain
 	
 
@@ -25,8 +23,6 @@ definitions:
 
 	// DOMAIN DEFINITIONS
 	domain SoldiDomain = {0..50}
-	
-	// FUNCTION DEFINITIONS
 		
 	// RULE DEFINITIONS
 	rule r_START =
@@ -40,7 +36,7 @@ definitions:
 		
 	rule r_MENU =
 		let ($s = selezione) in
-			if($s != FINESELEZIONE) then
+			if ($s != FINESELEZIONE) then
 				selezionati($s) := 1
 			else
 				par
@@ -54,31 +50,31 @@ definitions:
 		let ($s = soldi) in
 			switch (sommaselezioni)
 				case 0:
-						if($s >= 0) then
+						if ($s >= 0) then
 							stato := LAVORAZIONE
 						else
 							stato := PAGAMENTO
 						endif
 				case 1:
-						if($s >= 5) then
+						if ($s >= 5) then
 							stato := LAVORAZIONE
 						else
 							stato := PAGAMENTO
 						endif
 				case 2:
-						if($s >= 10) then
+						if ($s >= 10) then
 							stato := LAVORAZIONE
 						else
 							stato := PAGAMENTO
 						endif
 				case 3:
-						if($s >= 15) then
+						if ($s >= 15) then
 							stato := LAVORAZIONE
 						else
 							stato := PAGAMENTO
 						endif
 				case 4:
-						if($s >= 20) then
+						if ($s >= 20) then
 							stato := LAVORAZIONE
 						else
 							stato := PAGAMENTO
@@ -86,11 +82,59 @@ definitions:
 			endswitch
 		endlet
 		
-
 	rule r_LAVORAZIONE = 
-		stato := MENU
+		if (selezionati(RISCIAQUO) = 1) then
+			stato := FRISCIAQUO
+		else
+			if (selezionati(RULLI) = 1) then
+				stato := FRULLI
+			else
+				if (selezionati(CERCHI) = 1) then
+					stato := FCERCHI
+				else
+					if (selezionati(ASCIUGATURA) = 1) then
+						stato := FASCIUGATURA
+					else
+						stato := START
+					endif
+				endif
+			endif
+		endif
 		
-	//rule r_ERRORE = 
+	rule r_FASI =
+		if (stato = FRISCIAQUO) then
+			par
+				// Risciaquo
+				selezionati(RISCIAQUO) := 0
+				stato := LAVORAZIONE
+			endpar
+		else
+		 	if (stato = FRULLI) then
+		 		par
+					// Rulli
+					selezionati(RULLI) := 0
+					stato := LAVORAZIONE
+				endpar
+			else
+				if (stato = FCERCHI) then
+					par
+						// Cerchi
+						selezionati(CERCHI) := 0
+						stato := LAVORAZIONE
+					endpar
+				else
+					if (stato = FASCIUGATURA) then
+						par
+							// Asciugatura
+							selezionati(ASCIUGATURA) := 0
+							stato := LAVORAZIONE
+						endpar
+					else
+						stato := START // Fine
+					endif
+				endif
+			endif
+		endif
 
 	// MAIN RULE
 	main rule r_MAIN =
@@ -106,7 +150,7 @@ definitions:
 					if (stato = LAVORAZIONE) then
 						r_LAVORAZIONE[]
 					else
-						r_MENU[]
+						r_FASI[]
 					endif
 				endif
 			endif
