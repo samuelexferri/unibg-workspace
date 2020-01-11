@@ -13,7 +13,6 @@ signature:
 	dynamic controlled stato : Stato
 	dynamic controlled selezionati : Selezione -> SoldiDomain
 	dynamic controlled sommaselezioni : SoldiDomain
-	dynamic controlled costotot : Integer
 	
 	monitored selezione : Selezione
 	monitored soldi : SoldiDomain
