@@ -6,8 +6,8 @@ signature:
 	// DOMAINS
 	domain SoldiDomain subsetof Integer
 
-	enum domain Stato = { START | MENU | PAGAMENTO | LAVORAZIONE | FRISCIAQUO | FRULLI | FCERCHI | FASCIUGATURA }
-	enum domain Selezione = { RISCIAQUO | RULLI | CERCHI | ASCIUGATURA | FINESELEZIONE }
+	enum domain Stato = { START | MENU | PAGAMENTO | LAVORAZIONE | FRISCIACQUO | FRULLI | FCERCHI | FASCIUGATURA }
+	enum domain Selezione = { RISCIACQUO | RULLI | CERCHI | ASCIUGATURA | FINESELEZIONE }
 	
 	// FUNCTIONS
 	dynamic controlled stato : Stato
@@ -26,7 +26,7 @@ definitions:
 	// RULE DEFINITIONS
 	rule r_START =
 		seq
-			selezionati(RISCIAQUO) := 0
+			selezionati(RISCIACQUO) := 0
 			selezionati(RULLI) := 0
 			selezionati(CERCHI) := 0
 			selezionati(ASCIUGATURA) := 0
@@ -39,7 +39,7 @@ definitions:
 				selezionati($s) := 1
 			else
 				par
-					sommaselezioni := selezionati(RISCIAQUO) + selezionati(RULLI) + selezionati(CERCHI) + selezionati(ASCIUGATURA)
+					sommaselezioni := selezionati(RISCIACQUO) + selezionati(RULLI) + selezionati(CERCHI) + selezionati(ASCIUGATURA)
 					stato := PAGAMENTO
 				endpar
 			endif
@@ -82,8 +82,8 @@ definitions:
 		endlet
 		
 	rule r_LAVORAZIONE = 
-		if (selezionati(RISCIAQUO) = 1) then
-			stato := FRISCIAQUO
+		if (selezionati(RISCIACQUO) = 1) then
+			stato := FRISCIACQUO
 		else
 			if (selezionati(RULLI) = 1) then
 				stato := FRULLI
@@ -101,10 +101,10 @@ definitions:
 		endif
 		
 	rule r_FASI =
-		if (stato = FRISCIAQUO) then
+		if (stato = FRISCIACQUO) then
 			par
 				// Risciaquo
-				selezionati(RISCIAQUO) := 0
+				selezionati(RISCIACQUO) := 0
 				stato := LAVORAZIONE
 			endpar
 		else
