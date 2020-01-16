@@ -17,30 +17,32 @@ typedef struct Student {
 	char nome[50];
 	char cognome[50];
 	int matricola;
-} Student;
+};
 
-void print(Student *s) {
+void print(struct Student *s) {
 	printf("%s %s %d \n", s->nome, (*s).cognome, s->matricola);
 }
 
 // Variabile statica
 static int NUMERO_STUDENTI = 1;
 
-Student* makeStudent1(char *n, char *c) {
-	Student alunno; // Non funziona (Dandling sullo stack)
+struct Student* makeStudent1(char *n, char *c) {
+	struct Student alunno; // Non funziona (Dandling sullo stack)
 	strcpy(alunno.nome, n);
 	strcpy(alunno.cognome, c);
 	alunno.matricola = NUMERO_STUDENTI++;
+	printf("MK1 - Mi chiamo %s \n", alunno.nome);
 	return &alunno;
 }
 
 // Esercizio (4)
-Student* makeStudent2(char *n, char *c) {
-	Student *alunno = malloc(sizeof(struct Student));
+struct Student* makeStudent2(char *n, char *c) {
+	struct Student *alunno = malloc(sizeof(struct Student));
 	strcpy(alunno->nome, n);
 	strcpy(alunno->cognome, c);
 	alunno->matricola = NUMERO_STUDENTI++;
-	return &alunno;
+	printf("MK2 - Mi chiamo %s \n", alunno->nome);
+	return alunno;
 }
 
 void main(void) {
@@ -54,25 +56,25 @@ void main(void) {
 	printf("X = %x, Y = %x \n", &x, &y); // Indirizzi (%x)
 
 	// Esercizio (2)
-	printf("Esercizio (2) \n");
+	printf("\nEsercizio (2) \n");
 	char s2[8] = "seconda";
 	char s1[6] = "prima";
 	strcpyfunction(s1);
 	printf("%s %s \n", s1, s2);
 
 	// Esercizio (3)
-	printf("Esercizio (3) \n");
-	char n[] = "Gino";
-	char c[] = "Pino";
-	Student *pstud1 = makeStudent2("Gino", "Pino");
+	printf("\nEsercizio (3) \n");
+	char *n = "Gino";
+	char *c = "Pino";
+	struct Student *pstud1 = makeStudent1(n, c);
 	print(&pstud1);
-	pstud1 = makeStudent1("Giorgio", "Marchetti");
-	print(&pstud1);
+	printf("MAIN - Mi chiamo %s \n", pstud1->nome);
 
 	// Esercizio (4)
-	printf("Esercizio (4) \n");
-	Student *pstud2 = makeStudent2("Gino", "Pino");
+	printf("\nEsercizio (4) \n");
+	struct Student *pstud2 = makeStudent2(n, c);
 	print(&pstud2);
-	pstud2 = makeStudent2("Giorgio", "Marchetti");
-	print(&pstud2);
+	printf("MAIN - Mi chiamo %s \n", pstud2->nome);
+	free(pstud2); // Free
+	printf("MAIN - Mi chiamo %s \n", pstud2->nome);
 }

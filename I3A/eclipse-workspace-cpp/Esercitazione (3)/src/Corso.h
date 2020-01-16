@@ -1,3 +1,5 @@
+// Abstract Data Type (Record opaco)
+
 #include "Studente.h"
 
 #ifndef CORSO_H_

@@ -23,7 +23,6 @@ int main(void) {
 
 	delete(&c1);
 	printf("%p", c1);
-	// printf("%s",toString(c1));
 
 	return EXIT_SUCCESS;
 }

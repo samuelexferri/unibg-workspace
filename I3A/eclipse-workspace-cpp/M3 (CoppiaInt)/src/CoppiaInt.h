@@ -1,6 +1,4 @@
-/*
- * CoppiaInt.h
- */
+// Abstract Data Type (Record opaco)
 
 #ifndef COPPIAINT_H_
 #define COPPIAINT_H_
@@ -13,7 +11,6 @@ coppiaIntRef sumCoppia(coppiaIntRef, coppiaIntRef);
 
 char* toString(coppiaIntRef);
 
-// Puntatore a puntatore opaco
-void delete(coppiaIntRef*);
+void delete(coppiaIntRef*); // Puntatore a un puntatore opaco
 
 #endif /* COPPIAINT_H_ */

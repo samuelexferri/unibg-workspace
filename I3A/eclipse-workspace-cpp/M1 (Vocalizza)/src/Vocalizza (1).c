@@ -19,7 +19,7 @@ char* vocalizza_i(char *s) {
 	return result;
 }
 
-// Versione ricorsiva, no tail recursion
+// Versione ricorsiva senza tail recursion
 char* vocalizza_r(char *s) {
 	if (*s == '\0') {
 		// Restituisce una string vuota
@@ -35,7 +35,7 @@ char* vocalizza_r(char *s) {
 			sprintf(stringafinale, "%c", s[0]);
 			// Concatena il risultato
 			strcat(stringafinale, res);
-			// Free di res che non serve piÃ¹
+			// Free di res che non serve più
 			free(res);
 			return stringafinale;
 		} else {
@@ -45,7 +45,7 @@ char* vocalizza_r(char *s) {
 }
 
 int main(void) {
-	char nome[] = "giova";
+	char nome[] = "angelo";
 
 	char *res = vocalizza_i(nome);
 	printf("%s\n", res);

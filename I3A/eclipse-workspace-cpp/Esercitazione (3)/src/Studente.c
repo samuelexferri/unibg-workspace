@@ -37,7 +37,7 @@ void printStudente(studenteRef s) {
 }
 
 char* studentData(studenteRef s) {
-	char *buffer = malloc(sizeof(char) * 100); // NB: se avessi usato buffer[] significava che lo stavo allocando sullo stack!
+	char *buffer = malloc(sizeof(char) * 100); // NB: Se avessi usato buffer[] significava che lo stavo allocando sullo stack!
 	sprintf(buffer, "%s %s %d", s->nome, s->cognome, s->matricola);
 	return buffer;
 }

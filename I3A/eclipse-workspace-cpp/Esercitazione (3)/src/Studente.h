@@ -1,3 +1,5 @@
+// Abstract Data Type (Record opaco)
+
 #ifndef STUDENTE_H_
 #define STUDENTE_H_
 
@@ -10,7 +12,7 @@ void printStudente(studenteRef s);
 
 char* studentData(studenteRef s);
 
-void deleteStudente(studenteRef *s); // Puntatore a puntatore usato per mettere null poi
+void deleteStudente(studenteRef *s); // Puntatore a un puntatore opaco
 
 void addVoto(studenteRef s, int x);
 

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 // Esercizio (1)
 int hash_I(char *s) {
@@ -49,13 +50,28 @@ int sommaPari_I(int a[], int n) {
 int sommaPari_R(int a[], int n) {
 	if (n == 0)
 		return 0;
+	else
+		return ((*a % 2 == 0) ? (*a) : 0) + sommaPari_R(++a, n - 1);
+}
 
-	int res = sommaPari_R(a + 1, n - 1);
-	return res + (*a % 2 == 0) ? 1 : 0;
+int sommaPari_TailRecursion(int a[], int n, int somma) {
+	if (n == 0)
+		return somma;
+
+	if (*a % 2 == 0)
+		return sommaPari_TailRecursion(a + 1, n - 1, somma + *a);
+	else
+		return sommaPari_TailRecursion(a + 1, n - 1, somma);
+}
+
+int sommaPari_TailRecursion_CALL(int a[], int n) {
+	return sommaPari_TailRecursion(a, n, 0);
 }
 
 // Esercizio (3)
-int palindroma(char dritta[], int n) {
+// SEE: M1 (PalindromaInt)
+
+bool palindroma_I(char dritta[], int n) {
 	char inversa[n];
 
 	for (int i = 0; i < n; i++) {
@@ -67,12 +83,13 @@ int palindroma(char dritta[], int n) {
 	printf("%s - %s \n", dritta, inversa);
 
 	if (strcmp(dritta, inversa))
-		return 0;
+		return false;
 	else
-		return 1;
+		return true;
 }
 
 // Esercizio (4)
+// TODO
 int divisibile_8(int n) {
 	char nstr[12];
 
@@ -97,6 +114,20 @@ int divisibile_8(int n) {
 	}
 }
 
+// Passaggio di parametri
+void passPPInt(int **p) {
+	**p = (**p) + 1;
+}
+
+void passPPString(char **p) {
+	// TODO
+}
+
+void somma(int x, int y, int *z) {
+	// In C non si può usare il passaggio per reference
+	*z = x + y;
+}
+
 int main(void) {
 	// Esercizio (1)
 	printf("Esercizio (1) \n");
@@ -106,24 +137,48 @@ int main(void) {
 	printf("Hash: %d \n", hash_TailRecursion_CALL(a));
 
 	// Esercizio (2)
-	printf("Esercizio (2) \n");
-	int p[] = { 10, 5, 7 };
+	printf("\nEsercizio (2) \n");
+	int p[] = { 10, 5, 7, 4, 4 };
+	printf("Size: %d \n", sizeof(p) / sizeof(int));
 	printf("%d \n", sommaPari_I(p, sizeof(p) / sizeof(int)));
 	printf("%d \n", sommaPari_R(p, sizeof(p) / sizeof(int)));
+	printf("%d \n", sommaPari_TailRecursion_CALL(p, sizeof(p) / sizeof(int)));
 
 	// Esercizio (3)
-	printf("Esercizio (3) \n");
+	// SEE: M1 (PalindromaInt)
+	printf("\nEsercizio (3) \n");
 	char stringa_1[] = "anna";
 	char stringa_2[] = "nada";
-	printf("%d \n", palindroma(stringa_1, strlen(stringa_1)));
-	printf("%d \n", palindroma(stringa_2, strlen(stringa_2)));
+	printf("%d \n", palindroma_I(stringa_1, strlen(stringa_1)));
+	printf("%d \n", palindroma_I(stringa_2, strlen(stringa_2)));
 
 	// Esercizio (4)
-	printf("Esercizio (4) \n");
+	// TODO
+	printf("\nEsercizio (4) \n");
 	int n_1 = 8008;
 	int n_2 = 777;
 	printf("Variabile n_1: %d \n", divisibile_8(n_1));
 	printf("Variabile n_2: %d \n", divisibile_8(n_2));
+
+	// Esercizio (5)
+	// TODO
+
+	// Passaggio di parametri
+	printf("\nPassaggio di parametri \n");
+	int val = 46;
+	int *p1 = &val;
+	printf("%d \n", *p1);
+	passPPInt(&p1);
+	printf("%d \n", *p1);
+
+	char *s1 = "Viva";
+	printf("%s \n", s1);
+	passPPString(&s1);
+	printf("%s \n", s1);
+
+	int zeta;
+	somma(3, 4, &zeta);
+	printf("%d \n", zeta);
 
 	return EXIT_SUCCESS;
 }

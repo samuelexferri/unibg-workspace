@@ -1,8 +1,1 @@
-11:20:45 **** Rebuild of configuration Debug for project M3 (ListaInt) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (ListaInt).o" "..\\src\\M3 (ListaInt).c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ListaInt.o" "..\\src\\ListaInt.c" 
-gcc -o "M3 (ListaInt).exe" "src\\ListaInt.o" "src\\M3 (ListaInt).o" 
-
-11:20:46 Build Finished. 0 errors, 0 warnings. (took 712ms)
-
+Info: Nothing to build for M3 (ListaInt)

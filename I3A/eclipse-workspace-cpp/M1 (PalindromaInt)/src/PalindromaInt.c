@@ -1,17 +1,3 @@
-/*
- Scrivi una funzione palindromaInt che dato in ingresso
- un array di numeri interi restituisce (usa stdbool.h)
- se è palindromo (cioè se si legge dalla
- prima all'ultima posizione o viceversa, si ha sempre la stessa sequenza di numeri).
- Scrivi tre versioni:
- una ITERATIVA,
- una ricorsiva SENZA TAIL
- una ricorsiva con TAIL recursion.
-
- Scrivi anche un main di esempio in cui chiami la
- funzione con un paio di array a tua scelta.
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -29,7 +15,7 @@ bool palindromaInt_i(int a[], int n) {
 bool palindromaInt_r(int a[], int n) {
 	if (n <= 1)
 		return true;
-	// Palindromo se testa = coda e l'array tolta la testa e la coda è ancora palindromo
+	// Palindromo se testa = coda e l'array tolta la testa e la coda � ancora palindromo
 	return a[0] == a[n - 1] && palindromaInt_r(a + 1, n - 2);
 }
 
@@ -47,7 +33,6 @@ bool palindromaInt_trh(int a[], int n, int i) {
 
 bool palindromaInt_tr(int a[], int n) {
 	return palindromaInt_trh(a, n, 0);
-
 }
 
 int main(void) {

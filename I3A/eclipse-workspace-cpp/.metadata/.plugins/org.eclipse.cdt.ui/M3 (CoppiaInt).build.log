@@ -1,20 +1,7 @@
-11:20:43 **** Rebuild of configuration Debug for project M3 (CoppiaInt) ****
+22:00:44 **** Incremental Build of configuration Debug for project M3 (CoppiaInt) ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (CoppiaInt).o" "..\\src\\M3 (CoppiaInt).c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\CoppiaInt.o" "..\\src\\CoppiaInt.c" 
-..\src\CoppiaInt.c: In function 'toString':
-..\src\CoppiaInt.c:29:2: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  sprintf(buffer, "<%d, %d>", c->data[0], c->data[1]);
-  ^~~~~~~
-..\src\CoppiaInt.c:29:2: warning: incompatible implicit declaration of built-in function 'sprintf'
-..\src\CoppiaInt.c:29:2: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-..\src\CoppiaInt.c:4:1:
-+#include <stdio.h>
- 
-..\src\CoppiaInt.c:29:2:
-  sprintf(buffer, "<%d, %d>", c->data[0], c->data[1]);
-  ^~~~~~~
 gcc -o "M3 (CoppiaInt).exe" "src\\CoppiaInt.o" "src\\M3 (CoppiaInt).o" 
 
-11:20:44 Build Finished. 0 errors, 2 warnings. (took 788ms)
+22:00:44 Build Finished. 0 errors, 0 warnings. (took 524ms)
 

@@ -11,14 +11,13 @@ struct ListInt {
 
 ListIntRef mkList(int N) {
 	ListIntRef li = malloc(sizeof(struct ListInt));
-	li->data = malloc(sizeof(int) * N); // SarÃ  da deallocare anch'essa
+	li->data = malloc(sizeof(int) * N); // Sarà  da deallocare anch'essa
 	li->freePos = 0;
 	return li;
 }
 
 void aggiungi(ListIntRef li, int i) {
 	*(li->data + (li->freePos)) = i;
-	//(li + (li->freePos))->data = i;
 	(li->freePos)++;
 }
 

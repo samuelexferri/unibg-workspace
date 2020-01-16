@@ -3,7 +3,7 @@
 #include "CoppiaInt.h"
 
 struct coppiaInt {
-	// int n1, n2; // Prima soluzione consigliata
+	//int n1, n2; // Prima soluzione consigliata
 	int *data; // Soluzione di un buffer di due int
 };
 
@@ -20,7 +20,6 @@ coppiaIntRef makeCoppiaInt(int a, int b) {
 
 coppiaIntRef sumCoppia(coppiaIntRef c1, coppiaIntRef c2) {
 	return makeCoppiaInt(c1->data[0] + c2->data[0], c1->data[1] + c2->data[1]);
-
 }
 
 char* toString(coppiaIntRef c) {
