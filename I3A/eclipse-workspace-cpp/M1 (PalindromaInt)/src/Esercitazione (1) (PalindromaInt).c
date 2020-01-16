@@ -55,8 +55,7 @@ int main(void) {
 
 	printf("%d ", palindromaInt_i(p1, 5));
 	printf("%d ", palindromaInt_r(p1, 5));
-	printf("%d\n", palindromaInt_tr(p1, 5))
-	;
+	printf("%d\n", palindromaInt_tr(p1, 5));
 
 	int p2[] = { 1, 2, 3, 4, 1 };
 

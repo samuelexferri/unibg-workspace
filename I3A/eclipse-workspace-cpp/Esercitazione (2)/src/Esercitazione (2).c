@@ -19,14 +19,14 @@ typedef struct Student {
 	int matricola;
 } Student;
 
-void print(Student * s) {
+void print(Student *s) {
 	printf("%s %s %d \n", s->nome, (*s).cognome, s->matricola);
 }
 
 // Variabile statica
 static int NUMERO_STUDENTI = 1;
 
-Student * makeStudent1(char* n, char* c) {
+Student* makeStudent1(char *n, char *c) {
 	Student alunno; // Non funziona (Dandling sullo stack)
 	strcpy(alunno.nome, n);
 	strcpy(alunno.cognome, c);
@@ -35,8 +35,8 @@ Student * makeStudent1(char* n, char* c) {
 }
 
 // Esercizio (4)
-Student * makeStudent2(char* n, char* c) {
-	Student * alunno = malloc(sizeof(struct Student));
+Student* makeStudent2(char *n, char *c) {
+	Student *alunno = malloc(sizeof(struct Student));
 	strcpy(alunno->nome, n);
 	strcpy(alunno->cognome, c);
 	alunno->matricola = NUMERO_STUDENTI++;
@@ -62,16 +62,16 @@ void main(void) {
 
 	// Esercizio (3)
 	printf("Esercizio (3) \n");
-	char n[]= "Gino";
+	char n[] = "Gino";
 	char c[] = "Pino";
-	Student * pstud1 = makeStudent2("Gino", "Pino");
+	Student *pstud1 = makeStudent2("Gino", "Pino");
 	print(&pstud1);
 	pstud1 = makeStudent1("Giorgio", "Marchetti");
 	print(&pstud1);
 
 	// Esercizio (4)
 	printf("Esercizio (4) \n");
-	Student * pstud2 = makeStudent2("Gino", "Pino");
+	Student *pstud2 = makeStudent2("Gino", "Pino");
 	print(&pstud2);
 	pstud2 = makeStudent2("Giorgio", "Marchetti");
 	print(&pstud2);

@@ -27,7 +27,7 @@ corsoRef makeCorso(char *n) {
 
 // Inserimento in testa alla lista
 void addStudente(corsoRef c, studenteRef s) {
-	NodoLista * nodo = malloc(sizeof(struct NodoLista)); // Uso l'asterisco
+	NodoLista *nodo = malloc(sizeof(struct NodoLista)); // Uso l'asterisco
 
 	nodo->stud = s;
 	nodo->next = c->listaRef;
@@ -39,7 +39,7 @@ void printCorso(corsoRef c) {
 
 	NodoLista *point = c->listaRef;
 
-	while(point != NULL) {
+	while (point != NULL) {
 		printf("%s, ", point->stud);
 		point = point->next;
 	}

@@ -69,32 +69,32 @@ int main() {
 	ps3->getCorsoStudi();
 
 	/*
-	StudenteLS *psLS1 = new Studente("C1");
-	psLS1->getCorsoStudiVirtual();
-	psLS1->getCorsoStudi();
-	*/
+	 StudenteLS *psLS1 = new Studente("C1");
+	 psLS1->getCorsoStudiVirtual();
+	 psLS1->getCorsoStudi();
+	 */
 
 	StudenteLS *psLS2 = new StudenteLS("C1");
 	psLS2->getCorsoStudiVirtual();
 	psLS2->getCorsoStudi();
 
 	/*
-	StudenteLS *psLS3 = new StudenteIL("C1");
-	psLS3->getCorsoStudiVirtual();
-	psLS3->getCorsoStudi();
-	*/
+	 StudenteLS *psLS3 = new StudenteIL("C1");
+	 psLS3->getCorsoStudiVirtual();
+	 psLS3->getCorsoStudi();
+	 */
 
 	/*
-	StudenteIL *psIL1 = new Studente("C1");
-	psIL1->getCorsoStudiVirtual();
-	psIL1->getCorsoStudi();
-	*/
+	 StudenteIL *psIL1 = new Studente("C1");
+	 psIL1->getCorsoStudiVirtual();
+	 psIL1->getCorsoStudi();
+	 */
 
 	/*
-	StudenteIL *psIL2 = new StudenteLS("C1");
-	psIL2->getCorsoStudiVirtual();
-	psIL2->getCorsoStudi();
-	*/
+	 StudenteIL *psIL2 = new StudenteLS("C1");
+	 psIL2->getCorsoStudiVirtual();
+	 psIL2->getCorsoStudi();
+	 */
 
 	StudenteIL *psIL3 = new StudenteIL("C1");
 	psIL3->getCorsoStudiVirtual();

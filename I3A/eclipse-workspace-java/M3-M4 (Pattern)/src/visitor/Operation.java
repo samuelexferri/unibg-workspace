@@ -2,7 +2,9 @@ package visitor;
 
 interface Visitor {
 	abstract void visit(Rectangle r);
+
 	abstract void visit(Square s);
+
 	abstract void visit(Circle c);
 }
 

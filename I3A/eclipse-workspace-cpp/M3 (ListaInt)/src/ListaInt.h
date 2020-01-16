@@ -9,6 +9,6 @@ void aggiungi(ListIntRef, int i);
 
 char* toString(ListIntRef);
 
-void freeList(ListIntRef *); // Puntatore a puntatore opaco
+void freeList(ListIntRef*); // Puntatore a puntatore opaco
 
 #endif /* LISTAINT_H_ */

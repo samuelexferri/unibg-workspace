@@ -12,7 +12,6 @@ void foo5() {
 	x += 5;
 }
 
-
 int main() {
 	foo5();
 	foo5();

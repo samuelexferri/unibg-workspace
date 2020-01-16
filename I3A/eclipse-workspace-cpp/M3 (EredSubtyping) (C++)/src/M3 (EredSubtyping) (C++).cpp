@@ -3,9 +3,12 @@ using namespace std;
 
 class Lista {
 public:
-	void insert_tail(void) {}
-	void insert_head(void) {}
-	void remove_tail(void) {}
+	void insert_tail(void) {
+	}
+	void insert_head(void) {
+	}
+	void remove_tail(void) {
+	}
 };
 
 class Pila: private Lista {
@@ -14,7 +17,8 @@ public:
 	void remove_tail(void);
 };
 
-class Coda {};
+class Coda {
+};
 
 int main() {
 	Lista l;

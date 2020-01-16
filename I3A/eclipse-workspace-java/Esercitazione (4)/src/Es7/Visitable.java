@@ -1,5 +1,5 @@
 package Es7;
 
-public interface Visitable{
+public interface Visitable {
 	<T> T accept(Visitor<T> v);
 }

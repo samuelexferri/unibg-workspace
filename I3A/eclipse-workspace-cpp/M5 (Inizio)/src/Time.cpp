@@ -12,11 +12,11 @@ Time::Time() {
 }
 
 /*
-Time::Time(int h){ // Costruttore ora
-hour = h;
-minute = second = 0;
-}
-*/
+ Time::Time(int h){ // Costruttore ora
+ hour = h;
+ minute = second = 0;
+ }
+ */
 
 // Costruttore con initializer list
 Time::Time(int h, int m, int s) :

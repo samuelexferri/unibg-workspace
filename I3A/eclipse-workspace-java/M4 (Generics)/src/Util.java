@@ -9,12 +9,12 @@ public class Util {
 	// Dato un vettore di elementi restitusce il massimo con metodo generico
 	static <E extends Comparable<E>> E getMax(List<E> elements) {
 		E max = null;
-		
+
 		for (E i : elements) {
 			if (max == null || i.compareTo(max) > 0)
 				max = i;
 		}
-		
+
 		return max;
 	}
 }

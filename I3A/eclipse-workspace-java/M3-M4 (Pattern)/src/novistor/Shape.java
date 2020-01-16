@@ -1,9 +1,13 @@
 package novistor;
 
-abstract class Shape {}
+abstract class Shape {
+}
 
-class Rectangle extends Shape{}
+class Rectangle extends Shape {
+}
 
-class Square extends Rectangle{}
+class Square extends Rectangle {
+}
 
-class Circle extends Shape{}
+class Circle extends Shape {
+}
