@@ -14,11 +14,16 @@ int f(int *pi, int &ri) {
 	}
 }
 
-int main() {
+int mainXXX() {
 	int a[] = { 1, 2, 3, 4, 5, 6 };
 	int b = 2;
 	int *pa = a + 1;
 	int &rb = b;
+	cout << (&rb) << endl;
+	cout << (&b) << endl;
+
+	//int *rbb = &b;
+	//cout << (&rbb) << endl;
 
 	cout << f(pa, rb) << endl;
 	cout << *pa << endl;

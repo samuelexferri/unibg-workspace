@@ -114,13 +114,16 @@ int divisibile_8(int n) {
 	}
 }
 
+// Esercizio (5)
+// TODO
+
 // Passaggio di parametri
 void passPPInt(int **p) {
 	**p = (**p) + 1;
 }
 
 void passPPString(char **p) {
-	// TODO
+	**(p) = 'A';
 }
 
 void somma(int x, int y, int *z) {
@@ -171,10 +174,11 @@ int main(void) {
 	passPPInt(&p1);
 	printf("%d \n", *p1);
 
-	char *s1 = "Viva";
-	printf("%s \n", s1);
-	passPPString(&s1);
-	printf("%s \n", s1);
+	char s1[] = "Viva";
+	char *c = s1; // Puntatore a un array (non funzionava la funzione altrimenti) (String literals)
+	printf("%s \n", c);
+	passPPString(&c);
+	printf("%s \n", c);
 
 	int zeta;
 	somma(3, 4, &zeta);

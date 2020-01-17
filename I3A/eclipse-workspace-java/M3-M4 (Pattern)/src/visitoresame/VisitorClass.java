@@ -9,7 +9,7 @@ interface Visitor {
 }
 
 class Operation implements Visitor {
-	// Sigleton
+	// Singleton
 	public static Operation instance = new Operation();
 
 	// Use Integer, not int because Object
@@ -30,7 +30,6 @@ class Operation implements Visitor {
 }
 
 class ToString implements Visitor {
-
 	@Override
 	public String visit(Numero num) {
 		return String.valueOf(num.n);

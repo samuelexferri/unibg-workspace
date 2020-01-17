@@ -4,6 +4,7 @@ import java.util.List;
 class Veicolo implements Comparable<Veicolo> {
 	@Override
 	public int compareTo(Veicolo o) {
+		// ...
 		return 0;
 	}
 }

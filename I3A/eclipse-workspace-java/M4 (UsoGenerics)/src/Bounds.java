@@ -11,7 +11,7 @@ class Student extends Person {
 
 public class Bounds {
 	public static void main(String[] args) {
-		// List<Object> lo1 = new ArrayList<String>(); // Errore
+		// List<Object> lo1 = new ArrayList<String>(); // Errore (Accetta solo Object)
 		List<Object> lo2 = new ArrayList<Object>();
 
 		List<?> lo3 = new ArrayList<String>(); // Lista veramente generica

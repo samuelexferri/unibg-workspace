@@ -6,7 +6,7 @@ public class UseVisitor {
 		Translate t = new Translate();
 		r.accept(t);
 
-		Rectangle s = new Square();
+		Rectangle s = new Square(); // Translating square
 		s.accept(t);
 	}
 }

@@ -1,1 +1,12 @@
-Info: Nothing to build for Esercitazione (3)
+11:04:43 **** Incremental Build of configuration Debug for project Esercitazione (3) ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BitVector.o" "..\\src\\BitVector.c" 
+..\src\BitVector.c: In function 'makeBitVector':
+..\src\BitVector.c:15:9: warning: returning 'struct bitvector **' from a function with incompatible return type 'bvref' {aka 'struct bitvector *'} [-Wincompatible-pointer-types]
+  return &bv;
+         ^~~
+..\src\BitVector.c:15:9: warning: function returns address of local variable [-Wreturn-local-addr]
+gcc -o "Esercitazione (3).exe" "src\\BitVector.o" "src\\Corso.o" "src\\Main (Studente).o" "src\\Studente.o" 
+
+11:04:44 Build Finished. 0 errors, 2 warnings. (took 582ms)
+

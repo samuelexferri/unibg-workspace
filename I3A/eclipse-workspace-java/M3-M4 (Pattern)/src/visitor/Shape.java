@@ -1,7 +1,7 @@
 package visitor;
 
 interface Visitable {
-	void accept(Visitor v);
+	void accept(Visitor v); // Usiamo void in questo caso perchè stamperemo solamente
 }
 
 abstract class Shape implements Visitable {

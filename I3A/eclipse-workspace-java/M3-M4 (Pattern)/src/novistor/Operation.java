@@ -12,17 +12,17 @@ class Translate extends Operation {
 
 	@Override
 	void process(Rectangle r) {
-		System.out.println("translating rectangle");
+		System.out.println("Translating rectangle");
 	}
 
 	@Override
 	void process(Circle c) {
-		System.out.println("translating circle");
+		System.out.println("Translating circle");
 	}
 
 	@Override
 	void process(Square c) {
-		System.out.println("translating square");
+		System.out.println("Translating square");
 	}
 
 }

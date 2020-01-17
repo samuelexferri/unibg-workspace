@@ -6,7 +6,7 @@ public class NoVisitor {
 		Translate t = new Translate();
 		t.process(r);
 
-		Rectangle s = new Square();
+		Rectangle s = new Square(); // Translating rectangle
 		t.process(s);
 	}
 }

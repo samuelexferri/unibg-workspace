@@ -32,7 +32,7 @@ struct Student* makeStudent1(char *n, char *c) {
 	strcpy(alunno.cognome, c);
 	alunno.matricola = NUMERO_STUDENTI++;
 	printf("MK1 - Mi chiamo %s \n", alunno.nome);
-	return &alunno;
+	return &alunno; // Se è sullo stack gli ritorno l'indiritto
 }
 
 // Esercizio (4)
@@ -42,7 +42,7 @@ struct Student* makeStudent2(char *n, char *c) {
 	strcpy(alunno->cognome, c);
 	alunno->matricola = NUMERO_STUDENTI++;
 	printf("MK2 - Mi chiamo %s \n", alunno->nome);
-	return alunno;
+	return alunno; // Se è sull'heap è già un puntatore
 }
 
 void main(void) {
