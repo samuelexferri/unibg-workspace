@@ -1,4 +1,4 @@
-// Usiamo STL ed ereditariet√†
+// Usiamo STL ed ereditariet‡
 
 #include <iostream>
 #include <vector>

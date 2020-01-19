@@ -8,4 +8,5 @@ void m(int x, int y = 0) {
 int main2() {
 	m(4);
 	m(7, 8);
+	return 0;
 }

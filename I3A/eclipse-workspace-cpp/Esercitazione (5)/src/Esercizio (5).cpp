@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main() {
+int main5() {
 	map<string, int> nomevoti;
 	nomevoti.insert(map<string, int>::value_type("Name1", 20));
 	nomevoti.insert(map<string, int>::value_type("Name2", 25));

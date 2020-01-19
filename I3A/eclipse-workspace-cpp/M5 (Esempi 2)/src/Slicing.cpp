@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-class W {
 
+class W {
 public:
 	virtual void m() {
 		cout << "Metodo m di W" << endl;

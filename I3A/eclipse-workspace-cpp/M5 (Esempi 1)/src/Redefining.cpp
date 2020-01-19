@@ -27,7 +27,7 @@ public:
 	}
 };
 
-int main() {
+int main2() {
 	Base b;
 	Derivata d;
 	b.m(4);
@@ -37,4 +37,5 @@ int main() {
 	p->mv(10);
 	Base bnp = d;
 	bnp.mv(12);
+	return 0;
 }

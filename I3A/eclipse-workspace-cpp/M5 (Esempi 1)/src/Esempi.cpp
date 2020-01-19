@@ -34,7 +34,7 @@ public:
 	Base::m;
 };
 
-int mainnn() {
+int main() {
 	Base *pdpu = new DerivataPub;
 	pdpu->m();
 

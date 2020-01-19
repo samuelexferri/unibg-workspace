@@ -1,7 +1,1 @@
-22:00:44 **** Incremental Build of configuration Debug for project M3 (CoppiaInt) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\M3 (CoppiaInt).o" "..\\src\\M3 (CoppiaInt).c" 
-gcc -o "M3 (CoppiaInt).exe" "src\\CoppiaInt.o" "src\\M3 (CoppiaInt).o" 
-
-22:00:44 Build Finished. 0 errors, 0 warnings. (took 524ms)
-
+Info: Nothing to build for M3 (CoppiaInt)

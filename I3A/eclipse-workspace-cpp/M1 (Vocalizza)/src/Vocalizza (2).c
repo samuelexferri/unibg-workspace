@@ -78,7 +78,7 @@ char* vocalizza_tr(char *str, char *buff, int j) {
 	}
 }
 
-int main(void) {
+int main2(void) {
 	char str[] = "angelo";
 	printf("%s\n", str);
 

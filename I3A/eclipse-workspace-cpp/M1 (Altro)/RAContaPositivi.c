@@ -42,7 +42,7 @@ int contaPositiviTailInit(int arr[], int end) {
 	return contaPositiviTail(arr, end, 0);
 }
 
-int main(int argc, char *argv[]) {
+int mainXXX(int argc, char *argv[]) {
 	int arr[10] = { 1, 2, -3 };
 	printf("%d\n", contaPositivi(arr, 3));
 	printf("%d\n", contaPositiviRic(arr, 2));

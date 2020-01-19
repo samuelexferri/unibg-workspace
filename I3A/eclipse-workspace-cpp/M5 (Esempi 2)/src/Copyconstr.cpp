@@ -8,8 +8,7 @@ public:
 	char *s = new char[60];
 };
 
-// Rinomino in "main" solo quello da usare chiamando gli altri in modo diverso
-int main1() {
+int main() {
 	Q q1;
 	q1.x = 90;
 	strcpy(q1.s, "ciao");
@@ -18,4 +17,5 @@ int main1() {
 	q2.x = 100;
 	strcpy(q2.s, "hello");
 	cout << q1.x << " " << q1.s << " " << q2.x << " " << q2.s << endl;
+	return 0;
 }

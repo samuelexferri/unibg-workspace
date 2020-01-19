@@ -11,6 +11,7 @@ public:
 	}
 };
 class StudenteLS: private Studente {
+public:
 	virtual void getCorso() {
 		cout << "StudenteLS.getCorso" << endl;
 	}
@@ -21,6 +22,7 @@ class StudenteLS: private Studente {
 };
 
 class StudenteIL: private Studente {
+public:
 	virtual void getCorso() {
 		cout << "StudenteIL.getCorso" << endl;
 	}
@@ -30,7 +32,7 @@ class StudenteIL: private Studente {
 
 };
 
-int main() {
+int main2() {
 	Studente *s = new Studente;
 //	Studente* s1 = new StudenteLS;
 //	Studente* s2 = new StudenteIL;

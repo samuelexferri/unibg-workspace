@@ -19,11 +19,11 @@ void foo() {
 	std::cout << " fine foo" << std::endl;
 }
 
-int mainmmm() {
+int main2() {
 	foo();
 	int i = 9;
 	int *pi = &i;
-	// Sbagliato: non fate delete di puntatore sullo stack
+	// Sbagliato: non fare il delete di puntatore sullo stack
 	delete pi;
 	pi = NULL; // Da dangling a NULL
 	*pi = 90;

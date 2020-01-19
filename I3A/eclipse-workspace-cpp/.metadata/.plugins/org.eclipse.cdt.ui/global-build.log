@@ -1,45 +1,14 @@
-17:22:48 **** Incremental Build of configuration Debug for project Esercitazione (1) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (1).o" "..\\src\\Esercitazione (1).c" 
-..\src\Esercitazione (1).c: In function 'sommaPari_R':
-..\src\Esercitazione (1).c:54:51: warning: operation on 'a' may be undefined [-Wsequence-point]
-   return ((*a % 2 == 0) ? (*a) : 0) + sommaPari_R(++a, n - 1);
-                                                   ^~~
-gcc -o "Esercitazione (1).exe" "src\\Esercitazione (1).o" 
 Info: Nothing to build for Esercitazione (1)
-17:31:41 **** Incremental Build of configuration Debug for project Esercitazione (2) ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Esercitazione (2).o" "..\\src\\Esercitazione (2).c" 
-..\src\Esercitazione (2).c:20:1: warning: useless storage class specifier in empty declaration
- };
- ^
-..\src\Esercitazione (2).c: In function 'makeStudent1':
-..\src\Esercitazione (2).c:35:9: warning: function returns address of local variable [-Wreturn-local-addr]
-  return &alunno; // Se è sullo stack gli ritorno l'indiritto
-         ^~~~~~~
-..\src\Esercitazione (2).c: At top level:
-..\src\Esercitazione (2).c:48:6: warning: return type of 'main' is not 'int' [-Wmain]
- void main(void) {
-      ^~~~
-..\src\Esercitazione (2).c: In function 'main':
-..\src\Esercitazione (2).c:56:15: warning: format '%x' expects argument of type 'unsigned int', but argument 2 has type 'int *' [-Wformat=]
-  printf("X = %x, Y = %x \n", &x, &y); // Indirizzi (%x)
-              ~^              ~~
-              %n
-..\src\Esercitazione (2).c:56:23: warning: format '%x' expects argument of type 'unsigned int', but argument 3 has type 'int *' [-Wformat=]
-  printf("X = %x, Y = %x \n", &x, &y); // Indirizzi (%x)
-                      ~^          ~~
-                      %n
-..\src\Esercitazione (2).c:70:8: warning: passing argument 1 of 'print' from incompatible pointer type [-Wincompatible-pointer-types]
-  print(&pstud1);
-        ^~~~~~~
-..\src\Esercitazione (2).c:22:28: note: expected 'struct Student *' but argument is of type 'struct Student **'
- void print(struct Student *s) {
-            ~~~~~~~~~~~~~~~~^
-..\src\Esercitazione (2).c:76:8: warning: passing argument 1 of 'print' from incompatible pointer type [-Wincompatible-pointer-types]
-  print(&pstud2);
-        ^~~~~~~
-..\src\Esercitazione (2).c:22:28: note: expected 'struct Student *' but argument is of type 'struct Student **'
- void print(struct Student *s) {
-            ~~~~~~~~~~~~~~~~^
-gcc -o "Esercitazione (2).exe" "src\\Esercitazione (2).o" 
+Info: Nothing to build for Esercitazione (2)
+Info: Nothing to build for Esercitazione (3)
+Info: Nothing to build for Esercitazione (5)
+Info: Nothing to build for M1 (Altro)
+Info: Nothing to build for M1 (PalindromaInt)
+Info: Nothing to build for M1 (Vocalizza)
+Info: Nothing to build for M3 (CoppiaInt)
+Info: Nothing to build for M3 (EredSubtyping) (C++)
+Info: Nothing to build for M3 (ListaInt)
+Info: Nothing to build for M5 (Esempi 1)
+Info: Nothing to build for M5 (Esempi 2)
+Info: Nothing to build for M5 (Inizio)
+Info: Nothing to build for M5 (Template)

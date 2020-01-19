@@ -5,7 +5,7 @@ int& g(int &a) {
 	return a;
 }
 
-int hhhh() {
+int main6() {
 	int a = 8;
 	int *pa = &a;
 	int &ra = a;

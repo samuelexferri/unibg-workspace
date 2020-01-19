@@ -35,7 +35,7 @@ public:
 
 };
 
-int main() {
+int main6() {
 
 //Invoca i metodi della classe del tipo di oggetto creato
 

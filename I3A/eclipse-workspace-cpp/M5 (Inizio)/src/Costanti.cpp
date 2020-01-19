@@ -1,6 +1,5 @@
 /*
- * costanti.cpp
- *
+ * Costanti.cpp
  */
 
 int min_age = 18; // Variabile globale

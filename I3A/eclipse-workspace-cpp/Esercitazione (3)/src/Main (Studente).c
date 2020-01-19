@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+int main2(void) {
 	// Studente 1
 	char nome[30] = "Gino";
 	char cognome[30] = "Pino";
