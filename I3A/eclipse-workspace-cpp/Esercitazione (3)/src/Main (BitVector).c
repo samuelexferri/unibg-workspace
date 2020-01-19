@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void) {
+int main1(void) {
 	// TODO
 	return EXIT_SUCCESS;
 }

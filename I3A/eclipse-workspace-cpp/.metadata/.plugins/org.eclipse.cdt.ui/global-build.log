@@ -1,14 +1,5 @@
-Info: Nothing to build for Esercitazione (1)
-Info: Nothing to build for Esercitazione (2)
-Info: Nothing to build for Esercitazione (3)
-Info: Nothing to build for Esercitazione (5)
-Info: Nothing to build for M1 (Altro)
-Info: Nothing to build for M1 (PalindromaInt)
-Info: Nothing to build for M1 (Vocalizza)
-Info: Nothing to build for M3 (CoppiaInt)
-Info: Nothing to build for M3 (EredSubtyping) (C++)
-Info: Nothing to build for M3 (ListaInt)
-Info: Nothing to build for M5 (Esempi 1)
-Info: Nothing to build for M5 (Esempi 2)
-Info: Nothing to build for M5 (Inizio)
-Info: Nothing to build for M5 (Template)
+20:59:45 **** Incremental Build of configuration Debug for project M1 (Cane) ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cane.o" "..\\src\\Cane.c" 
+gcc -o "M1 (Cane).exe" "src\\Cane.o" 
+Info: Nothing to build for M1 (Cane)

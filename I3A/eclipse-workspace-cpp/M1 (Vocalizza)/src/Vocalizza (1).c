@@ -44,7 +44,7 @@ char* vocalizza_r(char *s) {
 	}
 }
 
-int main(void) {
+int main1(void) {
 	char nome[] = "angelo";
 
 	char *res = vocalizza_i(nome);
