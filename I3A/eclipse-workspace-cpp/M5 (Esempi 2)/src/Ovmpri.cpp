@@ -32,7 +32,7 @@ int main4() {
 	A *pab = new B;
 	pab->foo();
 	delete pab;
-	// Not subtyping
+	// No sottotipazione
 	// Errore: A* pc = new C;
 	// s
 	B b;

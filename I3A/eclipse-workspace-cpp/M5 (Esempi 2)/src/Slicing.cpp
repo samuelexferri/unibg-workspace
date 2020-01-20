@@ -22,7 +22,7 @@ public:
 
 int main5() {
 	W *pw = new Z;
-	pw->m(); // Binding dinamico
+	pw->m(); // Binding dinamico solo con i puntatori
 	Z z;
 	W w = z;
 	w.m(); // No binding dinamico

@@ -16,6 +16,7 @@ struct Studente {
 studenteRef makeStudent(char *n, char *c) {
 	studenteRef sref = malloc(sizeof(struct Studente)); // L'intera struct nell'heap
 
+	// Usare strcpy
 	strcpy(sref->nome, n);
 	strcpy(sref->cognome, c);
 	// NO: sref->nome = n;

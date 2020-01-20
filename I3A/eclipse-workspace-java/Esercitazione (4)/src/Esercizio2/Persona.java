@@ -21,7 +21,7 @@ public class Persona {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (obj instanceof Persona)
+		if (obj instanceof Persona) // Istanza instanceof
 			return equals((Persona) obj);
 
 		return super.equals(obj);

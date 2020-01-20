@@ -1,5 +1,62 @@
-20:59:45 **** Incremental Build of configuration Debug for project M1 (Cane) ****
+09:36:09 **** Rebuild of configuration Debug for project Esercitazione (3) ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Cane.o" "..\\src\\Cane.c" 
-gcc -o "M1 (Cane).exe" "src\\Cane.o" 
-Info: Nothing to build for M1 (Cane)
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Studente.o" "..\\src\\Studente.c" 
+..\src\Studente.c: In function 'makeStudent':
+..\src\Studente.c:20:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(sref->nome, n);
+  ^~~~~~
+..\src\Studente.c:20:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\Studente.c:20:2: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\Studente.c:5:1:
++#include <string.h>
+ 
+..\src\Studente.c:20:2:
+  strcpy(sref->nome, n);
+  ^~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BitVector.o" "..\\src\\BitVector.c" 
+..\src\BitVector.c: In function 'add':
+..\src\BitVector.c:24:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+..\src\BitVector.c: In function 'or':
+..\src\BitVector.c:27:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+..\src\BitVector.c: In function 'not':
+..\src\BitVector.c:30:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Main (BitVector).o" "..\\src\\Main (BitVector).c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Corso.o" "..\\src\\Corso.c" 
+..\src\Corso.c: In function 'makeCorso':
+..\src\Corso.c:21:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(cref->nomecorso, n);
+  ^~~~~~
+..\src\Corso.c:21:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\Corso.c:21:2: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\Corso.c:6:1:
++#include <string.h>
+ 
+..\src\Corso.c:21:2:
+  strcpy(cref->nomecorso, n);
+  ^~~~~~
+..\src\Corso.c: In function 'printCorso':
+..\src\Corso.c:43:12: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'studenteRef' {aka 'struct Studente *'} [-Wformat=]
+   printf("%s, ", point->stud);
+           ~^     ~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Main (Studente).o" "..\\src\\Main (Studente).c" 
+..\src\Main (Studente).c: In function 'main2':
+..\src\Main (Studente).c:17:2: warning: implicit declaration of function 'strcpy' [-Wimplicit-function-declaration]
+  strcpy(stampa, studentData(s1));
+  ^~~~~~
+..\src\Main (Studente).c:17:2: warning: incompatible implicit declaration of built-in function 'strcpy'
+..\src\Main (Studente).c:17:2: note: include '<string.h>' or provide a declaration of 'strcpy'
+..\src\Main (Studente).c:6:1:
++#include <string.h>
+ 
+..\src\Main (Studente).c:17:2:
+  strcpy(stampa, studentData(s1));
+  ^~~~~~
+gcc -o "Esercitazione (3).exe" "src\\BitVector.o" "src\\Corso.o" "src\\Main (BitVector).o" "src\\Main (Studente).o" "src\\Studente.o" 
+c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../../mingw32/bin/ld.exe: c:/mingw/bin/../lib/gcc/mingw32/8.2.0/../../../libmingw32.a(main.o):(.text.startup+0xb0): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status

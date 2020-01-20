@@ -17,7 +17,7 @@ abstract class Componente implements Visitable {
 	}
 }
 
-class ComponenteAtomico extends Componente { // Singleton?
+class ComponenteAtomico extends Componente {
 	String nome;
 	int prezzo;
 

@@ -2,7 +2,7 @@ package Esercizio7;
 
 import java.util.ArrayList;
 
-class Main {
+class MainVisitorGenerico {
 	public static void main(String[] args) {
 		// Creo dei componenti
 		ComponenteAtomico ca1 = new ComponenteAtomico("CA1", 5);

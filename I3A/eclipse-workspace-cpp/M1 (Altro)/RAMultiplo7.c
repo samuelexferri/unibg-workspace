@@ -48,7 +48,7 @@ bool multiplo7tail(int numero) {
 		return multiplo7tail(numero);
 }
 
-int main(void) {
+int main3(void) {
 	printf("%d\n", multiplo7for(68089));
 	printf("%d\n", multiplo7rec(14));
 	printf("%d", multiplo7tail(6853));

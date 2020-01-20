@@ -14,7 +14,7 @@ int f(int *pi, int &ri) {
 	}
 }
 
-int mainXXX() {
+int main1() {
 	int a[] = { 1, 2, 3, 4, 5, 6 };
 	int b = 2;
 	int *pa = a + 1;
