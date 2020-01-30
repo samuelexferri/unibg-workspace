@@ -2,6 +2,9 @@
  * VelocistaPassista.h
  */
 
+#ifndef VELOCISTAPASSISTA_H_
+#define VELOCISTAPASSISTA_H_
+
 using namespace std;
 
 #include <vector>
@@ -9,9 +12,6 @@ using namespace std;
 #include "Passista.h"
 #include "Velocista.h"
 #include "Time.h"
-
-#ifndef VELOCISTAPASSISTA_H_
-#define VELOCISTAPASSISTA_H_
 
 extern const char* VPCONST;
 

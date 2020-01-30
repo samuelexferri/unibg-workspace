@@ -2,14 +2,14 @@
  * Team.h
  */
 
+#ifndef TEAM_H_
+#define TEAM_H_
+
 #include <iostream>
 #include <string>
 #include <list>
 
 #include "Ciclista.h"
-
-#ifndef TEAM_H_
-#define TEAM_H_
 
 class Team {
 protected:

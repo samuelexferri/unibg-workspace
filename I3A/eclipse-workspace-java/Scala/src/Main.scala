@@ -16,10 +16,10 @@ object Main {
 
     println("\nPROFESSIONISTA SPONSORIZZATO:")
     c2.sponsorizzato
-
+    
+    println("\nPROFESSIONISTI DI GARA 1:")
     var gara1 = new Sprint("Salerno Sprint", list1, 1000)
 
-    println("\nPROFESSIONISTI DI GARA 1:")
     gara1.partecipantiProfessionisti()
 
     var c4 = new Amatore("Luis", "Luisso", 28, "Portogallo")
@@ -29,10 +29,10 @@ object Main {
 
     var gara2 = new Resistenza("Genova Resiste", list2, 1001)
 
+    println("\nGARE ORGANIZZATE:")
     var listgare: List[Gara] = List(gara1, gara2)
     var organizzatore = new Organizzatore(listgare)
 
-    println("\nGARE ORGANIZZATE:")
     organizzatore.print
 
     var c7 = new Amatore("Federico", "Federichini", 17, "Italia")
@@ -44,7 +44,7 @@ object Main {
 
     var gara3 = new Mista("Milano Mix", list3, 1002)
 
-    println("\nAggiungo una gara")
+    println("\n-Aggiungo una gara-")
     organizzatore.insert(gara3)
 
     println("\nGARE ORGANIZZATE:")

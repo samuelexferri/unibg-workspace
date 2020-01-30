@@ -8,6 +8,7 @@
 #include "Passista.h"
 #include "Velocista.h"
 #include "VelocistaPassista.h"
+#include "Lega.h"
 #include "Team.h"
 #include "Time.h"
 
@@ -85,7 +86,16 @@ int main() {
 
 	vp1->printGare();
 
+	// Lega
+	cout << "\nLEGA" << endl;
+	Lega *lega = Lega::getInstance();
+	lega->setNome("Lega Ciclistica");
+	lega->nuovoTeamIscritto(t1);
+	lega->nuovoTeamIscritto(t2);
+	lega->stampa();
+
 	cout << "\nDELETE" << endl;
 	delete v1;
 	delete t1;
+	delete lega;
 }

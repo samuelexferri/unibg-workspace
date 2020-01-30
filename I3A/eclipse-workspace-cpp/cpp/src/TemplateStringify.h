@@ -2,12 +2,12 @@
  * TemplateStringify.h
  */
 
+#ifndef TEMPLATESTRINGIFY_H_
+#define TEMPLATESTRINGIFY_H_
+
 #include <iostream>
 #include <string>
 #include <sstream> // Metodo str
-
-#ifndef TEMPLATESTRINGIFY_H_
-#define TEMPLATESTRINGIFY_H_
 
 // Template per la conversione di interi in stringhe ad esempio
 template<typename T>

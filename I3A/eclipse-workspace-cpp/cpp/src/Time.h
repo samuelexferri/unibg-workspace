@@ -2,14 +2,15 @@
  * Time.h
  */
 
+#ifndef TIME_H_
+#define TIME_H_
+
 using namespace std;
 
 #include <iostream>
 
 #include "TemplateStringify.h" // Template per la conversione di interi in stringhe
 
-#ifndef TIME_H_
-#define TIME_H_
 
 class Time {
 private:

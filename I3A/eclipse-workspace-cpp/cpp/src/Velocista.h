@@ -1,15 +1,16 @@
 /*
  * Velocista.h
  */
+
+#ifndef VELOCISTA_H_
+#define VELOCISTA_H_
+
 using namespace std;
 
 #include <vector>
 
 #include "Ciclista.h"
 #include "Time.h"
-
-#ifndef VELOCISTA_H_
-#define VELOCISTA_H_
 
 extern const char* VCONST;
 

@@ -2,13 +2,13 @@
  * Ciclista.h
  */
 
+#ifndef CICLISTA_H_
+#define CICLISTA_H_
+
 using namespace std;
 
 #include <string>
 #include "TemplateStringify.h" // Template per la conversione di interi in stringhe
-
-#ifndef CICLISTA_H_
-#define CICLISTA_H_
 
 // Tipo numerativo
 enum tipociclismo {

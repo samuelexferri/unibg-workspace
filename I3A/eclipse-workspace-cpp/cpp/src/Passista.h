@@ -2,12 +2,12 @@
  * Passista.h
  */
 
+#ifndef PASSISTA_H_
+#define PASSISTA_H_
+
 using namespace std;
 
 #include "Ciclista.h"
-
-#ifndef PASSISTA_H_
-#define PASSISTA_H_
 
 extern const char* PCONST;
 
