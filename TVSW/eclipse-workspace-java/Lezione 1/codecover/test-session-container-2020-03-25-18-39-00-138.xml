@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1585157940111" TestSessionContainerId="4e9e41f7-2939-4d0f-bf00-e4526362b098" version="1.0">
+<SrcFileList>
+<SrcFile Content="&#13;&#10;&#13;&#10;&#13;&#10;public class Counter {&#13;&#10;&#13;&#10;&#9;int val;&#13;&#10;&#13;&#10;&#9;public Counter() {&#13;&#10;&#9;&#9;val = 0;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int inc() {&#13;&#10;&#9;&#9;return ++val;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int dec() {&#13;&#10;&#9;&#9;if (val &gt; 0)&#13;&#10;&#9;&#9;&#9;return --val;&#13;&#10;&#9;&#9;else&#13;&#10;&#9;&#9;&#9;throw new RuntimeException(&quot;counter &lt;= 0&quot;);&#13;&#10;&#9;}&#13;&#10;}" Filename="Counter.java" Intrnl_Id="1"/>
+<SrcFile Content="&#13;&#10;public class Incrementa {&#13;&#10;&#13;&#10;&#9;static int inc(int a) {&#13;&#10;&#9;&#9;return a + 1;&#13;&#10;&#9;}&#13;&#10;}" Filename="Incrementa.java" Intrnl_Id="2"/>
+<SrcFile Content="package randoop;&#13;&#10;&#13;&#10;&#13;&#10;public class Counter {&#13;&#10;&#13;&#10;&#9;int val;&#13;&#10;&#13;&#10;&#9;public Counter() {&#13;&#10;&#9;&#9;val = 0;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int inc() {&#13;&#10;&#9;&#9;return ++val;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int dec() {&#13;&#10;&#9;&#9;if (val &gt; 0)&#13;&#10;&#9;&#9;&#9;return --val;&#13;&#10;&#9;&#9;else&#13;&#10;&#9;&#9;&#9;throw new RuntimeException(&quot;counter &lt;= 0&quot;);&#13;&#10;&#9;}&#13;&#10;}" Filename="Counter.java" Intrnl_Id="3"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList/>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="package" IntrnlName="package" Intrnl_Id="4"/>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="5"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="6"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="7"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="47" HierarchyLvlTypeId="7" Intrnl_Id="8" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="46" HierarchyLvlTypeId="4" Intrnl_Id="9" Name="randoop">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="45" HierarchyLvlTypeId="6" Intrnl_Id="10" Name="Counter">
+<Header>
+<Loc EndOffset="42" SrcFileId="3" StartOffset="22"/>
+</Header>
+<LocList>
+<Loc EndOffset="260" SrcFileId="3" StartOffset="22"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="42" HierarchyLvlTypeId="5" Intrnl_Id="11" Name="Counter">
+<Header>
+<Loc EndOffset="78" SrcFileId="3" StartOffset="62"/>
+</Header>
+<LocList>
+<Loc EndOffset="96" SrcFileId="3" StartOffset="62"/>
+</LocList>
+<StmntSeq Intrnl_Id="12">
+<LocList>
+<Loc EndOffset="92" SrcFileId="3" StartOffset="84"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="randoop.Counter.java" Intrnl_Id="13">
+<LocList>
+<Loc EndOffset="92" SrcFileId="3" StartOffset="84"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="43" HierarchyLvlTypeId="5" Intrnl_Id="14" Name="inc">
+<Header>
+<Loc EndOffset="117" SrcFileId="3" StartOffset="101"/>
+</Header>
+<LocList>
+<Loc EndOffset="140" SrcFileId="3" StartOffset="101"/>
+</LocList>
+<StmntSeq Intrnl_Id="15">
+<LocList>
+<Loc EndOffset="136" SrcFileId="3" StartOffset="123"/>
+</LocList>
+<BasicStmnt CovItemId="S2" CovItemPrefix="randoop.Counter.java" Intrnl_Id="16">
+<LocList>
+<Loc EndOffset="136" SrcFileId="3" StartOffset="123"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="44" HierarchyLvlTypeId="5" Intrnl_Id="17" Name="dec">
+<Header>
+<Loc EndOffset="161" SrcFileId="3" StartOffset="145"/>
+</Header>
+<LocList>
+<Loc EndOffset="257" SrcFileId="3" StartOffset="145"/>
+</LocList>
+<StmntSeq Intrnl_Id="18">
+<LocList>
+<Loc EndOffset="253" SrcFileId="3" StartOffset="167"/>
+</LocList>
+<CondStmnt CovItemId="S3" CovItemPrefix="randoop.Counter.java" Intrnl_Id="19">
+<Branch CovItemId="B1" CovItemPrefix="randoop.Counter.java" Implct="false" Intrnl_Id="20">
+<Cond/>
+<LocList>
+<Loc EndOffset="197" SrcFileId="3" StartOffset="184"/>
+</LocList>
+<StmntSeq Intrnl_Id="21">
+<LocList>
+<Loc EndOffset="197" SrcFileId="3" StartOffset="184"/>
+</LocList>
+<BasicStmnt CovItemId="S4" CovItemPrefix="randoop.Counter.java" Intrnl_Id="22">
+<LocList>
+<Loc EndOffset="197" SrcFileId="3" StartOffset="184"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="randoop.Counter.java" Implct="false" Intrnl_Id="23">
+<Cond>
+<Loc EndOffset="205" SrcFileId="3" StartOffset="201"/>
+</Cond>
+<LocList>
+<Loc EndOffset="253" SrcFileId="3" StartOffset="210"/>
+</LocList>
+<StmntSeq Intrnl_Id="24">
+<LocList>
+<Loc EndOffset="253" SrcFileId="3" StartOffset="210"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="randoop.Counter.java" Intrnl_Id="25">
+<LocList>
+<Loc EndOffset="253" SrcFileId="3" StartOffset="210"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="169" SrcFileId="3" StartOffset="167"/>
+<LocList>
+<Loc EndOffset="253" SrcFileId="3" StartOffset="167"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="randoop.Counter.java" Intrnl_Id="26">
+<BasicBoolTerm Intrnl_Id="27">
+<LocList>
+<Loc EndOffset="178" SrcFileId="3" StartOffset="171"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="39" HierarchyLvlTypeId="6" Intrnl_Id="28" Name="Counter">
+<Header>
+<Loc EndOffset="26" SrcFileId="1" StartOffset="6"/>
+</Header>
+<LocList>
+<Loc EndOffset="244" SrcFileId="1" StartOffset="6"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="36" HierarchyLvlTypeId="5" Intrnl_Id="29" Name="Counter">
+<Header>
+<Loc EndOffset="62" SrcFileId="1" StartOffset="46"/>
+</Header>
+<LocList>
+<Loc EndOffset="80" SrcFileId="1" StartOffset="46"/>
+</LocList>
+<StmntSeq Intrnl_Id="30">
+<LocList>
+<Loc EndOffset="76" SrcFileId="1" StartOffset="68"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="Counter.java" Intrnl_Id="31">
+<LocList>
+<Loc EndOffset="76" SrcFileId="1" StartOffset="68"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="37" HierarchyLvlTypeId="5" Intrnl_Id="32" Name="inc">
+<Header>
+<Loc EndOffset="101" SrcFileId="1" StartOffset="85"/>
+</Header>
+<LocList>
+<Loc EndOffset="124" SrcFileId="1" StartOffset="85"/>
+</LocList>
+<StmntSeq Intrnl_Id="33">
+<LocList>
+<Loc EndOffset="120" SrcFileId="1" StartOffset="107"/>
+</LocList>
+<BasicStmnt CovItemId="S2" CovItemPrefix="Counter.java" Intrnl_Id="34">
+<LocList>
+<Loc EndOffset="120" SrcFileId="1" StartOffset="107"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="38" HierarchyLvlTypeId="5" Intrnl_Id="35" Name="dec">
+<Header>
+<Loc EndOffset="145" SrcFileId="1" StartOffset="129"/>
+</Header>
+<LocList>
+<Loc EndOffset="241" SrcFileId="1" StartOffset="129"/>
+</LocList>
+<StmntSeq Intrnl_Id="36">
+<LocList>
+<Loc EndOffset="237" SrcFileId="1" StartOffset="151"/>
+</LocList>
+<CondStmnt CovItemId="S3" CovItemPrefix="Counter.java" Intrnl_Id="37">
+<Branch CovItemId="B1" CovItemPrefix="Counter.java" Implct="false" Intrnl_Id="38">
+<Cond/>
+<LocList>
+<Loc EndOffset="181" SrcFileId="1" StartOffset="168"/>
+</LocList>
+<StmntSeq Intrnl_Id="39">
+<LocList>
+<Loc EndOffset="181" SrcFileId="1" StartOffset="168"/>
+</LocList>
+<BasicStmnt CovItemId="S4" CovItemPrefix="Counter.java" Intrnl_Id="40">
+<LocList>
+<Loc EndOffset="181" SrcFileId="1" StartOffset="168"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="Counter.java" Implct="false" Intrnl_Id="41">
+<Cond>
+<Loc EndOffset="189" SrcFileId="1" StartOffset="185"/>
+</Cond>
+<LocList>
+<Loc EndOffset="237" SrcFileId="1" StartOffset="194"/>
+</LocList>
+<StmntSeq Intrnl_Id="42">
+<LocList>
+<Loc EndOffset="237" SrcFileId="1" StartOffset="194"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="Counter.java" Intrnl_Id="43">
+<LocList>
+<Loc EndOffset="237" SrcFileId="1" StartOffset="194"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="153" SrcFileId="1" StartOffset="151"/>
+<LocList>
+<Loc EndOffset="237" SrcFileId="1" StartOffset="151"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="Counter.java" Intrnl_Id="44">
+<BasicBoolTerm Intrnl_Id="45">
+<LocList>
+<Loc EndOffset="162" SrcFileId="1" StartOffset="155"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="41" HierarchyLvlTypeId="6" Intrnl_Id="46" Name="Incrementa">
+<Header>
+<Loc EndOffset="25" SrcFileId="2" StartOffset="2"/>
+</Header>
+<LocList>
+<Loc EndOffset="79" SrcFileId="2" StartOffset="2"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="40" HierarchyLvlTypeId="5" Intrnl_Id="47" Name="inc">
+<Header>
+<Loc EndOffset="53" SrcFileId="2" StartOffset="32"/>
+</Header>
+<LocList>
+<Loc EndOffset="76" SrcFileId="2" StartOffset="32"/>
+</LocList>
+<StmntSeq Intrnl_Id="48">
+<LocList>
+<Loc EndOffset="72" SrcFileId="2" StartOffset="59"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="Incrementa.java" Intrnl_Id="49">
+<LocList>
+<Loc EndOffset="72" SrcFileId="2" StartOffset="59"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+</TestSessionContainer>
