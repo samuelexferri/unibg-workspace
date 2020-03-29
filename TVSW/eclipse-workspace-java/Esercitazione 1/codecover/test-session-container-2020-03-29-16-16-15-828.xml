@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?><TestSessionContainer xmlns="http://www.codecover.org/xml/testsession-container" Date="1585491375812" TestSessionContainerId="c410dd83-469e-4a6b-9a27-07abbe3e362a" version="1.0">
+<SrcFileList>
+<SrcFile Content="package esercizio0;&#13;&#10;&#13;&#10;public class Rettangolo {&#13;&#10;&#9;private int base;&#13;&#10;&#9;private int altezza;&#13;&#10;&#13;&#10;&#9;public Rettangolo(int b, int a) {&#13;&#10;&#9;&#9;base = b;&#13;&#10;&#9;&#9;altezza = a;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int getBase() {&#13;&#10;&#9;&#9;return base;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int getAltezza() {&#13;&#10;&#9;&#9;return altezza;&#13;&#10;&#9;}&#13;&#10;}" Filename="Rettangolo.java" Intrnl_Id="1"/>
+<SrcFile Content="package esercizio1;&#13;&#10;&#13;&#10;public class Light {&#13;&#10;&#13;&#10;&#9;private boolean lightOn = false;&#13;&#10;&#9;private boolean bottomIn = false;&#13;&#10;&#9;private boolean bottomOut = false;&#13;&#10;&#13;&#10;&#9;Light() {&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public boolean onOff(boolean light, boolean in, boolean out) {&#13;&#10;&#13;&#10;&#9;&#9;this.bottomIn = in;&#13;&#10;&#9;&#9;this.bottomOut = out;&#13;&#10;&#13;&#10;&#9;&#9;if ((bottomIn || bottomOut) &amp;&amp; !light) {&#13;&#10;&#9;&#9;&#9;lightOn = true;&#13;&#10;&#9;&#9;&#9;return true; // Luce accesa&#13;&#10;&#9;&#9;} else {&#13;&#10;&#9;&#9;&#9;lightOn = false;&#13;&#10;&#9;&#9;&#9;return false; // Luce spenta&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;}" Filename="Light.java" Intrnl_Id="2"/>
+<SrcFile Content="package esercizio2;&#13;&#10;&#13;&#10;public class Computer {&#13;&#10;&#13;&#10;&#9;boolean Compute(boolean x, boolean y, boolean z, int temp, int thresh) {&#13;&#10;&#9;&#9;boolean no_alarm;&#13;&#10;&#13;&#10;&#9;&#9;if (temp &lt;= thresh) {&#13;&#10;&#9;&#9;&#9;no_alarm = true;&#13;&#10;&#9;&#9;} else {&#13;&#10;&#9;&#9;&#9;no_alarm = false;&#13;&#10;&#9;&#9;}&#13;&#10;&#13;&#10;&#9;&#9;if ((x &amp;&amp; (y || z)) &amp;&amp; no_alarm)&#13;&#10;&#9;&#9;&#9;return true;&#13;&#10;&#9;&#9;else&#13;&#10;&#9;&#9;&#9;return false;&#13;&#10;&#9;}&#13;&#10;}" Filename="Computer.java" Intrnl_Id="3"/>
+<SrcFile Content="package esercizio3;&#13;&#10;&#13;&#10;public class Balance {&#13;&#10;&#13;&#10;&#9;private int p;&#13;&#10;&#9;private int w;&#13;&#10;&#13;&#10;&#9;Balance() {&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public boolean setBalanceValue(int x, int y) {&#13;&#10;&#9;&#9;this.p = x;&#13;&#10;&#9;&#9;this.w = y;&#13;&#10;&#13;&#10;&#9;&#9;if ((p &lt; 4 &amp;&amp; w &lt;= 400) || (p == 0 &amp;&amp; w &lt;= 1000))&#13;&#10;&#9;&#9;&#9;return true;&#13;&#10;&#9;&#9;else {&#13;&#10;&#9;&#9;&#9;return false;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int getP() {&#13;&#10;&#9;&#9;return p;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;public int getW() {&#13;&#10;&#9;&#9;return w;&#13;&#10;&#9;}&#13;&#10;}&#13;&#10;" Filename="Balance.java" Intrnl_Id="4"/>
+<SrcFile Content="package esercizio4;&#13;&#10;&#13;&#10;public class Magazzino {&#13;&#10;&#13;&#10;&#9;private int[] product = new int[5]; // Rappresenta i 5 prodotti, da 0 a 4&#13;&#10;&#13;&#10;&#9;public Magazzino() {&#13;&#10;&#9;&#9;for (int i = 0; i &lt; 1; i++) {&#13;&#10;&#9;&#9;&#9;product[i] = 0;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;/**&#13;&#10;&#9; * @param productIndex l'indice del prodotto al quale aggiungere addQuantity&#13;&#10;&#9; * @param addQuantity  la quantità da aggiungere al prodotto productIndex&#13;&#10;&#9; * @return true se l'inserimento è avvenuto, false altrimenti&#13;&#10;&#9; */&#13;&#10;&#9;public boolean insert(int productIndex, int addQuantity) {&#13;&#10;&#9;&#9;if ((productIndex &lt; 0 || productIndex &gt; 4) || (addQuantity &lt; 0 || addQuantity &gt; 10)&#13;&#10;&#9;&#9;&#9;&#9;|| (product[productIndex] + addQuantity) &gt; 100) {&#13;&#10;&#9;&#9;&#9;return false;&#13;&#10;&#9;&#9;} else {&#13;&#10;&#9;&#9;&#9;product[productIndex] += addQuantity;&#13;&#10;&#9;&#9;&#9;return true;&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;/**&#13;&#10;&#9; * @param productIndex l'indice del prodotto che voglio controllare&#13;&#10;&#9; * @return false se l'indice non è corretto o il magazzino non è pieno, true&#13;&#10;&#9; *         altrimenti&#13;&#10;&#9; */&#13;&#10;&#9;public boolean isFull(int productIndex) {&#13;&#10;&#9;&#9;if (productIndex &lt; 0 || productIndex &gt; 4)&#13;&#10;&#9;&#9;&#9;return false;&#13;&#10;&#9;&#9;else&#13;&#10;&#9;&#9;&#9;return product[productIndex] == 100 ? true : false;&#13;&#10;&#9;}&#13;&#10;&#13;&#10;&#9;/**&#13;&#10;&#9; * @return true se il magazzino è pieno, false altrimenti&#13;&#10;&#9; */&#13;&#10;&#9;public boolean isFull() {&#13;&#10;&#9;&#9;int total = 0;&#13;&#10;&#9;&#9;for (int i = 0; i &lt; 5; i++)&#13;&#10;&#9;&#9;&#9;total += product[i];&#13;&#10;&#9;&#9;return total == 500 ? true : false;&#13;&#10;&#9;}&#13;&#10;}&#13;&#10;" Filename="Magazzino.java" Intrnl_Id="5"/>
+<SrcFile Content="package esercizio5;&#13;&#10;&#13;&#10;import static org.junit.Assert.*;&#13;&#10;import org.junit.Test;&#13;&#10;/**&#13;&#10; * The Class RedCarExitTest. Scenario in cui la macchina esce&#13;&#10; */&#13;&#10;public class RedCarExitTest {&#13;&#10;&#9;&#13;&#10;&#9;@Test&#13;&#10;&#9;public void test() {&#13;&#10;&#9;&#9;RushHour puzzle = new RushHour();&#13;&#10;&#9;&#9;//sposto la macchina 4 verso sinistra&#13;&#10;&#9;&#9;assertTrue(puzzle.moveCar(3,5,4));&#13;&#10;&#9;&#9;//sposto la macchina 3 verso il basso&#13;&#10;&#9;&#9;assertTrue(puzzle.moveCar(2,5,3));&#13;&#10;&#9;&#9;//sposto la macchina rossa (1) verso destra per tre volte&#13;&#10;&#9;&#9;assertTrue(puzzle.moveCar(2,2,2));&#13;&#10;&#9;&#9;assertTrue(puzzle.moveCar(2,3,2));&#13;&#10;&#9;&#9;assertTrue(puzzle.moveCar(2,4,2));&#13;&#10;&#9;&#9;//controllo se la macchina rossa è all'uscita&#13;&#10;&#9;&#9;assertTrue(puzzle.redCarAtExit());&#13;&#10;&#9;}&#13;&#10;&#13;&#10;}&#13;&#10;" Filename="RedCarExitTest.java" Intrnl_Id="6"/>
+</SrcFileList>
+<CritList>
+<CritListEntry Name="org.codecover.model.utils.criteria.ConditionCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.BranchCoverage" PluginName="org.codecover"/>
+<CritListEntry Name="org.codecover.model.utils.criteria.StatementCoverage" PluginName="org.codecover"/>
+</CritList>
+<BoolOpList>
+<BoolOp Arity="2" Intrnl_Id="7" Name="conditional and (&amp;&amp;)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="02" Value="false"/>
+<MapEntry BoolAssgnmnt="10" Value="false"/>
+<MapEntry BoolAssgnmnt="11" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+<BoolOp Arity="2" Intrnl_Id="8" Name="conditional or (||)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="00" Value="false"/>
+<MapEntry BoolAssgnmnt="01" Value="true"/>
+<MapEntry BoolAssgnmnt="12" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+<BoolOp Arity="1" Intrnl_Id="9" Name="not (!)">
+<BoolAssgnmntBoolMapList>
+<MapEntry BoolAssgnmnt="1" Value="false"/>
+<MapEntry BoolAssgnmnt="0" Value="true"/>
+</BoolAssgnmntBoolMapList>
+</BoolOp>
+</BoolOpList>
+<HierarchyLvlTypeList>
+<HierarchyLvlType EnglishName="package" IntrnlName="package" Intrnl_Id="10"/>
+<HierarchyLvlType EnglishName="method" IntrnlName="method" Intrnl_Id="11"/>
+<HierarchyLvlType EnglishName="class" IntrnlName="class" Intrnl_Id="12"/>
+<HierarchyLvlType EnglishName="default package" IntrnlName="default package" Intrnl_Id="13"/>
+</HierarchyLvlTypeList>
+<MASTRoot>
+<HierarchyLvl HierarchyLvlId="715" HierarchyLvlTypeId="13" Intrnl_Id="14" Name="default package">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="709" HierarchyLvlTypeId="10" Intrnl_Id="15" Name="esercizio0">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="691" HierarchyLvlTypeId="12" Intrnl_Id="16" Name="Rettangolo">
+<Header>
+<Loc EndOffset="46" SrcFileId="1" StartOffset="23"/>
+</Header>
+<LocList>
+<Loc EndOffset="265" SrcFileId="1" StartOffset="23"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="688" HierarchyLvlTypeId="11" Intrnl_Id="17" Name="Rettangolo">
+<Header>
+<Loc EndOffset="127" SrcFileId="1" StartOffset="96"/>
+</Header>
+<LocList>
+<Loc EndOffset="162" SrcFileId="1" StartOffset="96"/>
+</LocList>
+<StmntSeq Intrnl_Id="18">
+<LocList>
+<Loc EndOffset="142" SrcFileId="1" StartOffset="133"/>
+<Loc EndOffset="158" SrcFileId="1" StartOffset="146"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="esercizio0.Rettangolo.java" Intrnl_Id="19">
+<LocList>
+<Loc EndOffset="142" SrcFileId="1" StartOffset="133"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S2" CovItemPrefix="esercizio0.Rettangolo.java" Intrnl_Id="20">
+<LocList>
+<Loc EndOffset="158" SrcFileId="1" StartOffset="146"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="689" HierarchyLvlTypeId="11" Intrnl_Id="21" Name="getBase">
+<Header>
+<Loc EndOffset="187" SrcFileId="1" StartOffset="167"/>
+</Header>
+<LocList>
+<Loc EndOffset="209" SrcFileId="1" StartOffset="167"/>
+</LocList>
+<StmntSeq Intrnl_Id="22">
+<LocList>
+<Loc EndOffset="205" SrcFileId="1" StartOffset="193"/>
+</LocList>
+<BasicStmnt CovItemId="S3" CovItemPrefix="esercizio0.Rettangolo.java" Intrnl_Id="23">
+<LocList>
+<Loc EndOffset="205" SrcFileId="1" StartOffset="193"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="690" HierarchyLvlTypeId="11" Intrnl_Id="24" Name="getAltezza">
+<Header>
+<Loc EndOffset="237" SrcFileId="1" StartOffset="214"/>
+</Header>
+<LocList>
+<Loc EndOffset="262" SrcFileId="1" StartOffset="214"/>
+</LocList>
+<StmntSeq Intrnl_Id="25">
+<LocList>
+<Loc EndOffset="258" SrcFileId="1" StartOffset="243"/>
+</LocList>
+<BasicStmnt CovItemId="S4" CovItemPrefix="esercizio0.Rettangolo.java" Intrnl_Id="26">
+<LocList>
+<Loc EndOffset="258" SrcFileId="1" StartOffset="243"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="710" HierarchyLvlTypeId="10" Intrnl_Id="27" Name="esercizio1">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="694" HierarchyLvlTypeId="12" Intrnl_Id="28" Name="Light">
+<Header>
+<Loc EndOffset="41" SrcFileId="2" StartOffset="23"/>
+</Header>
+<LocList>
+<Loc EndOffset="464" SrcFileId="2" StartOffset="23"/>
+</LocList>
+<StmntSeq Intrnl_Id="29">
+<LocList>
+<Loc EndOffset="80" SrcFileId="2" StartOffset="48"/>
+<Loc EndOffset="116" SrcFileId="2" StartOffset="83"/>
+<Loc EndOffset="153" SrcFileId="2" StartOffset="119"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="30">
+<LocList>
+<Loc EndOffset="80" SrcFileId="2" StartOffset="48"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S2" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="31">
+<LocList>
+<Loc EndOffset="116" SrcFileId="2" StartOffset="83"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S3" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="32">
+<LocList>
+<Loc EndOffset="153" SrcFileId="2" StartOffset="119"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<HierarchyLvl HierarchyLvlId="692" HierarchyLvlTypeId="11" Intrnl_Id="33" Name="Light">
+<Header>
+<Loc EndOffset="165" SrcFileId="2" StartOffset="158"/>
+</Header>
+<LocList>
+<Loc EndOffset="171" SrcFileId="2" StartOffset="158"/>
+</LocList>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="693" HierarchyLvlTypeId="11" Intrnl_Id="34" Name="onOff">
+<Header>
+<Loc EndOffset="236" SrcFileId="2" StartOffset="176"/>
+</Header>
+<LocList>
+<Loc EndOffset="461" SrcFileId="2" StartOffset="176"/>
+</LocList>
+<StmntSeq Intrnl_Id="35">
+<LocList>
+<Loc EndOffset="263" SrcFileId="2" StartOffset="244"/>
+<Loc EndOffset="288" SrcFileId="2" StartOffset="267"/>
+<Loc EndOffset="457" SrcFileId="2" StartOffset="294"/>
+</LocList>
+<BasicStmnt CovItemId="S4" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="36">
+<LocList>
+<Loc EndOffset="263" SrcFileId="2" StartOffset="244"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S5" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="37">
+<LocList>
+<Loc EndOffset="288" SrcFileId="2" StartOffset="267"/>
+</LocList>
+</BasicStmnt>
+<CondStmnt CovItemId="S6" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="38">
+<Branch CovItemId="B1" CovItemPrefix="esercizio1.Light.java" Implct="false" Intrnl_Id="39">
+<Cond/>
+<LocList>
+<Loc EndOffset="391" SrcFileId="2" StartOffset="333"/>
+</LocList>
+<StmntSeq Intrnl_Id="40">
+<LocList>
+<Loc EndOffset="354" SrcFileId="2" StartOffset="339"/>
+<Loc EndOffset="371" SrcFileId="2" StartOffset="359"/>
+</LocList>
+<BasicStmnt CovItemId="S7" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="41">
+<LocList>
+<Loc EndOffset="354" SrcFileId="2" StartOffset="339"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S8" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="42">
+<LocList>
+<Loc EndOffset="371" SrcFileId="2" StartOffset="359"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="esercizio1.Light.java" Implct="false" Intrnl_Id="43">
+<Cond>
+<Loc EndOffset="396" SrcFileId="2" StartOffset="392"/>
+</Cond>
+<LocList>
+<Loc EndOffset="457" SrcFileId="2" StartOffset="397"/>
+</LocList>
+<StmntSeq Intrnl_Id="44">
+<LocList>
+<Loc EndOffset="419" SrcFileId="2" StartOffset="403"/>
+<Loc EndOffset="437" SrcFileId="2" StartOffset="424"/>
+</LocList>
+<BasicStmnt CovItemId="S9" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="45">
+<LocList>
+<Loc EndOffset="419" SrcFileId="2" StartOffset="403"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S10" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="46">
+<LocList>
+<Loc EndOffset="437" SrcFileId="2" StartOffset="424"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="296" SrcFileId="2" StartOffset="294"/>
+<LocList>
+<Loc EndOffset="457" SrcFileId="2" StartOffset="294"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="esercizio1.Light.java" Intrnl_Id="47">
+<OpTerm BooleanOpId="7" Intrnl_Id="48">
+<OpTerm BooleanOpId="8" Intrnl_Id="49">
+<BasicBoolTerm Intrnl_Id="50">
+<LocList>
+<Loc EndOffset="307" SrcFileId="2" StartOffset="299"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="51">
+<LocList>
+<Loc EndOffset="320" SrcFileId="2" StartOffset="311"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="310" SrcFileId="2" StartOffset="308"/>
+</LocList>
+</OpTerm>
+<OpTerm BooleanOpId="9" Intrnl_Id="52">
+<BasicBoolTerm Intrnl_Id="53">
+<LocList>
+<Loc EndOffset="331" SrcFileId="2" StartOffset="326"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="326" SrcFileId="2" StartOffset="325"/>
+</LocList>
+</OpTerm>
+<LocList>
+<Loc EndOffset="324" SrcFileId="2" StartOffset="322"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="711" HierarchyLvlTypeId="10" Intrnl_Id="54" Name="esercizio2">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="696" HierarchyLvlTypeId="12" Intrnl_Id="55" Name="Computer">
+<Header>
+<Loc EndOffset="44" SrcFileId="3" StartOffset="23"/>
+</Header>
+<LocList>
+<Loc EndOffset="319" SrcFileId="3" StartOffset="23"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="695" HierarchyLvlTypeId="11" Intrnl_Id="56" Name="Compute">
+<Header>
+<Loc EndOffset="121" SrcFileId="3" StartOffset="51"/>
+</Header>
+<LocList>
+<Loc EndOffset="316" SrcFileId="3" StartOffset="51"/>
+</LocList>
+<StmntSeq Intrnl_Id="57">
+<LocList>
+<Loc EndOffset="231" SrcFileId="3" StartOffset="150"/>
+<Loc EndOffset="312" SrcFileId="3" StartOffset="237"/>
+</LocList>
+<CondStmnt CovItemId="S1" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="58">
+<Branch CovItemId="B1" CovItemPrefix="esercizio2.Computer.java" Implct="false" Intrnl_Id="59">
+<Cond/>
+<LocList>
+<Loc EndOffset="197" SrcFileId="3" StartOffset="170"/>
+</LocList>
+<StmntSeq Intrnl_Id="60">
+<LocList>
+<Loc EndOffset="192" SrcFileId="3" StartOffset="176"/>
+</LocList>
+<BasicStmnt CovItemId="S2" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="61">
+<LocList>
+<Loc EndOffset="192" SrcFileId="3" StartOffset="176"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="esercizio2.Computer.java" Implct="false" Intrnl_Id="62">
+<Cond>
+<Loc EndOffset="202" SrcFileId="3" StartOffset="198"/>
+</Cond>
+<LocList>
+<Loc EndOffset="231" SrcFileId="3" StartOffset="203"/>
+</LocList>
+<StmntSeq Intrnl_Id="63">
+<LocList>
+<Loc EndOffset="226" SrcFileId="3" StartOffset="209"/>
+</LocList>
+<BasicStmnt CovItemId="S3" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="64">
+<LocList>
+<Loc EndOffset="226" SrcFileId="3" StartOffset="209"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="152" SrcFileId="3" StartOffset="150"/>
+<LocList>
+<Loc EndOffset="231" SrcFileId="3" StartOffset="150"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="65">
+<BasicBoolTerm Intrnl_Id="66">
+<LocList>
+<Loc EndOffset="168" SrcFileId="3" StartOffset="154"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</CondStmnt>
+<CondStmnt CovItemId="S4" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="67">
+<Branch CovItemId="B3" CovItemPrefix="esercizio2.Computer.java" Implct="false" Intrnl_Id="68">
+<Cond/>
+<LocList>
+<Loc EndOffset="286" SrcFileId="3" StartOffset="274"/>
+</LocList>
+<StmntSeq Intrnl_Id="69">
+<LocList>
+<Loc EndOffset="286" SrcFileId="3" StartOffset="274"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="70">
+<LocList>
+<Loc EndOffset="286" SrcFileId="3" StartOffset="274"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B4" CovItemPrefix="esercizio2.Computer.java" Implct="false" Intrnl_Id="71">
+<Cond>
+<Loc EndOffset="294" SrcFileId="3" StartOffset="290"/>
+</Cond>
+<LocList>
+<Loc EndOffset="312" SrcFileId="3" StartOffset="299"/>
+</LocList>
+<StmntSeq Intrnl_Id="72">
+<LocList>
+<Loc EndOffset="312" SrcFileId="3" StartOffset="299"/>
+</LocList>
+<BasicStmnt CovItemId="S6" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="73">
+<LocList>
+<Loc EndOffset="312" SrcFileId="3" StartOffset="299"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="239" SrcFileId="3" StartOffset="237"/>
+<LocList>
+<Loc EndOffset="312" SrcFileId="3" StartOffset="237"/>
+</LocList>
+<RootTerm CovItemId="C2" CovItemPrefix="esercizio2.Computer.java" Intrnl_Id="74">
+<OpTerm BooleanOpId="7" Intrnl_Id="75">
+<OpTerm BooleanOpId="7" Intrnl_Id="76">
+<BasicBoolTerm Intrnl_Id="77">
+<LocList>
+<Loc EndOffset="243" SrcFileId="3" StartOffset="242"/>
+</LocList>
+</BasicBoolTerm>
+<OpTerm BooleanOpId="8" Intrnl_Id="78">
+<BasicBoolTerm Intrnl_Id="79">
+<LocList>
+<Loc EndOffset="249" SrcFileId="3" StartOffset="248"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="80">
+<LocList>
+<Loc EndOffset="254" SrcFileId="3" StartOffset="253"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="252" SrcFileId="3" StartOffset="250"/>
+</LocList>
+</OpTerm>
+<LocList>
+<Loc EndOffset="246" SrcFileId="3" StartOffset="244"/>
+</LocList>
+</OpTerm>
+<BasicBoolTerm Intrnl_Id="81">
+<LocList>
+<Loc EndOffset="268" SrcFileId="3" StartOffset="260"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="259" SrcFileId="3" StartOffset="257"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="712" HierarchyLvlTypeId="10" Intrnl_Id="82" Name="esercizio3">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="701" HierarchyLvlTypeId="12" Intrnl_Id="83" Name="Balance">
+<Header>
+<Loc EndOffset="43" SrcFileId="4" StartOffset="23"/>
+</Header>
+<LocList>
+<Loc EndOffset="376" SrcFileId="4" StartOffset="23"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="697" HierarchyLvlTypeId="11" Intrnl_Id="84" Name="Balance">
+<Header>
+<Loc EndOffset="95" SrcFileId="4" StartOffset="86"/>
+</Header>
+<LocList>
+<Loc EndOffset="101" SrcFileId="4" StartOffset="86"/>
+</LocList>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="698" HierarchyLvlTypeId="11" Intrnl_Id="85" Name="setBalanceValue">
+<Header>
+<Loc EndOffset="150" SrcFileId="4" StartOffset="106"/>
+</Header>
+<LocList>
+<Loc EndOffset="291" SrcFileId="4" StartOffset="106"/>
+</LocList>
+<StmntSeq Intrnl_Id="86">
+<LocList>
+<Loc EndOffset="167" SrcFileId="4" StartOffset="156"/>
+<Loc EndOffset="182" SrcFileId="4" StartOffset="171"/>
+<Loc EndOffset="287" SrcFileId="4" StartOffset="188"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="87">
+<LocList>
+<Loc EndOffset="167" SrcFileId="4" StartOffset="156"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S2" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="88">
+<LocList>
+<Loc EndOffset="182" SrcFileId="4" StartOffset="171"/>
+</LocList>
+</BasicStmnt>
+<CondStmnt CovItemId="S3" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="89">
+<Branch CovItemId="B1" CovItemPrefix="esercizio3.Balance.java" Implct="false" Intrnl_Id="90">
+<Cond/>
+<LocList>
+<Loc EndOffset="254" SrcFileId="4" StartOffset="242"/>
+</LocList>
+<StmntSeq Intrnl_Id="91">
+<LocList>
+<Loc EndOffset="254" SrcFileId="4" StartOffset="242"/>
+</LocList>
+<BasicStmnt CovItemId="S4" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="92">
+<LocList>
+<Loc EndOffset="254" SrcFileId="4" StartOffset="242"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="esercizio3.Balance.java" Implct="false" Intrnl_Id="93">
+<Cond>
+<Loc EndOffset="262" SrcFileId="4" StartOffset="258"/>
+</Cond>
+<LocList>
+<Loc EndOffset="287" SrcFileId="4" StartOffset="263"/>
+</LocList>
+<StmntSeq Intrnl_Id="94">
+<LocList>
+<Loc EndOffset="282" SrcFileId="4" StartOffset="269"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="95">
+<LocList>
+<Loc EndOffset="282" SrcFileId="4" StartOffset="269"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="190" SrcFileId="4" StartOffset="188"/>
+<LocList>
+<Loc EndOffset="287" SrcFileId="4" StartOffset="188"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="96">
+<OpTerm BooleanOpId="8" Intrnl_Id="97">
+<OpTerm BooleanOpId="7" Intrnl_Id="98">
+<BasicBoolTerm Intrnl_Id="99">
+<LocList>
+<Loc EndOffset="198" SrcFileId="4" StartOffset="193"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="100">
+<LocList>
+<Loc EndOffset="210" SrcFileId="4" StartOffset="202"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="201" SrcFileId="4" StartOffset="199"/>
+</LocList>
+</OpTerm>
+<OpTerm BooleanOpId="7" Intrnl_Id="101">
+<BasicBoolTerm Intrnl_Id="102">
+<LocList>
+<Loc EndOffset="222" SrcFileId="4" StartOffset="216"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="103">
+<LocList>
+<Loc EndOffset="235" SrcFileId="4" StartOffset="226"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="225" SrcFileId="4" StartOffset="223"/>
+</LocList>
+</OpTerm>
+<LocList>
+<Loc EndOffset="214" SrcFileId="4" StartOffset="212"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="699" HierarchyLvlTypeId="11" Intrnl_Id="104" Name="getP">
+<Header>
+<Loc EndOffset="313" SrcFileId="4" StartOffset="296"/>
+</Header>
+<LocList>
+<Loc EndOffset="332" SrcFileId="4" StartOffset="296"/>
+</LocList>
+<StmntSeq Intrnl_Id="105">
+<LocList>
+<Loc EndOffset="328" SrcFileId="4" StartOffset="319"/>
+</LocList>
+<BasicStmnt CovItemId="S6" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="106">
+<LocList>
+<Loc EndOffset="328" SrcFileId="4" StartOffset="319"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="700" HierarchyLvlTypeId="11" Intrnl_Id="107" Name="getW">
+<Header>
+<Loc EndOffset="354" SrcFileId="4" StartOffset="337"/>
+</Header>
+<LocList>
+<Loc EndOffset="373" SrcFileId="4" StartOffset="337"/>
+</LocList>
+<StmntSeq Intrnl_Id="108">
+<LocList>
+<Loc EndOffset="369" SrcFileId="4" StartOffset="360"/>
+</LocList>
+<BasicStmnt CovItemId="S7" CovItemPrefix="esercizio3.Balance.java" Intrnl_Id="109">
+<LocList>
+<Loc EndOffset="369" SrcFileId="4" StartOffset="360"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="713" HierarchyLvlTypeId="10" Intrnl_Id="110" Name="esercizio4">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="706" HierarchyLvlTypeId="12" Intrnl_Id="111" Name="Magazzino">
+<Header>
+<Loc EndOffset="45" SrcFileId="5" StartOffset="23"/>
+</Header>
+<LocList>
+<Loc EndOffset="1330" SrcFileId="5" StartOffset="23"/>
+</LocList>
+<StmntSeq Intrnl_Id="112">
+<LocList>
+<Loc EndOffset="87" SrcFileId="5" StartOffset="52"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="113">
+<LocList>
+<Loc EndOffset="87" SrcFileId="5" StartOffset="52"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<HierarchyLvl HierarchyLvlId="702" HierarchyLvlTypeId="11" Intrnl_Id="114" Name="Magazzino">
+<Header>
+<Loc EndOffset="148" SrcFileId="5" StartOffset="130"/>
+</Header>
+<LocList>
+<Loc EndOffset="212" SrcFileId="5" StartOffset="130"/>
+</LocList>
+<StmntSeq Intrnl_Id="115">
+<LocList>
+<Loc EndOffset="208" SrcFileId="5" StartOffset="154"/>
+</LocList>
+<LoopStmnt CovItemId="S2" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="116" MltplExecId="L1-2" MltplExecPrefix="esercizio4.Magazzino.java" NvrExecId="L1-0" NvrExecPrefix="esercizio4.Magazzino.java" OnceExecutedId="L1-1" OnceExecutedPrefix="esercizio4.Magazzino.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="117">
+<LocList>
+<Loc EndOffset="203" SrcFileId="5" StartOffset="188"/>
+</LocList>
+<BasicStmnt CovItemId="S3" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="118">
+<LocList>
+<Loc EndOffset="203" SrcFileId="5" StartOffset="188"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<Keyword EndOffset="157" SrcFileId="5" StartOffset="154"/>
+<LocList>
+<Loc EndOffset="208" SrcFileId="5" StartOffset="154"/>
+</LocList>
+<RootTerm CovItemId="C1" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="119">
+<BasicBoolTerm Intrnl_Id="120">
+<LocList>
+<Loc EndOffset="175" SrcFileId="5" StartOffset="170"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</LoopStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="703" HierarchyLvlTypeId="11" Intrnl_Id="121" Name="insert">
+<Header>
+<Loc EndOffset="504" SrcFileId="5" StartOffset="448"/>
+</Header>
+<LocList>
+<Loc EndOffset="746" SrcFileId="5" StartOffset="448"/>
+</LocList>
+<StmntSeq Intrnl_Id="122">
+<LocList>
+<Loc EndOffset="742" SrcFileId="5" StartOffset="510"/>
+</LocList>
+<CondStmnt CovItemId="S4" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="123">
+<Branch CovItemId="B1" CovItemPrefix="esercizio4.Magazzino.java" Implct="false" Intrnl_Id="124">
+<Cond/>
+<LocList>
+<Loc EndOffset="671" SrcFileId="5" StartOffset="647"/>
+</LocList>
+<StmntSeq Intrnl_Id="125">
+<LocList>
+<Loc EndOffset="666" SrcFileId="5" StartOffset="653"/>
+</LocList>
+<BasicStmnt CovItemId="S5" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="126">
+<LocList>
+<Loc EndOffset="666" SrcFileId="5" StartOffset="653"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B2" CovItemPrefix="esercizio4.Magazzino.java" Implct="false" Intrnl_Id="127">
+<Cond>
+<Loc EndOffset="676" SrcFileId="5" StartOffset="672"/>
+</Cond>
+<LocList>
+<Loc EndOffset="742" SrcFileId="5" StartOffset="677"/>
+</LocList>
+<StmntSeq Intrnl_Id="128">
+<LocList>
+<Loc EndOffset="720" SrcFileId="5" StartOffset="683"/>
+<Loc EndOffset="737" SrcFileId="5" StartOffset="725"/>
+</LocList>
+<BasicStmnt CovItemId="S6" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="129">
+<LocList>
+<Loc EndOffset="720" SrcFileId="5" StartOffset="683"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S7" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="130">
+<LocList>
+<Loc EndOffset="737" SrcFileId="5" StartOffset="725"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="512" SrcFileId="5" StartOffset="510"/>
+<LocList>
+<Loc EndOffset="742" SrcFileId="5" StartOffset="510"/>
+</LocList>
+<RootTerm CovItemId="C2" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="131">
+<OpTerm BooleanOpId="8" Intrnl_Id="132">
+<OpTerm BooleanOpId="8" Intrnl_Id="133">
+<OpTerm BooleanOpId="8" Intrnl_Id="134">
+<BasicBoolTerm Intrnl_Id="135">
+<LocList>
+<Loc EndOffset="531" SrcFileId="5" StartOffset="515"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="136">
+<LocList>
+<Loc EndOffset="551" SrcFileId="5" StartOffset="535"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="534" SrcFileId="5" StartOffset="532"/>
+</LocList>
+</OpTerm>
+<OpTerm BooleanOpId="8" Intrnl_Id="137">
+<BasicBoolTerm Intrnl_Id="138">
+<LocList>
+<Loc EndOffset="572" SrcFileId="5" StartOffset="557"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="139">
+<LocList>
+<Loc EndOffset="592" SrcFileId="5" StartOffset="576"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="575" SrcFileId="5" StartOffset="573"/>
+</LocList>
+</OpTerm>
+<LocList>
+<Loc EndOffset="555" SrcFileId="5" StartOffset="553"/>
+</LocList>
+</OpTerm>
+<BasicBoolTerm Intrnl_Id="140">
+<LocList>
+<Loc EndOffset="645" SrcFileId="5" StartOffset="602"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="601" SrcFileId="5" StartOffset="599"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="704" HierarchyLvlTypeId="11" Intrnl_Id="141" Name="isFull">
+<Header>
+<Loc EndOffset="975" SrcFileId="5" StartOffset="936"/>
+</Header>
+<LocList>
+<Loc EndOffset="1108" SrcFileId="5" StartOffset="936"/>
+</LocList>
+<StmntSeq Intrnl_Id="142">
+<LocList>
+<Loc EndOffset="1104" SrcFileId="5" StartOffset="981"/>
+</LocList>
+<CondStmnt CovItemId="S8" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="143">
+<Branch CovItemId="B3" CovItemPrefix="esercizio4.Magazzino.java" Implct="false" Intrnl_Id="144">
+<Cond/>
+<LocList>
+<Loc EndOffset="1040" SrcFileId="5" StartOffset="1027"/>
+</LocList>
+<StmntSeq Intrnl_Id="145">
+<LocList>
+<Loc EndOffset="1040" SrcFileId="5" StartOffset="1027"/>
+</LocList>
+<BasicStmnt CovItemId="S9" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="146">
+<LocList>
+<Loc EndOffset="1040" SrcFileId="5" StartOffset="1027"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Branch CovItemId="B4" CovItemPrefix="esercizio4.Magazzino.java" Implct="false" Intrnl_Id="147">
+<Cond>
+<Loc EndOffset="1048" SrcFileId="5" StartOffset="1044"/>
+</Cond>
+<LocList>
+<Loc EndOffset="1104" SrcFileId="5" StartOffset="1053"/>
+</LocList>
+<StmntSeq Intrnl_Id="148">
+<LocList>
+<Loc EndOffset="1104" SrcFileId="5" StartOffset="1053"/>
+</LocList>
+<BasicStmnt CovItemId="S10" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="149">
+<LocList>
+<Loc EndOffset="1104" SrcFileId="5" StartOffset="1053"/>
+</LocList>
+<QMO CovItemId="Q0" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="150">
+<LocList>
+<Loc EndOffset="1088" SrcFileId="5" StartOffset="1060"/>
+</LocList>
+<QMO_E CovItemId="Q0-0" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="151">
+<LocList>
+<Loc EndOffset="1095" SrcFileId="5" StartOffset="1091"/>
+</LocList>
+</QMO_E>
+<QMO_E CovItemId="Q0-1" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="152">
+<LocList>
+<Loc EndOffset="1103" SrcFileId="5" StartOffset="1098"/>
+</LocList>
+</QMO_E>
+</QMO>
+</BasicStmnt>
+</StmntSeq>
+</Branch>
+<Keyword EndOffset="983" SrcFileId="5" StartOffset="981"/>
+<LocList>
+<Loc EndOffset="1104" SrcFileId="5" StartOffset="981"/>
+</LocList>
+<RootTerm CovItemId="C3" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="153">
+<OpTerm BooleanOpId="8" Intrnl_Id="154">
+<BasicBoolTerm Intrnl_Id="155">
+<LocList>
+<Loc EndOffset="1001" SrcFileId="5" StartOffset="985"/>
+</LocList>
+</BasicBoolTerm>
+<BasicBoolTerm Intrnl_Id="156">
+<LocList>
+<Loc EndOffset="1021" SrcFileId="5" StartOffset="1005"/>
+</LocList>
+</BasicBoolTerm>
+<LocList>
+<Loc EndOffset="1004" SrcFileId="5" StartOffset="1002"/>
+</LocList>
+</OpTerm>
+</RootTerm>
+</CondStmnt>
+</StmntSeq>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="705" HierarchyLvlTypeId="11" Intrnl_Id="157" Name="isFull">
+<Header>
+<Loc EndOffset="1208" SrcFileId="5" StartOffset="1185"/>
+</Header>
+<LocList>
+<Loc EndOffset="1327" SrcFileId="5" StartOffset="1185"/>
+</LocList>
+<StmntSeq Intrnl_Id="158">
+<LocList>
+<Loc EndOffset="1228" SrcFileId="5" StartOffset="1214"/>
+<Loc EndOffset="1284" SrcFileId="5" StartOffset="1232"/>
+<Loc EndOffset="1323" SrcFileId="5" StartOffset="1288"/>
+</LocList>
+<BasicStmnt CovItemId="S11" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="159">
+<LocList>
+<Loc EndOffset="1228" SrcFileId="5" StartOffset="1214"/>
+</LocList>
+</BasicStmnt>
+<LoopStmnt CovItemId="S12" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="160" MltplExecId="L2-2" MltplExecPrefix="esercizio4.Magazzino.java" NvrExecId="L2-0" NvrExecPrefix="esercizio4.Magazzino.java" OnceExecutedId="L2-1" OnceExecutedPrefix="esercizio4.Magazzino.java" OptBodyExec="true">
+<StmntSeq Intrnl_Id="161">
+<LocList>
+<Loc EndOffset="1284" SrcFileId="5" StartOffset="1264"/>
+</LocList>
+<BasicStmnt CovItemId="S13" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="162">
+<LocList>
+<Loc EndOffset="1284" SrcFileId="5" StartOffset="1264"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+<Keyword EndOffset="1235" SrcFileId="5" StartOffset="1232"/>
+<LocList>
+<Loc EndOffset="1284" SrcFileId="5" StartOffset="1232"/>
+</LocList>
+<RootTerm CovItemId="C4" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="163">
+<BasicBoolTerm Intrnl_Id="164">
+<LocList>
+<Loc EndOffset="1253" SrcFileId="5" StartOffset="1248"/>
+</LocList>
+</BasicBoolTerm>
+</RootTerm>
+</LoopStmnt>
+<BasicStmnt CovItemId="S14" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="165">
+<LocList>
+<Loc EndOffset="1323" SrcFileId="5" StartOffset="1288"/>
+</LocList>
+<QMO CovItemId="Q1" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="166">
+<LocList>
+<Loc EndOffset="1307" SrcFileId="5" StartOffset="1295"/>
+</LocList>
+<QMO_E CovItemId="Q1-0" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="167">
+<LocList>
+<Loc EndOffset="1314" SrcFileId="5" StartOffset="1310"/>
+</LocList>
+</QMO_E>
+<QMO_E CovItemId="Q1-1" CovItemPrefix="esercizio4.Magazzino.java" Intrnl_Id="168">
+<LocList>
+<Loc EndOffset="1322" SrcFileId="5" StartOffset="1317"/>
+</LocList>
+</QMO_E>
+</QMO>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+<HierarchyLvl HierarchyLvlId="714" HierarchyLvlTypeId="10" Intrnl_Id="169" Name="esercizio5">
+<Header/>
+<LocList/>
+<HierarchyLvl HierarchyLvlId="708" HierarchyLvlTypeId="12" Intrnl_Id="170" Name="RedCarExitTest">
+<Header>
+<Loc EndOffset="182" SrcFileId="6" StartOffset="155"/>
+</Header>
+<LocList>
+<Loc EndOffset="684" SrcFileId="6" StartOffset="155"/>
+</LocList>
+<HierarchyLvl HierarchyLvlId="707" HierarchyLvlTypeId="11" Intrnl_Id="171" Name="test">
+<Header>
+<Loc EndOffset="216" SrcFileId="6" StartOffset="190"/>
+</Header>
+<LocList>
+<Loc EndOffset="679" SrcFileId="6" StartOffset="190"/>
+</LocList>
+<StmntSeq Intrnl_Id="172">
+<LocList>
+<Loc EndOffset="255" SrcFileId="6" StartOffset="222"/>
+<Loc EndOffset="334" SrcFileId="6" StartOffset="300"/>
+<Loc EndOffset="413" SrcFileId="6" StartOffset="379"/>
+<Loc EndOffset="512" SrcFileId="6" StartOffset="478"/>
+<Loc EndOffset="550" SrcFileId="6" StartOffset="516"/>
+<Loc EndOffset="588" SrcFileId="6" StartOffset="554"/>
+<Loc EndOffset="675" SrcFileId="6" StartOffset="641"/>
+</LocList>
+<BasicStmnt CovItemId="S1" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="173">
+<LocList>
+<Loc EndOffset="255" SrcFileId="6" StartOffset="222"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S2" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="174">
+<LocList>
+<Loc EndOffset="334" SrcFileId="6" StartOffset="300"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S3" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="175">
+<LocList>
+<Loc EndOffset="413" SrcFileId="6" StartOffset="379"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S4" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="176">
+<LocList>
+<Loc EndOffset="512" SrcFileId="6" StartOffset="478"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S5" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="177">
+<LocList>
+<Loc EndOffset="550" SrcFileId="6" StartOffset="516"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S6" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="178">
+<LocList>
+<Loc EndOffset="588" SrcFileId="6" StartOffset="554"/>
+</LocList>
+</BasicStmnt>
+<BasicStmnt CovItemId="S7" CovItemPrefix="esercizio5.RedCarExitTest.java" Intrnl_Id="179">
+<LocList>
+<Loc EndOffset="675" SrcFileId="6" StartOffset="641"/>
+</LocList>
+</BasicStmnt>
+</StmntSeq>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</HierarchyLvl>
+</MASTRoot>
+<TestSession Comment="" Date="1585491379852" Name="Mar 29, 2020 4:16:19 PM">
+<TestCase Comment="" Date="1585491379664" Name="esercizio3.BalanceTest:testBalance">
+<CovList/>
+<AssgnmntList/>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491379669" Name="esercizio3.BalanceTest:testMCDCBalance">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio3.Balance.java">
+<Cov CovItemId="B1" Value="3"/>
+<Cov CovItemId="B2" Value="5"/>
+<Cov CovItemId="S1" Value="8"/>
+<Cov CovItemId="S2" Value="8"/>
+<Cov CovItemId="S3" Value="8"/>
+<Cov CovItemId="S4" Value="3"/>
+<Cov CovItemId="S5" Value="5"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio3.Balance.java">
+<AssgnmntListEntry Length="4" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1122" Value="1"/>
+<MapEntry BoolAssgnmnt="1002" Value="2"/>
+<MapEntry BoolAssgnmnt="1010" Value="1"/>
+<MapEntry BoolAssgnmnt="1011" Value="2"/>
+<MapEntry BoolAssgnmnt="0202" Value="2"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491379671" Name="esercizio3.BalanceTest:testStatementCoverageBalance">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio3.Balance.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="S1" Value="2"/>
+<Cov CovItemId="S2" Value="2"/>
+<Cov CovItemId="S3" Value="2"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio3.Balance.java">
+<AssgnmntListEntry Length="4" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1122" Value="1"/>
+<MapEntry BoolAssgnmnt="0202" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491379672" Name="esercizio3.BalanceTest:testConditionCoverageBalance">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio3.Balance.java">
+<Cov CovItemId="B1" Value="2"/>
+<Cov CovItemId="B2" Value="3"/>
+<Cov CovItemId="S1" Value="5"/>
+<Cov CovItemId="S2" Value="5"/>
+<Cov CovItemId="S3" Value="5"/>
+<Cov CovItemId="S4" Value="2"/>
+<Cov CovItemId="S5" Value="3"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio3.Balance.java">
+<AssgnmntListEntry Length="4" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1122" Value="1"/>
+<MapEntry BoolAssgnmnt="1002" Value="1"/>
+<MapEntry BoolAssgnmnt="1010" Value="1"/>
+<MapEntry BoolAssgnmnt="1011" Value="1"/>
+<MapEntry BoolAssgnmnt="0202" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491379673" Name="esercizio3.BalanceTest:testBranchCoverageBalance">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio3.Balance.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="S1" Value="2"/>
+<Cov CovItemId="S2" Value="2"/>
+<Cov CovItemId="S3" Value="2"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio3.Balance.java">
+<AssgnmntListEntry Length="4" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1122" Value="1"/>
+<MapEntry BoolAssgnmnt="0202" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491379674" Name="esercizio3.BalanceTest:assertTest">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio3.Balance.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S6" Value="4"/>
+<Cov CovItemId="S7" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio3.Balance.java">
+<AssgnmntListEntry Length="4" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1122" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1585491384452" Name="Mar 29, 2020 4:16:24 PM">
+<TestCase Comment="" Date="1585491384394" Name="esercizio2.ComputerTestBranchCoverage:testBrachCoverage2">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="0222" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491384404" Name="esercizio2.ComputerTestBranchCoverage:testBranchCoverage1">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1121" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+<TestSession Comment="" Date="1585491396235" Name="Mar 29, 2020 4:16:36 PM">
+<TestCase Comment="" Date="1585491396172" Name="esercizio2.ComputerTestMCDC:testX1">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1121" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396181" Name="esercizio2.ComputerTestMCDC:testX2">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="0222" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396183" Name="esercizio2.ComputerTestMCDC:testY5">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1121" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396185" Name="esercizio2.ComputerTestMCDC:testY6">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1002" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396187" Name="esercizio2.ComputerTestMCDC:testZ7">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1011" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396188" Name="esercizio2.ComputerTestMCDC:testZ8">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1002" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396189" Name="esercizio2.ComputerTestMCDC:testNoAlarm3">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B1" Value="1"/>
+<Cov CovItemId="B3" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S2" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S5" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="1" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1121" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<TestCase Comment="" Date="1585491396190" Name="esercizio2.ComputerTestMCDC:testNoAlarm4">
+<CovList>
+<CovPrefix CovItemPrefix="esercizio2.Computer.java">
+<Cov CovItemId="B2" Value="1"/>
+<Cov CovItemId="B4" Value="1"/>
+<Cov CovItemId="S1" Value="1"/>
+<Cov CovItemId="S3" Value="1"/>
+<Cov CovItemId="S4" Value="1"/>
+<Cov CovItemId="S6" Value="1"/>
+</CovPrefix>
+</CovList>
+<AssgnmntList>
+<AssgnmntPrefix RootTermCovItemPrefix="esercizio2.Computer.java">
+<AssgnmntListEntry Length="1" RootTermCovItemId="C1">
+<MapEntry BoolAssgnmnt="0" Value="1"/>
+</AssgnmntListEntry>
+<AssgnmntListEntry Length="4" RootTermCovItemId="C2">
+<MapEntry BoolAssgnmnt="1120" Value="1"/>
+</AssgnmntListEntry>
+</AssgnmntPrefix>
+</AssgnmntList>
+<ObjMetaDataList/>
+<MetaDataList/>
+</TestCase>
+<MetaDataList/>
+</TestSession>
+</TestSessionContainer>
