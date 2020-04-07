@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="54f1472253c6cd5c114908095630600b" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Cicli[Cicli::reset([I)].JML operation contract.0
+
+Time: 1.497 s
+Nodes: 1236
+Branches: 20
+   </markerMessage>
+   <usedTypes>
+      <type name="Cicli">
+      </type>
+   </usedTypes>
+   <calledMethods>
+      <calledMethod fullQualifiedName="java.lang.ArrayIndexOutOfBoundsException#&lt;createObject&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.ArrayIndexOutOfBoundsException#&lt;allocate&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.ArrayIndexOutOfBoundsException#&lt;prepareEnter&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.IndexOutOfBoundsException#&lt;prepare&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.RuntimeException#&lt;prepare&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Exception#&lt;prepare&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Throwable#&lt;prepare&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Object#&lt;prepare&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.IndexOutOfBoundsException#&lt;init&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.RuntimeException#&lt;init&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Exception#&lt;init&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Throwable#&lt;init&gt;()"/>
+      <calledMethod fullQualifiedName="java.lang.Object#&lt;init&gt;()"/>
+   </calledMethods>
+   <assumptions>
+   </assumptions>
+</proofMetaFile>

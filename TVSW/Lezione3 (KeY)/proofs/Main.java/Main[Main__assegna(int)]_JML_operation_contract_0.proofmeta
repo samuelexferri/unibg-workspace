@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="8ebd25a1392c7f8462309ab5099729b3" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Main[Main::assegna(int)].JML operation contract.0
+
+Time: 0.961 s
+Nodes: 63
+Branches: 3
+   </markerMessage>
+   <usedTypes>
+      <type name="Main">
+      </type>
+   </usedTypes>
+</proofMetaFile>

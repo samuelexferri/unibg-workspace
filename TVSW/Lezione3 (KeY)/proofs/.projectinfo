@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<project name="Lezione3 (KeY)">
+   <package name="(default package)" path="/Lezione3 (KeY)/src">
+      <type name="Cicli" path="/Lezione3 (KeY)/src/Cicli.java">
+         <method displayName="Cicli()" name="Cicli" declaringType="Cicli" declaringFilePath="/Lezione3 (KeY)/src/Cicli.java" parameterTypes="">
+         </method>
+         <method displayName="countToZero(int)" name="countToZero" declaringType="Cicli" declaringFilePath="/Lezione3 (KeY)/src/Cicli.java" parameterTypes="int">
+            <contract name="Cicli[Cicli::countToZero(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__countToZero(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__countToZero(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="countToZero2(int)" name="countToZero2" declaringType="Cicli" declaringFilePath="/Lezione3 (KeY)/src/Cicli.java" parameterTypes="int">
+            <contract name="Cicli[Cicli::countToZero2(int)].JML operation contract.0" modality="DIAMOND" proofFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__countToZero2(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__countToZero2(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="reset(int[])" name="reset" declaringType="Cicli" declaringFilePath="/Lezione3 (KeY)/src/Cicli.java" parameterTypes="int">
+            <contract name="Cicli[Cicli::reset([I)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__reset([I)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__reset([I)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="quadrato(int)" name="quadrato" declaringType="Cicli" declaringFilePath="/Lezione3 (KeY)/src/Cicli.java" parameterTypes="int">
+            <contract name="Cicli[Cicli::quadrato(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__quadrato(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__quadrato(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="doppio(int)" name="doppio" declaringType="Cicli" declaringFilePath="/Lezione3 (KeY)/src/Cicli.java" parameterTypes="int">
+            <contract name="Cicli[Cicli::doppio(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__doppio(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Cicli.java/Cicli[Cicli__doppio(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+      </type>
+      <type name="Counter" path="/Lezione3 (KeY)/src/Counter19.java">
+         <method displayName="Counter()" name="Counter" declaringType="Counter" declaringFilePath="/Lezione3 (KeY)/src/Counter.java" parameterTypes="">
+         </method>
+         <method displayName="inc()" name="inc" declaringType="Counter" declaringFilePath="/Lezione3 (KeY)/src/Counter.java" parameterTypes="">
+            <contract name="Counter[Counter::inc()].JML operation contract.0" modality="DIAMOND" proofFilePath="/Lezione3 (KeY)/proofs/Counter19.java/Counter[Counter__inc()]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Counter19.java/Counter[Counter__inc()]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="reset()" name="reset" declaringType="Counter" declaringFilePath="/Lezione3 (KeY)/src/Counter.java" parameterTypes="">
+            <contract name="Counter[Counter::reset()].JML operation contract.0" modality="DIAMOND" proofFilePath="/Lezione3 (KeY)/proofs/Counter19.java/Counter[Counter__reset()]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Counter19.java/Counter[Counter__reset()]_JML_operation_contract_0.proofmeta"/>
+         </method>
+      </type>
+      <type name="Main" path="/Lezione3 (KeY)/src/Main.java">
+         <method displayName="Main()" name="Main" declaringType="Main" declaringFilePath="/Lezione3 (KeY)/src/Main.java" parameterTypes="">
+         </method>
+         <method displayName="assegna(int)" name="assegna" declaringType="Main" declaringFilePath="/Lezione3 (KeY)/src/Main.java" parameterTypes="int">
+            <contract name="Main[Main::assegna(int)].JML operation contract.0" modality="DIAMOND" proofFilePath="/Lezione3 (KeY)/proofs/Main.java/Main[Main__assegna(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Main.java/Main[Main__assegna(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="max(int, int)" name="max" declaringType="Main" declaringFilePath="/Lezione3 (KeY)/src/Main.java" parameterTypes="int;int">
+            <contract name="Main[Main::max(int,int)].JML operation contract.0" modality="DIAMOND" proofFilePath="/Lezione3 (KeY)/proofs/Main.java/Main[Main__max(int,int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Main.java/Main[Main__max(int,int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+      </type>
+   </package>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="5b43dcf56d4d7c5c7877151bc98f5bdc" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Cicli[Cicli::doppio(int)].JML operation contract.0
+
+Time: 1.5 s
+Nodes: 570
+Branches: 6
+   </markerMessage>
+   <usedTypes>
+      <type name="Cicli">
+      </type>
+   </usedTypes>
+</proofMetaFile>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="6a5d3ba85c457ac64a78ff1d4ac929f6" proofClosed="false" proofOutdated="false">
+   <markerMessage>
+Open Proof:
+Main[Main::max(int,int)].JML operation contract.0
+
+Reason: Goal can&apos;t be closed automatically
+Hint: Check code and specifications for bugs or continue proof interactively
+
+Time: 1.169 s
+Nodes: 82
+Branches: 5
+   </markerMessage>
+   <usedTypes>
+      <type name="Main">
+      </type>
+   </usedTypes>
+</proofMetaFile>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="769e23e3d2de8348f3e95d21295bb53f" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Counter[Counter::inc()].JML operation contract.0
+
+Time: 0.680 s
+Nodes: 300
+Branches: 7
+   </markerMessage>
+   <usedTypes>
+      <type name="Counter">
+      </type>
+   </usedTypes>
+   <assumptions>
+   </assumptions>
+</proofMetaFile>

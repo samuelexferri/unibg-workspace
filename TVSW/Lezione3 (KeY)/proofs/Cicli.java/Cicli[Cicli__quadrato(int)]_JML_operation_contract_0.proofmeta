@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="317931366e15124b78fe616ed83e3eda" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Cicli[Cicli::quadrato(int)].JML operation contract.0
+
+Time: 1.22 s
+Nodes: 495
+Branches: 6
+   </markerMessage>
+   <usedTypes>
+      <type name="Cicli">
+      </type>
+   </usedTypes>
+</proofMetaFile>
