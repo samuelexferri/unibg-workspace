@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="e469c27a8271755a41b8c66b2f656022" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Invarianti[Invarianti::countdown(int)].JML operation contract.0
+
+Time: 1.646 s
+Nodes: 285
+Branches: 4
+   </markerMessage>
+   <usedTypes>
+      <type name="Invarianti">
+      </type>
+   </usedTypes>
+</proofMetaFile>

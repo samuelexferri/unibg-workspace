@@ -30,6 +30,22 @@
             <contract name="Counter[Counter::reset()].JML operation contract.0" modality="DIAMOND" proofFilePath="/Lezione3 (KeY)/proofs/Counter19.java/Counter[Counter__reset()]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Counter19.java/Counter[Counter__reset()]_JML_operation_contract_0.proofmeta"/>
          </method>
       </type>
+      <type name="Invarianti" path="/Lezione3 (KeY)/src/Invarianti.java">
+         <method displayName="Invarianti()" name="Invarianti" declaringType="Invarianti" declaringFilePath="/Lezione3 (KeY)/src/Invarianti.java" parameterTypes="">
+         </method>
+         <method displayName="setTo(int)" name="setTo" declaringType="Invarianti" declaringFilePath="/Lezione3 (KeY)/src/Invarianti.java" parameterTypes="int">
+            <contract name="Invarianti[Invarianti::setTo(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__setTo(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__setTo(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="countdown(int)" name="countdown" declaringType="Invarianti" declaringFilePath="/Lezione3 (KeY)/src/Invarianti.java" parameterTypes="int">
+            <contract name="Invarianti[Invarianti::countdown(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__countdown(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__countdown(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="quadrato(int)" name="quadrato" declaringType="Invarianti" declaringFilePath="/Lezione3 (KeY)/src/Invarianti.java" parameterTypes="int">
+            <contract name="Invarianti[Invarianti::quadrato(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__quadrato(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__quadrato(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+         <method displayName="doppio(int)" name="doppio" declaringType="Invarianti" declaringFilePath="/Lezione3 (KeY)/src/Invarianti.java" parameterTypes="int">
+            <contract name="Invarianti[Invarianti::doppio(int)].JML operation contract.0" modality="BOX" proofFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__doppio(int)]_JML_operation_contract_0.proof" metaFilePath="/Lezione3 (KeY)/proofs/Invarianti.java/Invarianti[Invarianti__doppio(int)]_JML_operation_contract_0.proofmeta"/>
+         </method>
+      </type>
       <type name="Main" path="/Lezione3 (KeY)/src/Main.java">
          <method displayName="Main()" name="Main" declaringType="Main" declaringFilePath="/Lezione3 (KeY)/src/Main.java" parameterTypes="">
          </method>

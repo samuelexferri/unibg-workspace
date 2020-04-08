@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofMetaFile proofFileMD5="37500dd91c1b6f20dbbc7537ec152563" proofClosed="true" proofOutdated="false">
+   <markerMessage>
+Closed Proof:
+Invarianti[Invarianti::doppio(int)].JML operation contract.0
+
+Time: 1.790 s
+Nodes: 570
+Branches: 6
+   </markerMessage>
+   <usedTypes>
+      <type name="Invarianti">
+      </type>
+   </usedTypes>
+</proofMetaFile>
