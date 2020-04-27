@@ -313,7 +313,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1HQCi1EeqyreWIpk3E7w" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_bLF_QGtXEeqbzMrlaZmx-Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_4rVgxSi1EeqyreWIpk3E7w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_S9RksIhgEeqdkfR_JCjerw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_4rVgxSi1EeqyreWIpk3E7w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1uUCi1EeqyreWIpk3E7w" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -344,7 +344,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1uVyi1EeqyreWIpk3E7w" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_bLN7EGtXEeqbzMrlaZmx-Q" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_4rVgdCi1EeqyreWIpk3E7w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_S9gOMIhgEeqdkfR_JCjerw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_4rVgdCi1EeqyreWIpk3E7w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1uWCi1EeqyreWIpk3E7w" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2618,6 +2618,7 @@
   <commands xmi:id="_5JcWhSi1EeqyreWIpk3E7w" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.doc.legend.show.action" commandName="Show UI Legend" description="Show Tasks UI Legend" category="_4rRz6Ci1EeqyreWIpk3E7w"/>
   <commands xmi:id="_5JcWhii1EeqyreWIpk3E7w" elementId="AUTOGEN:::org.eclipse.mylyn.tasks.ui.actions.view/org.eclipse.mylyn.context.ui.actions.tasklist.focus" commandName="Focus on Workweek" description="Focus on Workweek" category="_4rRz6Ci1EeqyreWIpk3E7w"/>
   <commands xmi:id="_DGUXoWtXEeqJOPvfiMYtcA" elementId="org.eclipse.egit.ui.commit.UnifiedDiffCommand" commandName="Show Unified Diff" category="_4rRz6Ci1EeqyreWIpk3E7w"/>
+  <commands xmi:id="_SUqskIhgEeqdkfR_JCjerw" elementId="org.eclipse.oomph.setup.donate" commandName="Donate" description="Donate to the development of the Eclipse IDE" category="_4rRz6Ci1EeqyreWIpk3E7w"/>
   <addons xmi:id="_4qphsii1EeqyreWIpk3E7w" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_4qphsyi1EeqyreWIpk3E7w" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_4qphtCi1EeqyreWIpk3E7w" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
