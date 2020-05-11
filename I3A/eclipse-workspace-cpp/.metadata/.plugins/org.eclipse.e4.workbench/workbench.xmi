@@ -313,7 +313,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1HQCi1EeqyreWIpk3E7w" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_S9RksIhgEeqdkfR_JCjerw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_4rVgxSi1EeqyreWIpk3E7w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_3gTbQJNtEequ74a1D83n8w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_4rVgxSi1EeqyreWIpk3E7w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1uUCi1EeqyreWIpk3E7w" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -344,7 +344,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1uVyi1EeqyreWIpk3E7w" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_S9gOMIhgEeqdkfR_JCjerw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_4rVgdCi1EeqyreWIpk3E7w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_3gY60JNtEequ74a1D83n8w" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_4rVgdCi1EeqyreWIpk3E7w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5N1uWCi1EeqyreWIpk3E7w" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
