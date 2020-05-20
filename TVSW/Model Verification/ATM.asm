@@ -1,16 +1,16 @@
-// ATM 3
-// Versione gennaio 2011, rimossa la seq nella main rule
+// ATM
+// versione gennaio 2011. rimossa la seq nella main rule
 //
-// Requirements (Abstract State Machines - A Method for High-Level System Design and Analysis, page 92)
-// "Design the control for an ATM, and show it to be well functioning,
-// where via a GUI the customer can perform the following operations:
-// Op1. Enter the ID. Only one attempt is allowed per session; upon
-// failure the card is withdrawn.
-// Op2. Ask for the balance of the account. This operation is allowed
-// only once and only before attempting to withdraw money.
-// Op3. Withdraw money from the account. Only one attempt is allowed
-// per session. A warning is issued if the amount required
-// exceeds the balance of the account."
+//Requirements (Abstract State Machines - A Method for High-Level System Design and Analysis, page 92)
+//"Design the control for an ATM, and show it to be well functioning,
+//where via a GUI the customer can perform the following operations:
+//Op1. Enter the ID. Only one attempt is allowed per session; upon
+//failure the card is withdrawn.
+//Op2. Ask for the balance of the account. This operation is allowed
+//only once and only before attempting to withdraw money.
+//Op3. Withdraw money from the account. Only one attempt is allowed
+//per session. A warning is issued if the amount required
+//exceeds the balance of the account."
 
 asm ATM
 
@@ -212,8 +212,8 @@ definitions:
 				r_chooseAmount[]
 				seq
 					r_prelievo[]
-					//se la carta corrente non Ã¨ accessibile,
-					//vuol dire che c'Ã¨ stato un prelievo
+					//se la carta corrente non è accessibile,
+					//vuol dire che c'è stato un prelievo
 					if isDef(currCard) and not(accessible(currCard)) then
 						accessible(currCard) := true //il sistema centrale sblocca l'account della carta corrente
 					endif
