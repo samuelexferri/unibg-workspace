@@ -1,4 +1,7 @@
-asm CartSimple // No output message, Drug not abstract domain but enum domain (Eliminate static variables), Fixed price for generic drugs
+asm CartSimple 
+// No output message
+// Drug not abstract domain but enum domain, static variables eliminated and r_DrugDetail modified
+// Price fixed at 1 for generic drugs
 
 import ./STDL/StandardLibrary
 import ./STDL/CTLlibrary
@@ -6,40 +9,40 @@ import ./STDL/CTLlibrary
 signature:
 
 	// DOMAINS
-	enum domain Drug = {LITIO | MORFINA | PARACETAMOLO}
+	enum domain Drug = {LITIO | MORFINA | PARACETAMOLO} // Enum
 	domain SubInteger subsetof Integer
 	enum domain States = {WAITING | ADD_PRODUCT_OR_EXIT | CHOOSE_GEN_COM | SELECTED_GENERIC | SELECTED_COMMERCIAL | CLOSED}
 	enum domain Actions = {ORDER | EXIT}
 	enum domain AddProduct = {YES | NO}
-	enum domain SelectType = {GENERIC | COMMERCIAL}
+	enum domain Type = {GENERIC | COMMERCIAL}
 
 	// CONTROLLED VARAIBLES
 	dynamic controlled cartState: States
 	dynamic controlled currentDrug: Drug	
 	dynamic controlled total: SubInteger
 	dynamic controlled numOfProductsInCart: SubInteger
-	
+
 	// MONITORED VARAIBLES
 	dynamic monitored action: Actions 
 	dynamic monitored selectedDrug: Drug 
 	dynamic monitored selectedAddProduct: AddProduct
-	dynamic monitored selectedDrugType: SelectType
+	dynamic monitored selectedDrugType: Type
 	dynamic monitored insertQuantity: SubInteger
 	dynamic monitored insertPrice: SubInteger
-
+	
 	// DERIVED FUNCTION
 	derived valid: Boolean
-	
+
 definitions:
 	// DOMAIN DEFINITIONS
-	domain SubInteger = {1..100}
+	domain SubInteger = {0..1000}
 	
 	// DERIVED FUNCTION
 	function valid = numOfProductsInCart < 2 // Max number of products in cart
-	
+
 	// MACRO RULE SUPPORT
 	macro rule r_AddGenericToTotal =
-		total := total + 1*insertQuantity // There is a problem [plus or mult(UndefValue,IntegerValue)] so i fixed 1 the price
+		total := total + 1*insertQuantity // Price fixed at 1
 	
 	macro rule r_AddCommercialToTotal =
 		total := total + insertPrice*insertQuantity
@@ -48,19 +51,12 @@ definitions:
 	macro rule r_Waiting =
 		if (cartState=WAITING) then
 			par
-			if (action=EXIT) then
-				par
-				numOfProductsInCart := 0 // Necessary
-				cartState := CLOSED
-				endpar
+			if (action=ORDER) then
+				cartState := ADD_PRODUCT_OR_EXIT
 			endif
 			
-			if (action=ORDER) then
-				par
-				total := 0
-				numOfProductsInCart := 0
-				cartState := ADD_PRODUCT_OR_EXIT
-				endpar
+			if (action=EXIT) then
+				cartState := CLOSED
 			endif
 			endpar
 		endif
@@ -91,7 +87,7 @@ definitions:
 			endpar
 		endif
 	
-	macro rule r_DrugDetail =
+	macro rule r_DrugDetail = // Modified
 		par
 		if(cartState=SELECTED_GENERIC) then
 			par
@@ -100,7 +96,7 @@ definitions:
 			cartState := ADD_PRODUCT_OR_EXIT
 			endpar
 		endif
-		
+	
 		if (cartState=SELECTED_COMMERCIAL) then
 			par
 			r_AddCommercialToTotal[]
@@ -110,13 +106,12 @@ definitions:
 		endif
 		endpar
 		
-	macro rule r_CheckoutForced = 
+	macro rule r_Closing = 
 		cartState := CLOSED
-
+		
 	// CTL
-	// TODO
 	// I prodotti nel carrell sono sempre minori o uguali di due
-	//CTLSPEC ag(numOfProductsInCart <= 2)
+	CTLSPEC ag(numOfProductsInCart <= 2)
 
 	// MAIN RULE
 	main rule r_Main =
@@ -129,7 +124,7 @@ definitions:
 				r_DrugDetail[]
 				endpar
 			else
-				r_CheckoutForced[]
+				r_Closing[]
 			endif
 		endpar
 
@@ -137,9 +132,4 @@ definitions:
 default init s0:
 	function cartState = WAITING
 	function numOfProductsInCart = 0 
-	function total = 0 
-
-// TODO:
-// Max product nel carrello (AG)
-// Simulare che prima non c'era SubInteger nel Model Advisor o che comprendeva anche lo 0
-// else skip
+	function total = 0

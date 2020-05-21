@@ -10,7 +10,7 @@ signature:
 	enum domain States = {WAITING | ADD_PRODUCT_OR_EXIT | CHOOSE_GEN_COM | SELECTED_GENERIC | SELECTED_COMMERCIAL | CLOSED}
 	enum domain Actions = {ORDER | EXIT}
 	enum domain AddProduct = {YES | NO}
-	enum domain SelectType = {GENERIC | COMMERCIAL}
+	enum domain Type = {GENERIC | COMMERCIAL}
 
 	// CONTROLLED VARAIBLES
 	dynamic controlled cartState: States
@@ -23,7 +23,7 @@ signature:
 	dynamic monitored action: Actions 
 	dynamic monitored selectedDrug: Drug 
 	dynamic monitored selectedAddProduct: AddProduct
-	dynamic monitored selectedDrugType: SelectType
+	dynamic monitored selectedDrugType: Type
 	dynamic monitored insertQuantity: SubInteger
 	dynamic monitored insertPrice: SubInteger
 	
@@ -40,7 +40,7 @@ signature:
 	
 definitions:
 	// DOMAIN DEFINITIONS
-	domain SubInteger = {1..100}
+	domain SubInteger = {0..1000}
 	
 	// DERIVED FUNCTION
 	function valid = numOfProductsInCart < 2 // Max number of products in cart
@@ -55,32 +55,32 @@ definitions:
 
 	// MACRO RULE SUPPORT
 	macro rule r_AddGenericToTotal =
-		seq
+		par
 		total := total + getPrice(currentDrug)*insertQuantity
-		outMess := "Total price updated!"	
-		endseq
+		outMess := "Total price updated"	
+		endpar
 	
 	macro rule r_AddCommercialToTotal =
-		seq
+		par
 		total := total + insertPrice*insertQuantity
-		outMess := "Total price updated!"	
-		endseq
+		outMess := "Total price updated"	
+		endpar
 	
 	// MACRO RULE MAIN
 	macro rule r_Waiting =
 		if (cartState=WAITING) then
 			par
-			if (action=EXIT) then
-				par
-				cartState := CLOSED
-				outMess := "Payment successful!"
-				endpar
-			endif
-			
 			if (action=ORDER) then
 				par
 				cartState := ADD_PRODUCT_OR_EXIT
 				outMess := "Select a generic or commercial drug"
+				endpar
+			endif
+			
+			if (action=EXIT) then
+				par
+				cartState := CLOSED
+				outMess := "Successful!"
 				endpar
 			endif
 			endpar
@@ -88,7 +88,7 @@ definitions:
 	
 	macro rule r_SelectAddProductOrExit =
 		if (cartState=ADD_PRODUCT_OR_EXIT) then
-			seq
+			par
 			if (selectedAddProduct=YES) then
 				par
 				cartState := CHOOSE_GEN_COM
@@ -98,11 +98,11 @@ definitions:
 			
 			if (selectedAddProduct=NO) then
 				par
-				outMess := "Back"
 				cartState := WAITING
+				outMess := "Order or Exit"
 				endpar
 			endif
-			endseq
+			endpar
 		endif
 
 	macro rule r_SelectDrugType =
@@ -124,28 +124,29 @@ definitions:
 			endpar
 		endif
 	
-	macro rule r_GenericDrugSelected =
+	macro rule r_DrugDetail =
+		par
 		if(cartState=SELECTED_GENERIC) then
 			if ((exist $c in Drug with $c=selectedDrug)) then	
-				seq
+				par
 				currentDrug := selectedDrug
 				r_AddGenericToTotal[]
 				numOfProductsInCart := numOfProductsInCart + 1
 				cartState := ADD_PRODUCT_OR_EXIT
-				endseq
+				endpar
 			endif
 		endif
 	
-	macro rule r_CommercialDrugSelected =
 		if (cartState=SELECTED_COMMERCIAL) then
-			seq
+			par
 			r_AddCommercialToTotal[]
 			numOfProductsInCart := numOfProductsInCart + 1
 			cartState := ADD_PRODUCT_OR_EXIT
-			endseq
+			endpar
 		endif
+		endpar
 		
-	macro rule r_CheckoutForced = 
+	macro rule r_Closing = 
 		cartState := CLOSED
 
 	// MAIN RULE
@@ -156,11 +157,10 @@ definitions:
 				par
 				r_SelectAddProductOrExit[]
 				r_SelectDrugType[]
-				r_GenericDrugSelected[]
-				r_CommercialDrugSelected[]
+				r_DrugDetail[]
 				endpar
 			else
-				r_CheckoutForced[]
+				r_Closing[]
 			endif
 		endpar
 
