@@ -1,12 +1,12 @@
 asm Cart
 
+// TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO mult(UndefValue,IntegerValue)
+
 import ./STDL/StandardLibrary
 
 signature:
-
 	// DOMAINS
 	abstract domain Drug
-	domain SubInteger subsetof Integer
 	enum domain States = {WAITING | ADD_PRODUCT_OR_EXIT | CHOOSE_GEN_COM | SELECTED_GENERIC | SELECTED_COMMERCIAL | CLOSED}
 	enum domain Actions = {ORDER | EXIT}
 	enum domain AddProduct = {YES | NO}
@@ -24,8 +24,8 @@ signature:
 	dynamic monitored selectedDrug: Drug 
 	dynamic monitored selectedAddProduct: AddProduct
 	dynamic monitored selectedDrugType: Type
-	dynamic monitored insertQuantity: SubInteger
-	dynamic monitored insertPrice: SubInteger
+	dynamic monitored insertQuantity: Integer
+	dynamic monitored insertPrice: Integer
 	
 	// STATIC VARIABLES
 	static litio: Drug
@@ -39,31 +39,32 @@ signature:
 	static getPrice: Drug -> Integer  
 	
 definitions:
-	// DOMAIN DEFINITIONS
-	domain SubInteger = {0..100}
-	
 	// DERIVED FUNCTION
 	function valid = numOfProductsInCart < 2 // Max number of products in cart
 	
 	// STATIC FUNCTION (N-ARIE)
 	function getPrice($c in Drug) = // $c Input a string
 		switch($c)
-			case paracetamolo : 4
-			case morfina : 10
 			case litio : 7
+			case morfina : 10
+			case paracetamolo : 4
 		endswitch
 
 	// MACRO RULE SUPPORT
 	macro rule r_AddGenericToTotal =
 		par
 		total := total + getPrice(currentDrug)*insertQuantity
-		outMess := "Total price updated"	
+		outMess := "Total price updated"
+		numOfProductsInCart := numOfProductsInCart + 1
+		cartState := ADD_PRODUCT_OR_EXIT
 		endpar
 	
 	macro rule r_AddCommercialToTotal =
 		par
 		total := total + insertPrice*insertQuantity
-		outMess := "Total price updated"	
+		outMess := "Total price updated"
+		numOfProductsInCart := numOfProductsInCart + 1
+		cartState := ADD_PRODUCT_OR_EXIT
 		endpar
 	
 	// MACRO RULE MAIN
@@ -75,8 +76,6 @@ definitions:
 				cartState := ADD_PRODUCT_OR_EXIT
 				outMess := "Select a generic or commercial drug"
 				endpar
-			else
-				skip
 			endif
 			
 			if (action=EXIT) then
@@ -84,12 +83,8 @@ definitions:
 				cartState := CLOSED
 				outMess := "Successful!"
 				endpar
-			else
-				skip
 			endif
 			endpar
-		else
-			skip
 		endif
 	
 	macro rule r_SelectAddProductOrExit =
@@ -100,8 +95,6 @@ definitions:
 				cartState := CHOOSE_GEN_COM
 				outMess := "Choose the type of drugs (generic or commercial)"
 				endpar
-			else
-				skip
 			endif
 			
 			if (selectedAddProduct=NO) then
@@ -109,12 +102,8 @@ definitions:
 				cartState := WAITING
 				outMess := "Order or Exit"
 				endpar
-			else
-				skip
 			endif
 			endpar
-		else
-			skip
 		endif
 
 	macro rule r_SelectDrugType =
@@ -125,8 +114,6 @@ definitions:
 				cartState := SELECTED_GENERIC
 				outMess := "Insert a name of a generic drug in the list"
 				endpar
-			else
-				skip
 			endif
 			
 			if (selectedDrugType=COMMERCIAL) then
@@ -134,39 +121,23 @@ definitions:
 				cartState := SELECTED_COMMERCIAL
 				outMess := "Insert a name of a new commercial drug"
 				endpar
-			else
-				skip
 			endif
 			endpar
-		else
-			skip
 		endif
 	
 	macro rule r_DrugDetail =
 		par
 		if (cartState=SELECTED_GENERIC) then
-			if ((exist $c in Drug with $c=selectedDrug)) then	
+			if (exist $c in Drug with $c=selectedDrug) then	
 				par
 				currentDrug := selectedDrug
 				r_AddGenericToTotal[]
-				numOfProductsInCart := numOfProductsInCart + 1
-				cartState := ADD_PRODUCT_OR_EXIT
 				endpar
-			else
-				skip
 			endif
-		else
-			skip
 		endif
 	
 		if (cartState=SELECTED_COMMERCIAL) then
-			par
 			r_AddCommercialToTotal[]
-			numOfProductsInCart := numOfProductsInCart + 1
-			cartState := ADD_PRODUCT_OR_EXIT
-			endpar
-		else
-			skip
 		endif
 		endpar
 		

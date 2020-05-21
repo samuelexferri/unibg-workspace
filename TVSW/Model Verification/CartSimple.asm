@@ -1,9 +1,10 @@
 asm CartSimple 
-// No output message
-// Drug enum domain
-// Reduced SubIntegerReduced
+// CHANGES
+// No output messages
+// Enum domain (Drug)
+// Reduced domain SubInteger and SubIntegerReduced
 // Removed various variables (also static)
-// Modified r_DrugDetail
+// Modified r_DrugDetail (exist)
 // Price fixed at 1 for generic drugs
 // Removed loop (NO -> CLOSED)
 
@@ -11,9 +12,8 @@ import ./STDL/StandardLibrary
 import ./STDL/CTLlibrary
 
 signature:
-
 	// DOMAINS
-	enum domain Drug = {LITIO | MORFINA | PARACETAMOLO} // Enum
+	enum domain Drug = {LITIO | MORFINA | PARACETAMOLO} // Enum domain
 	domain SubInteger subsetof Integer
 	domain SubIntegerReduced subsetof Integer // Reduced for MP6
 	enum domain States = {WAITING | ADD_PRODUCT_OR_EXIT | CHOOSE_GEN_COM | SELECTED_GENERIC | SELECTED_COMMERCIAL | CLOSED}
@@ -48,10 +48,18 @@ definitions:
 
 	// MACRO RULE SUPPORT
 	macro rule r_AddGenericToTotal =
+		par
 		total := total + 1*insertQuantity // Price fixed at 1
+		numOfProductsInCart := numOfProductsInCart + 1
+		cartState := ADD_PRODUCT_OR_EXIT
+		endpar
 	
 	macro rule r_AddCommercialToTotal =
+		par
 		total := total + insertPrice*insertQuantity
+		numOfProductsInCart := numOfProductsInCart + 1
+		cartState := ADD_PRODUCT_OR_EXIT
+		endpar
 	
 	// MACRO RULE MAIN
 	macro rule r_Waiting =
@@ -59,18 +67,12 @@ definitions:
 			par
 			if (action=ORDER) then
 				cartState := ADD_PRODUCT_OR_EXIT
-			else
-				skip
 			endif
 			
 			if (action=EXIT) then
 				cartState := CLOSED
-			else
-				skip
 			endif
 			endpar
-		else
-			skip
 		endif
 	
 	macro rule r_SelectAddProductOrExit =
@@ -78,18 +80,12 @@ definitions:
 			par
 			if (selectedAddProduct=YES) then
 				cartState := CHOOSE_GEN_COM
-			else
-				skip
 			endif
 			
 			if (selectedAddProduct=NO) then
 				cartState := CLOSED // Removed loop
-			else
-				skip
 			endif
 			endpar
-		else
-			skip
 		endif
 
 	macro rule r_SelectDrugType =
@@ -97,18 +93,12 @@ definitions:
 			par
 			if (selectedDrugType=GENERIC) then
 				cartState := SELECTED_GENERIC
-			else
-				skip
 			endif
 			
 			if (selectedDrugType=COMMERCIAL) then
 				cartState := SELECTED_COMMERCIAL
-			else
-				skip
 			endif
 			endpar
-		else
-			skip
 		endif
 	
 	macro rule r_DrugDetail = // Modified
@@ -117,21 +107,11 @@ definitions:
 			par
 			currentDrug := selectedDrug
 			r_AddGenericToTotal[]
-			numOfProductsInCart := numOfProductsInCart + 1
-			cartState := ADD_PRODUCT_OR_EXIT
 			endpar
-		else
-			skip
 		endif
 	
 		if (cartState=SELECTED_COMMERCIAL) then
-			par
 			r_AddCommercialToTotal[]
-			numOfProductsInCart := numOfProductsInCart + 1
-			cartState := ADD_PRODUCT_OR_EXIT
-			endpar
-		else
-			skip
 		endif
 		endpar
 		
@@ -174,7 +154,3 @@ default init s0:
 	function cartState = WAITING
 	function numOfProductsInCart = 0 
 	function total = 0
-	// The following are initializated for CTL
-	function action = ORDER
-	function selectedAddProduct = YES
-	
