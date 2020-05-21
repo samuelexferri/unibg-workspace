@@ -40,7 +40,7 @@ signature:
 	
 definitions:
 	// DOMAIN DEFINITIONS
-	domain SubInteger = {0..1000}
+	domain SubInteger = {0..100}
 	
 	// DERIVED FUNCTION
 	function valid = numOfProductsInCart < 2 // Max number of products in cart
@@ -75,6 +75,8 @@ definitions:
 				cartState := ADD_PRODUCT_OR_EXIT
 				outMess := "Select a generic or commercial drug"
 				endpar
+			else
+				skip
 			endif
 			
 			if (action=EXIT) then
@@ -82,8 +84,12 @@ definitions:
 				cartState := CLOSED
 				outMess := "Successful!"
 				endpar
+			else
+				skip
 			endif
 			endpar
+		else
+			skip
 		endif
 	
 	macro rule r_SelectAddProductOrExit =
@@ -94,6 +100,8 @@ definitions:
 				cartState := CHOOSE_GEN_COM
 				outMess := "Choose the type of drugs (generic or commercial)"
 				endpar
+			else
+				skip
 			endif
 			
 			if (selectedAddProduct=NO) then
@@ -101,8 +109,12 @@ definitions:
 				cartState := WAITING
 				outMess := "Order or Exit"
 				endpar
+			else
+				skip
 			endif
 			endpar
+		else
+			skip
 		endif
 
 	macro rule r_SelectDrugType =
@@ -113,6 +125,8 @@ definitions:
 				cartState := SELECTED_GENERIC
 				outMess := "Insert a name of a generic drug in the list"
 				endpar
+			else
+				skip
 			endif
 			
 			if (selectedDrugType=COMMERCIAL) then
@@ -120,13 +134,17 @@ definitions:
 				cartState := SELECTED_COMMERCIAL
 				outMess := "Insert a name of a new commercial drug"
 				endpar
+			else
+				skip
 			endif
 			endpar
+		else
+			skip
 		endif
 	
 	macro rule r_DrugDetail =
 		par
-		if(cartState=SELECTED_GENERIC) then
+		if (cartState=SELECTED_GENERIC) then
 			if ((exist $c in Drug with $c=selectedDrug)) then	
 				par
 				currentDrug := selectedDrug
@@ -134,7 +152,11 @@ definitions:
 				numOfProductsInCart := numOfProductsInCart + 1
 				cartState := ADD_PRODUCT_OR_EXIT
 				endpar
+			else
+				skip
 			endif
+		else
+			skip
 		endif
 	
 		if (cartState=SELECTED_COMMERCIAL) then
@@ -143,6 +165,8 @@ definitions:
 			numOfProductsInCart := numOfProductsInCart + 1
 			cartState := ADD_PRODUCT_OR_EXIT
 			endpar
+		else
+			skip
 		endif
 		endpar
 		
