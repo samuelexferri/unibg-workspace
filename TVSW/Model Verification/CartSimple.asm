@@ -3,9 +3,10 @@ asm CartSimple
 // No output messages
 // Enum domain (Drug)
 // Reduced domain SubInteger and SubIntegerReduced
-// Removed various variables (also static)
-// Modified r_DrugDetail (exist)
-// Price fixed at 1 for generic drugs
+// Removed various variables, also static
+// Modified Main rule (not sequenzial because it is not supported)
+// Modified DrugDetail rule (removed exist)
+// Price fixed for generic drugs
 // Removed loop (NO -> CLOSED)
 
 import ./STDL/StandardLibrary
@@ -49,7 +50,7 @@ definitions:
 	// MACRO RULE SUPPORT
 	macro rule r_AddGenericToTotal =
 		par
-		total := total + 1*insertQuantity // Price fixed at 1
+		total := total + 1*insertQuantity // Price fixed
 		numOfProductsInCart := numOfProductsInCart + 1
 		cartState := ADD_PRODUCT_OR_EXIT
 		endpar
@@ -104,10 +105,10 @@ definitions:
 	macro rule r_DrugDetail = // Modified
 		par
 		if (cartState=SELECTED_GENERIC) then
-			par
+			seq // Necessarily sequential
 			currentDrug := selectedDrug
 			r_AddGenericToTotal[]
-			endpar
+			endseq
 		endif
 	
 		if (cartState=SELECTED_COMMERCIAL) then
@@ -136,18 +137,18 @@ definitions:
 
 	// MAIN RULE
 	main rule r_Main =
-		par
+		seq
 		r_Waiting[]
-			if (valid) then
-				par
-				r_SelectAddProductOrExit[]
-				r_SelectDrugType[]
-				r_DrugDetail[]
-				endpar
-			else
-				r_Closing[]
-			endif
-		endpar
+		if (valid) then
+			par
+			r_SelectAddProductOrExit[]
+			r_SelectDrugType[]
+			r_DrugDetail[]
+			endpar
+		else
+			r_Closing[]
+		endif
+		endseq
 
 // INITIAL STATE
 default init s0:

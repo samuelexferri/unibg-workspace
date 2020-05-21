@@ -1,7 +1,5 @@
 asm Cart
 
-// TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO mult(UndefValue,IntegerValue)
-
 import ./STDL/StandardLibrary
 
 signature:
@@ -129,10 +127,10 @@ definitions:
 		par
 		if (cartState=SELECTED_GENERIC) then
 			if (exist $c in Drug with $c=selectedDrug) then	
-				par
+				seq // Necessarily sequential
 				currentDrug := selectedDrug
 				r_AddGenericToTotal[]
-				endpar
+				endseq
 			endif
 		endif
 	
@@ -146,18 +144,18 @@ definitions:
 
 	// MAIN RULE
 	main rule r_Main =
-		par
+		seq
 		r_Waiting[]
 			if (valid) then
-				par
+				seq
 				r_SelectAddProductOrExit[]
 				r_SelectDrugType[]
 				r_DrugDetail[]
-				endpar
+				endseq
 			else
 				r_Closing[]
 			endif
-		endpar
+		endseq
 
 // INITIAL STATE
 default init s0:

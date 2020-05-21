@@ -12,7 +12,7 @@ MODULE main
 		selectedDrugType: {COMMERCIAL, GENERIC}; --monitored
 		total: {-2147483647, 0, 1, 10, 2, 3, 4, 5, 6, 7, 8, 9}; --controlled
 	DEFINE
-	CONSTANTS TYPE_UNDEF, COMMERCIAL, GENERIC, ACTIONS_UNDEF, EXIT, ORDER, ADDPRODUCT_UNDEF, NO, YES, STATES_UNDEF, ADD_PRODUCT_OR_EXIT, CHOOSE_GEN_COM, CLOSED, SELECTED_COMMERCIAL, SELECTED_GENERIC, WAITING, DRUG_UNDEF, LITIO, MORFINA, PARACETAMOLO;
+	CONSTANTS DRUG_UNDEF, LITIO, MORFINA, PARACETAMOLO, ACTIONS_UNDEF, EXIT, ORDER, ADDPRODUCT_UNDEF, NO, YES, TYPE_UNDEF, COMMERCIAL, GENERIC, STATES_UNDEF, ADD_PRODUCT_OR_EXIT, CHOOSE_GEN_COM, CLOSED, SELECTED_COMMERCIAL, SELECTED_GENERIC, WAITING;
 	ASSIGN
 		init(cartState) := WAITING;
 		init(currentDrug) := DRUG_UNDEF;
@@ -22,9 +22,9 @@ MODULE main
 			case
 				(((numOfProductsInCart < 2) & (cartState = CHOOSE_GEN_COM)) & (selectedDrugType = GENERIC)): SELECTED_GENERIC;
 				((((cartState = WAITING) & (action = EXIT)) | ((selectedAddProduct = NO) & ((cartState = ADD_PRODUCT_OR_EXIT) & (numOfProductsInCart < 2)))) | !(numOfProductsInCart < 2)): CLOSED;
-				(((numOfProductsInCart < 2) & (cartState = SELECTED_COMMERCIAL)) | (((cartState = SELECTED_GENERIC) & (numOfProductsInCart < 2)) | ((cartState = WAITING) & (action = ORDER)))): ADD_PRODUCT_OR_EXIT;
 				((selectedAddProduct = YES) & ((cartState = ADD_PRODUCT_OR_EXIT) & (numOfProductsInCart < 2))): CHOOSE_GEN_COM;
 				(((numOfProductsInCart < 2) & (cartState = CHOOSE_GEN_COM)) & (selectedDrugType = COMMERCIAL)): SELECTED_COMMERCIAL;
+				((((numOfProductsInCart < 2) & (cartState = SELECTED_COMMERCIAL)) | ((cartState = WAITING) & (action = ORDER))) | ((cartState = SELECTED_GENERIC) & (numOfProductsInCart < 2))): ADD_PRODUCT_OR_EXIT;
 				TRUE: cartState;
 			esac;
 		next(currentDrug) :=
