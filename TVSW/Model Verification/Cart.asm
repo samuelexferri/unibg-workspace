@@ -1,20 +1,22 @@
 asm Cart
 
 import ./STDL/StandardLibrary
+import ./STDL/CTLlibrary
+import ./STDL/LTLlibrary
 
 signature:
 
 	// DOMAINS
 	abstract domain Drug
 	domain QuantityPriceDom subsetof Integer
-	enum domain States = { WAITING | ADD_PRODUCT_OR_EXIT | CLOSED | CHOOSE_GEN_COM | SELECTED_GENERIC | SELECTED_COMMERCIAL}
+	enum domain States = {WAITING | ADD_PRODUCT_OR_EXIT | CHOOSE_GEN_COM | SELECTED_GENERIC | SELECTED_COMMERCIAL | CLOSED}
 	enum domain Actions = {ORDER | EXIT}
-	enum domain AddProduct = {YES| NO}
+	enum domain AddProduct = {YES | NO}
 	enum domain SelectType = {GENERIC | COMMERCIAL}
 
 	// CONTROLLED VARAIBLES
-	dynamic controlled currentDrug: Drug	
 	dynamic controlled cartState: States
+	dynamic controlled currentDrug: Drug	
 	dynamic controlled outMess: Any	// Output message
 	dynamic controlled total: Integer
 	dynamic controlled numOfProductsInCart: Integer
@@ -28,20 +30,16 @@ signature:
 	dynamic monitored insertPrice: QuantityPriceDom
 	
 	// STATIC VARIABLES
-	static paracetamolo: Drug
-	static morfina: Drug
 	static litio: Drug
+	static morfina: Drug
+	static paracetamolo: Drug
 	
+	// DERIVED FUNCTION
+	derived valid: Boolean
 
-	// STATIC FUNCTIONS
+	// STATIC FUNCTION (N-ARIE)
 	static getPrice: Drug -> Integer  
 	
-	// DERIVED FUNCTIONS
-	derived valid: Boolean
-	
-	// N-ARIE FUNCTIONS
-	// TODO
-
 definitions:
 	// DOMAIN DEFINITIONS
 	domain QuantityPriceDom = {1..50}
@@ -49,15 +47,15 @@ definitions:
 	// DERIVED FUNCTION
 	function valid = numOfProductsInCart < 2 // Max number of products in cart
 	
-	// FUNCTIONS
-	function getPrice($c in Drug) = // $c input a string
+	// STATIC FUNCTION (N-ARIE)
+	function getPrice($c in Drug) = // $c Input a string
 		switch($c)
 			case paracetamolo : 4
 			case morfina : 10
 			case litio : 7
 		endswitch
 
-	// MACRORULE DEFINITIONS
+	// MACRO RULE SUPPORT
 	macro rule r_AddGenericToTotal =
 		seq
 		total := total + getPrice(currentDrug)*insertQuantity
@@ -70,9 +68,10 @@ definitions:
 		outMess := "Total price updated!"	
 		endseq
 	
+	// MACRO RULE MAIN
 	macro rule r_Waiting =
 		if (cartState=WAITING) then
-		par
+			par
 			if (action=EXIT) then
 				par
 				numOfProductsInCart := 0 // Necessary
@@ -89,7 +88,7 @@ definitions:
 				outMess := "Select a generic or commercial drug"
 				endpar
 			endif
-		endpar
+			endpar
 		endif
 	
 	macro rule r_SelectAddProductOrExit =
@@ -101,9 +100,9 @@ definitions:
 				outMess := "Choose the type of drugs (generic or commercial)"
 				endpar
 			endif
+			
 			if (selectedAddProduct=NO) then
 				par
-				// outMess := "Total" // Inconsistent update
 				outMess := total
 				cartState := WAITING
 				endpar
@@ -124,7 +123,7 @@ definitions:
 			if (selectedDrugType=COMMERCIAL) then
 				par 
 				cartState := SELECTED_COMMERCIAL
-				outMess := "Insert a name of a new commergial drug"
+				outMess := "Insert a name of a new commercial drug"
 				endpar
 			endif
 			endpar
@@ -139,12 +138,6 @@ definitions:
 				numOfProductsInCart := numOfProductsInCart + 1
 				cartState := ADD_PRODUCT_OR_EXIT
 				endseq
-			// TODO (Eliminare else)
-			else
-				seq
-				outMess := "This generic drug is not listed!"
-				cartState := ADD_PRODUCT_OR_EXIT
-				endseq
 			endif
 		endif
 	
@@ -157,9 +150,8 @@ definitions:
 			endseq
 		endif
 		
-	macro rule r_CheckOutForced = 
+	macro rule r_CheckoutForced = 
 		cartState := CLOSED
-
 
 	// CTL/LTL
 	// TODO
@@ -176,7 +168,7 @@ definitions:
 			r_CommercialDrugSelected[]
 			endpar
 		else
-			r_CheckOutForced[]
+			r_CheckoutForced[]
 		endif
 	endseq
 
@@ -186,10 +178,6 @@ default init s0:
 	function cartState = WAITING
 	
 // TODO:
-// Simulare che prima non c'era QuantityPriceDom nel Model Advisor o che comprendeva anche lo 0
-// else mancanti o non funzionanti
-// skip
 // Max product nel carrello (AG)
-// Funzioni derivate
-// Funzioni n arie (statiche e dinamiche), Il dominio delle funzioni n arie sono n domini,
-// In questo caso diciamo che il dominio è un prodotto di domini
+// Simulare che prima non c'era QuantityPriceDom nel Model Advisor o che comprendeva anche lo 0
+// else skip
