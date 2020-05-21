@@ -16,7 +16,7 @@ signature:
 	dynamic monitored sensorMon3: Boolean
 
 definitions:
-	domain NumOfInvalidDom = {0 : 10}
+	domain NumOfInvalidDom = {0 .. 10}
 
 	function valid = numOfInvalid < 10 
 
