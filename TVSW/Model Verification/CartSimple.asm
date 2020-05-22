@@ -1,9 +1,9 @@
 asm CartSimple 
 // CHANGES
 // No output messages
-// Enum domain (Drug)
+// Removed abstract domain and transformed into an enum domain (Drug)
 // Reduced domain SubInteger and SubIntegerReduced
-// Removed various variables, also static
+// Removed various variables also static
 // Modified Main rule (not sequenzial because it is not supported)
 // Modified DrugDetail rule (removed exist)
 // Price fixed for generic drugs
