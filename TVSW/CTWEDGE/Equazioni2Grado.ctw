@@ -1,0 +1,14 @@
+Model equation
+
+Parameters:
+// numero di soluzioni
+	soluzione: { zero una due };
+	a: { 3 0 5 };
+	b: { 3 0 5 };
+	c: { 3 0 5 };
+
+Constraints:
+	# a!=0 # // vincolo aggiuntivo
+	# (soluzione==zero) => b*b-4*a*c<0 #
+	# (soluzione==una) => b*b-4*a*c==0 #
+	# (soluzione==due) => b*b-4*a*c>0 #

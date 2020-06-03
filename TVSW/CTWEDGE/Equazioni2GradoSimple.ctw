@@ -1,0 +1,9 @@
+Model Equazioni2Grado 
+ 
+Parameters:
+a: { -2, 0, 1, 3 }
+b: { -2, 0, 1, 3 }
+c: { -2, 0, 2 }
+
+Constraints:
+# a!=0 # // altrimenti non è una equazione di 2° grado

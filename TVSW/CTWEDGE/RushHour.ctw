@@ -1,0 +1,21 @@
+Model RushHour 
+ 
+Parameters: // prima macchina righe e colonne 
+r1: [ 1..6 ];
+c1: [ 1..6 ];
+// seconda macchina righe e colonne
+r2: [ 1..6 ];  
+c2: [ 1..6 ];
+// terza macchina righe e colonne  
+r3: [ 1..6 ];
+c3: [ 1..6 ]; 
+// prima macchine in uscita 
+redAtExit: Boolean; 
+
+Constraints:  // la prima macchina è in uscita se e solo se è in 1,6 
+# redAtExit <=> (r1==3 and c1==6) #   
+// car1 e car2 non possono occupare la stessa cella 
+# r1!=r2 or c1!=c2 #  
+// idem per le altre 
+# r1!=r3 or c1!=c3 # 
+# r2!=r3 or c2!=c3 #

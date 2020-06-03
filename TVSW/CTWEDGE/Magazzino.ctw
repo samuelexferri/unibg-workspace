@@ -1,0 +1,10 @@
+Model Magazzino
+
+Parameters:
+productIndex: {0, 3, 6}
+addQuantity: {0, 1, 5, 10, 11}
+returnedValue: Boolean
+nproductsOld: {0,50,90,95,100}
+
+Constraints:
+# returnedValue = (productIndex>0 and productIndex<6 and addQuantity>0 and addQuantity<11 and (nproductsOld + addQuantity <= 100)) #
