@@ -16,7 +16,7 @@ asm EuclideMCD
 //Il modello deve essere eseguito con l'opzione -ne (run until empty).
 //I valori dei due numeri numA e numB devono essere inizializzati nello stato iniziale,
 
-import ./STDL/StandardLibrary
+import ../STDL/StandardLibrary
 
 signature:
 	dynamic controlled numA: Integer

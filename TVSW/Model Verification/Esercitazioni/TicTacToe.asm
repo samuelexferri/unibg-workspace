@@ -1,7 +1,7 @@
 asm TicTacToe
 
-import ./STDL/StandardLibrary
-import ./STDL/CTLlibrary
+import ../STDL/StandardLibrary
+import ../STDL/CTLlibrary
 
 signature:
 	domain Coord subsetof Integer
@@ -16,7 +16,7 @@ signature:
 	derived endOfGame: Boolean
 
 definitions:
-	domain Coord = {1..3}
+	domain Coord = {1:3}
 
 	function winner($s in Sign) =
 		(exist $r in Coord with (forall $c in Coord with board($r, $c) = $s)) or

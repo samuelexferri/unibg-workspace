@@ -14,7 +14,7 @@
 
 asm ATM
 
-import ./STDL/StandardLibrary
+import ../STDL/StandardLibrary
 
 signature:
 	abstract domain NumCard

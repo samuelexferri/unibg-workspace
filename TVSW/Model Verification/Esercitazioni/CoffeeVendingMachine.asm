@@ -19,8 +19,8 @@ asm CoffeeVendingMachine
 //L'utente del sistema decide ad ogni passo di simulazione il tipo di moneta da inserire.
 
 
-import ./STDL/StandardLibrary
-import ./STDL/CTLlibrary
+import ../STDL/StandardLibrary
+import ../STDL/CTLlibrary
 
 signature:
 	enum domain CoinType = {HALF | ONE}
@@ -32,8 +32,8 @@ signature:
 	monitored insertedCoin: CoinType
 
 definitions:
-	domain QuantityDomain = {0 .. 10}
-	domain CoinDomain = {0 .. 25}
+	domain QuantityDomain = {0:10}
+	domain CoinDomain = {0:25}
 
 	rule r_serveProduct($p in Product) =
 		par

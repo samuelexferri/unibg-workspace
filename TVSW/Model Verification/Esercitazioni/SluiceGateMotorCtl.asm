@@ -2,8 +2,8 @@ asm SluiceGateMotorCtl
 
 //from the paper "The Abstract State Machines Method for High-Level System Design and Analysis" by Egon Boerger
 
-import ./STDL/StandardLibrary
-import ./STDL/CTLlibrary
+import ../STDL/StandardLibrary
+import ../STDL/CTLlibrary
 
 signature:
 	domain Minutes subsetof Integer
