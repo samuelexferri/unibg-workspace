@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proofMetaFile proofFileMD5="6a5d3ba85c457ac64a78ff1d4ac929f6" proofClosed="false" proofOutdated="false">
+<proofMetaFile proofFileMD5="4404ebcb2096bc14741af9193d7ce1b7" proofClosed="false" proofOutdated="false">
    <markerMessage>
 Open Proof:
 Main[Main::max(int,int)].JML operation contract.0
 
-Reason: Goal can&apos;t be closed automatically
-Hint: Check code and specifications for bugs or continue proof interactively
+Reason: Goal can&apos;t be closed automatically.
+Hint: Check code and specifications for bugs or continue proof interactively.
 
-Time: 1.169 s
-Nodes: 82
+Time: 1.236 s
+Nodes: 146
 Branches: 5
    </markerMessage>
-   <usedTypes>
+   <references rep="pre: {heap=java.lang.Object::&lt;inv&gt;(heap,self)}; mby: null; post: {heap=and(imp(equals(exc,null),and(and(geq(result,x),geq(result,y)),and(or(equals(result,x),equals(result,y)),java.lang.Object::&lt;inv&gt;(heap,self)))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: diamond; transaction: false">
       <type name="Main">
+         <axiomReferences>
+            <axiomReference kjt="Main" name="Class invariant axiom for Main" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),true)"/>
+         </axiomReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Main" name="max" parameters="int;int;" src="intmax (int x,int y) {return x&gt;y ?x :100;}"/>
+         </inlineMethodReferences>
       </type>
-   </usedTypes>
+   </references>
 </proofMetaFile>

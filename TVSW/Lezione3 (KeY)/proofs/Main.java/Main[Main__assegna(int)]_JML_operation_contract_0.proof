@@ -2,13 +2,12 @@
 
 \settings {
 "#Proof-Settings-Config-File
-#Tue Apr 07 16:31:27 CEST 2020
+#Thu Jun 11 13:02:14 CEST 2020
 [StrategyProperty]VBT_PHASE=VBT_SYM_EX
 [SMTSettings]useUninterpretedMultiplication=true
 [SMTSettings]SelectedTaclets=
 [StrategyProperty]METHOD_OPTIONS_KEY=METHOD_CONTRACT
 [StrategyProperty]USER_TACLETS_OPTIONS_KEY3=USER_TACLETS_OFF
-[StrategyProperty]SYMBOLIC_EXECUTION_ALIAS_CHECK_OPTIONS_KEY=SYMBOLIC_EXECUTION_ALIAS_CHECK_NEVER
 [StrategyProperty]LOOP_OPTIONS_KEY=LOOP_INVARIANT
 [StrategyProperty]USER_TACLETS_OPTIONS_KEY2=USER_TACLETS_OFF
 [StrategyProperty]USER_TACLETS_OPTIONS_KEY1=USER_TACLETS_OFF
@@ -19,12 +18,11 @@
 [StrategyProperty]DEP_OPTIONS_KEY=DEP_ON
 [StrategyProperty]BLOCK_OPTIONS_KEY=BLOCK_CONTRACT
 [StrategyProperty]CLASS_AXIOM_OPTIONS_KEY=CLASS_AXIOM_FREE
-[StrategyProperty]SYMBOLIC_EXECUTION_NON_EXECUTION_BRANCH_HIDING_OPTIONS_KEY=SYMBOLIC_EXECUTION_NON_EXECUTION_BRANCH_HIDING_OFF
 [StrategyProperty]QUERY_NEW_OPTIONS_KEY=QUERY_OFF
 [Strategy]Timeout=-1
 [Strategy]MaximumNumberOfAutomaticApplications=10000
 [SMTSettings]integersMaximum=2147483645
-[Choice]DefaultChoices=assertions-assertions\\:on , initialisation-initialisation\\:disableStaticInitialisation , intRules-intRules\\:arithmeticSemanticsIgnoringOF , programRules-programRules\\:Java , runtimeExceptions-runtimeExceptions\\:allow , JavaCard-JavaCard\\:off , Strings-Strings\\:on , modelFields-modelFields\\:showSatisfiability , bigint-bigint\\:on , sequences-sequences\\:on , moreSeqRules-moreSeqRules\\:off , reach-reach\\:on , integerSimplificationRules-integerSimplificationRules\\:full , wdOperator-wdOperator\\:L , wdChecks-wdChecks\\:off
+[Choice]DefaultChoices=assertions-assertions\\:on , initialisation-initialisation\\:disableStaticInitialisation , intRules-intRules\\:arithmeticSemanticsIgnoringOF , programRules-programRules\\:Java , runtimeExceptions-runtimeExceptions\\:allow , JavaCard-JavaCard\\:off , Strings-Strings\\:on , modelFields-modelFields\\:showSatisfiability , bigint-bigint\\:on , sequences-sequences\\:on , moreSeqRules-moreSeqRules\\:off , reach-reach\\:on , integerSimplificationRules-integerSimplificationRules\\:full , permissions-permissions\\:off , wdOperator-wdOperator\\:L , wdChecks-wdChecks\\:off , joinGenerateIsWeakeningGoal-joinGenerateIsWeakeningGoal\\:off
 [SMTSettings]useConstantsForBigOrSmallIntegers=true
 [StrategyProperty]STOPMODE_OPTIONS_KEY=STOPMODE_NONCLOSE
 [StrategyProperty]QUERYAXIOM_OPTIONS_KEY=QUERYAXIOM_ON
@@ -39,67 +37,28 @@
 "
 }
 
-\javaSource "../../../src";
+\javaSource "../../src";
 
-\problem {
-     wellFormed(heap)
-   & !self = null
-   &   boolean::select(heap,
-                       self,
-                       java.lang.Object::<created>)
-     = TRUE
-   & Main::exactInstance(self) = TRUE
-   & inInt(x)
-   & measuredByEmpty
-   & (  gt(x, Z(0(#)))
-      & java.lang.Object::<inv>(heap, self))
--> {heapAtPre:=heap || _x:=x}
-     \<{
-         exc=null;try {result=self.assegna(_x)@Main;
-         }catch (java.lang.Throwable e) {
-           exc=e;
-         }
-       }\> (  (   exc = null
-               ->     result
-                    = javaMulInt(Z(2(#)),
-                                 javaAddInt(x,
-                                            Z(0(1(#)))))
-                  & java.lang.Object::<inv>(heap, self))
-            & (   !exc = null
-               ->   (     java.lang.Throwable::instance(exc)
-                        = TRUE
-                     -> java.lang.Object::<inv>(heap,
-                                                self))
-                  & (    java.lang.Error::instance(exc)
-                       = TRUE
-                     |   java.lang.RuntimeException::instance(exc)
-                       = TRUE))
-            & \forall Field f;
-                \forall java.lang.Object o;
-                  (  elementOf(o, f, allLocs)
-                   | !o = null
-                   & !  boolean::select(heapAtPre,
-                                        o,
-                                        java.lang.Object::<created>)
-                      = TRUE
-                   |   any::select(heap, o, f)
-                     = any::select(heapAtPre, o, f)))
-
-}
+\proofObligation "#Proof Obligation Settings
+#Thu Jun 11 13:02:14 CEST 2020
+name=Main[Main\\:\\:assegna(int)].JML operation contract.0
+contract=Main[Main\\:\\:assegna(int)].JML operation contract.0
+class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
+";
 
 \proof {
-(keyLog "0" (keyUser "samuelexferri" ) (keyVersion "cf2b4245b92fe9df2d6b7bd158dd83ee7308d9a6"))
+(keyLog "0" (keyUser "samuelexferri" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
 
-(autoModeTime "536")
+(autoModeTime "272")
 
 (branch "dummy ID"
-(builtin "One Step Simplification" (formula "1") (newnames "heapAtPre"))
+(builtin "One Step Simplification" (formula "1") (newnames "x,self,result,exc,heapAtPre,o,f"))
 (rule "translateJavaMulInt" (formula "1") (term "1,0,1,0,0,1,1"))
 (rule "translateJavaAddInt" (formula "1") (term "1,1,0,1,0,0,1,1"))
 (rule "impRight" (formula "1"))
 (rule "andLeft" (formula "1"))
+(rule "andLeft" (formula "2"))
 (rule "andLeft" (formula "1"))
-(rule "andLeft" (formula "3"))
 (rule "andLeft" (formula "1"))
 (rule "andLeft" (formula "1"))
 (rule "andLeft" (formula "1"))

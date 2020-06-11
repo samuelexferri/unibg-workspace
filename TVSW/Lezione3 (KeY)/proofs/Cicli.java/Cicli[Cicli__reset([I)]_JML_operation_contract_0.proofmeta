@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proofMetaFile proofFileMD5="54f1472253c6cd5c114908095630600b" proofClosed="true" proofOutdated="false">
+<proofMetaFile proofFileMD5="66e49c0fc6fd6218eb25e7c01d994835" proofClosed="false" proofOutdated="false">
    <markerMessage>
-Closed Proof:
+Open Proof:
 Cicli[Cicli::reset([I)].JML operation contract.0
 
-Time: 1.497 s
-Nodes: 1236
-Branches: 20
+Reason: Max. Rule Applications reached.
+Hint: Continue proof automatic- or interactively.
+
+Time: 2.439 s
+Nodes: 900
+Branches: 12
    </markerMessage>
-   <usedTypes>
-      <type name="Cicli">
-      </type>
-   </usedTypes>
    <calledMethods>
       <calledMethod fullQualifiedName="java.lang.ArrayIndexOutOfBoundsException#&lt;createObject&gt;()"/>
       <calledMethod fullQualifiedName="java.lang.ArrayIndexOutOfBoundsException#&lt;allocate&gt;()"/>
@@ -21,12 +20,15 @@ Branches: 20
       <calledMethod fullQualifiedName="java.lang.Exception#&lt;prepare&gt;()"/>
       <calledMethod fullQualifiedName="java.lang.Throwable#&lt;prepare&gt;()"/>
       <calledMethod fullQualifiedName="java.lang.Object#&lt;prepare&gt;()"/>
-      <calledMethod fullQualifiedName="java.lang.IndexOutOfBoundsException#&lt;init&gt;()"/>
-      <calledMethod fullQualifiedName="java.lang.RuntimeException#&lt;init&gt;()"/>
-      <calledMethod fullQualifiedName="java.lang.Exception#&lt;init&gt;()"/>
-      <calledMethod fullQualifiedName="java.lang.Throwable#&lt;init&gt;()"/>
-      <calledMethod fullQualifiedName="java.lang.Object#&lt;init&gt;()"/>
    </calledMethods>
-   <assumptions>
-   </assumptions>
+   <references rep="pre: {heap=and(not(equals(a,null)),and(java.lang.Object::&lt;inv&gt;(heap,self),not(equals(a,null))))}; mby: null; post: {heap=and(imp(equals(exc,null),and(all{i:int}(imp(and(and(geq(i,Z(0(#))),lt(i,length(a))),inInt(i)),equals(int::select(heap,a,arr(i)),Z(0(#))))),java.lang.Object::&lt;inv&gt;(heap,self))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: box; transaction: false">
+      <type name="Cicli">
+         <axiomReferences>
+            <axiomReference kjt="Cicli" name="Class invariant axiom for Cicli" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),true)"/>
+         </axiomReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Cicli" name="reset" parameters="int;" src="public void reset (int a[]) {/*//@ loop_invariant (\forall int j; j &gt;= 0 &amp;&amp; j&lt; i; a[j] == 0);*/for ( int i = 0; i&lt;a.length; i++ ) {     a[i]=0;   } }"/>
+         </inlineMethodReferences>
+      </type>
+   </references>
 </proofMetaFile>

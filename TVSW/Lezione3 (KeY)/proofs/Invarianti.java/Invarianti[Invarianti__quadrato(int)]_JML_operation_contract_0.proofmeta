@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proofMetaFile proofFileMD5="1472c0076d7413ba0ddf896b5f9c9171" proofClosed="true" proofOutdated="false">
+<proofMetaFile proofFileMD5="25551bf089ce31cf742ee415207b6ce3" proofClosed="true" proofOutdated="false">
    <markerMessage>
 Closed Proof:
 Invarianti[Invarianti::quadrato(int)].JML operation contract.0
 
-Time: 1.767 s
+Time: 1.279 s
 Nodes: 495
 Branches: 6
    </markerMessage>
-   <usedTypes>
+   <references rep="pre: {heap=and(geq(n,Z(0(#))),java.lang.Object::&lt;inv&gt;(heap,self))}; mby: null; post: {heap=and(imp(equals(exc,null),and(equals(result,javaMulInt(n,n)),java.lang.Object::&lt;inv&gt;(heap,self))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: box; transaction: false">
       <type name="Invarianti">
+         <axiomReferences>
+            <axiomReference kjt="Invarianti" name="Class invariant axiom for Invarianti" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),true)"/>
+         </axiomReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Invarianti" name="quadrato" parameters="int;" src="publicintquadrato (int n) {int result = 0;/*//@ loop_invariant result == i * n &amp;&amp; i &lt;= n;*/for ( int i = 0; i&lt;n; i++ ) {     result+=n;   }                  return    result; }"/>
+         </inlineMethodReferences>
       </type>
-   </usedTypes>
+   </references>
 </proofMetaFile>

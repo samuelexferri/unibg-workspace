@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proofMetaFile proofFileMD5="37500dd91c1b6f20dbbc7537ec152563" proofClosed="true" proofOutdated="false">
+<proofMetaFile proofFileMD5="3100463f4dc5824d15594aaa98e33f26" proofClosed="true" proofOutdated="false">
    <markerMessage>
 Closed Proof:
 Invarianti[Invarianti::doppio(int)].JML operation contract.0
 
-Time: 1.790 s
-Nodes: 570
+Time: 1.889 s
+Nodes: 259
 Branches: 6
    </markerMessage>
-   <usedTypes>
+   <references rep="pre: {heap=and(geq(x,Z(0(#))),java.lang.Object::&lt;inv&gt;(heap,self))}; mby: null; post: {heap=and(imp(equals(exc,null),and(equals(result,javaMulInt(Z(2(#)),x)),java.lang.Object::&lt;inv&gt;(heap,self))),imp(not(equals(exc,null)),and(imp(equals(java.lang.Throwable::instance(exc),TRUE),java.lang.Object::&lt;inv&gt;(heap,self)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE)))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: box; transaction: false">
       <type name="Invarianti">
+         <axiomReferences>
+            <axiomReference kjt="Invarianti" name="Class invariant axiom for Invarianti" rep="equiv(java.lang.Object::&lt;inv&gt;(heap,self),true)"/>
+         </axiomReferences>
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Invarianti" name="doppio" parameters="int;" src="publicintdoppio (int x) {int counter = x;int result = x;/*//@ loop_invariant counter + result == 2 * x &amp;&amp; counter &gt;=0;*/while ( counter&gt;0 ) {     result++;     counter--;   }                  return  result; }"/>
+         </inlineMethodReferences>
       </type>
-   </usedTypes>
+   </references>
 </proofMetaFile>

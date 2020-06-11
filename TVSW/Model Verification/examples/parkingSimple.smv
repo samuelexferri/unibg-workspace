@@ -1,0 +1,14 @@
+--file C:\GitHub\workspace\TVSW\Model Verification\examples\parkingSimple.smv
+MODULE main
+	VAR
+		carEntering: boolean; --monitored
+		carExiting: boolean; --monitored
+		free: {-2147483647, 0, 1, 10, 2, 3, 4, 5, 6, 7, 8, 9}; --controlled
+	ASSIGN
+		init(free) := 0;
+		next(free) :=
+			case
+				((free > 0) & carExiting) & (free - 1) in {-2147483647, 0, 1, 10, 2, 3, 4, 5, 6, 7, 8, 9}: (free - 1);
+				(((free < 10) & carEntering) & !((free > 0) & carExiting)) & (free + 1) in {-2147483647, 0, 1, 10, 2, 3, 4, 5, 6, 7, 8, 9}: (free + 1);
+				TRUE: free;
+			esac;

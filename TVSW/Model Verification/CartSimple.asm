@@ -4,7 +4,7 @@ asm CartSimple
 // Removed abstract domain and transformed into an enum domain (Drug)
 // Reduced domain SubInteger and SubIntegerReduced
 // Removed various variables also static
-// Modified Main rule (not sequenzial because it is not supported)
+// Modified Main rule (not sequential because it is not supported)
 // Modified DrugDetail rule (removed exist)
 // Price fixed for generic drugs
 // Removed loop (NO -> CLOSED)
@@ -41,9 +41,9 @@ signature:
 
 definitions:
 	// DOMAIN DEFINITIONS
-	domain SubInteger = {0..10}
-	domain SubIntegerReduced = {0..2}
-	
+	domain SubInteger = {0:10}
+	domain SubIntegerReduced = {0:2}
+
 	// DERIVED FUNCTION
 	function valid = numOfProductsInCart < 2 // Max number of products in cart
 
@@ -137,10 +137,9 @@ definitions:
 
 	// MAIN RULE
 	main rule r_Main =
-		seq
-		r_Waiting[]
 		if (valid) then
 			par
+			r_Waiting[]
 			r_SelectAddProductOrExit[]
 			r_SelectDrugType[]
 			r_DrugDetail[]
@@ -148,7 +147,6 @@ definitions:
 		else
 			r_Closing[]
 		endif
-		endseq
 
 // INITIAL STATE
 default init s0:

@@ -9,7 +9,7 @@ signature:
 	dynamic monitored carExiting: Boolean//external nondeterminism
 	dynamic monitored carEntering: Boolean//external nondeterminism
 definitions:
-	domain AvailableSpaces = {0 : 10}
+	domain AvailableSpaces = {0:10}
 
 	main rule r_Main =
 		if carExiting and free > 0 then

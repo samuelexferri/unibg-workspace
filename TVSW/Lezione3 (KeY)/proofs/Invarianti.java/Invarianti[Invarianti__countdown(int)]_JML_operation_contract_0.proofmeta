@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<proofMetaFile proofFileMD5="e469c27a8271755a41b8c66b2f656022" proofClosed="true" proofOutdated="false">
+<proofMetaFile proofFileMD5="180d01a93c88e9f9678129ac58eaa490" proofClosed="true" proofOutdated="false">
    <markerMessage>
 Closed Proof:
 Invarianti[Invarianti::countdown(int)].JML operation contract.0
 
-Time: 1.646 s
+Time: 1.694 s
 Nodes: 285
 Branches: 4
    </markerMessage>
-   <usedTypes>
+   <references rep="pre: {heap=geq(timer,Z(0(#)))}; mby: null; post: {heap=and(imp(equals(exc,null),equals(result,Z(0(#)))),imp(not(equals(exc,null)),or(equals(java.lang.Error::instance(exc),TRUE),equals(java.lang.RuntimeException::instance(exc),TRUE))))}; mods: {heap=allLocs, savedHeap=null}; hasMod: {heap=true, savedHeap=true}; termination: box; transaction: false">
       <type name="Invarianti">
+         <inlineMethodReferences>
+            <inlineMethodReference kjt="Invarianti" name="countdown" parameters="int;" src="publicstaticintcountdown (int timer) {/*//@ loop_invariant*//*//@ timer &gt;= 0;*/while ( timer&gt;0 ) {     timer--;   }                  return  timer; }"/>
+         </inlineMethodReferences>
       </type>
-   </usedTypes>
+   </references>
 </proofMetaFile>

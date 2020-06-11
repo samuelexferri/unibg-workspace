@@ -144,18 +144,16 @@ definitions:
 
 	// MAIN RULE
 	main rule r_Main =
-		seq
-		r_Waiting[]
 			if (valid) then
-				seq
+				par
+				r_Waiting[]
 				r_SelectAddProductOrExit[]
 				r_SelectDrugType[]
 				r_DrugDetail[]
-				endseq
+				endpar
 			else
 				r_Closing[]
 			endif
-		endseq
 
 // INITIAL STATE
 default init s0:

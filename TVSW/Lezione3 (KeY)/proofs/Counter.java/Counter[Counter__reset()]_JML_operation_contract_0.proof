@@ -2,7 +2,7 @@
 
 \settings {
 "#Proof-Settings-Config-File
-#Tue Apr 07 16:44:44 CEST 2020
+#Thu Jun 11 13:02:10 CEST 2020
 [StrategyProperty]VBT_PHASE=VBT_SYM_EX
 [SMTSettings]useUninterpretedMultiplication=true
 [SMTSettings]SelectedTaclets=
@@ -24,7 +24,7 @@
 [Strategy]Timeout=-1
 [Strategy]MaximumNumberOfAutomaticApplications=10000
 [SMTSettings]integersMaximum=2147483645
-[Choice]DefaultChoices=assertions-assertions\\:on , initialisation-initialisation\\:disableStaticInitialisation , intRules-intRules\\:arithmeticSemanticsIgnoringOF , programRules-programRules\\:Java , runtimeExceptions-runtimeExceptions\\:allow , JavaCard-JavaCard\\:off , Strings-Strings\\:on , modelFields-modelFields\\:showSatisfiability , bigint-bigint\\:on , sequences-sequences\\:on , moreSeqRules-moreSeqRules\\:off , reach-reach\\:on , integerSimplificationRules-integerSimplificationRules\\:full , wdOperator-wdOperator\\:L , wdChecks-wdChecks\\:off
+[Choice]DefaultChoices=assertions-assertions\\:on , initialisation-initialisation\\:disableStaticInitialisation , intRules-intRules\\:arithmeticSemanticsIgnoringOF , programRules-programRules\\:Java , runtimeExceptions-runtimeExceptions\\:allow , JavaCard-JavaCard\\:off , Strings-Strings\\:on , modelFields-modelFields\\:showSatisfiability , bigint-bigint\\:on , sequences-sequences\\:on , moreSeqRules-moreSeqRules\\:off , reach-reach\\:on , integerSimplificationRules-integerSimplificationRules\\:full , permissions-permissions\\:off , wdOperator-wdOperator\\:L , wdChecks-wdChecks\\:off , joinGenerateIsWeakeningGoal-joinGenerateIsWeakeningGoal\\:off
 [SMTSettings]useConstantsForBigOrSmallIntegers=true
 [StrategyProperty]STOPMODE_OPTIONS_KEY=STOPMODE_NONCLOSE
 [StrategyProperty]QUERYAXIOM_OPTIONS_KEY=QUERYAXIOM_ON
@@ -42,7 +42,7 @@
 \javaSource "../../src";
 
 \proofObligation "#Proof Obligation Settings
-#Tue Apr 07 16:44:44 CEST 2020
+#Thu Jun 11 13:02:10 CEST 2020
 name=Counter[Counter\\:\\:reset()].JML operation contract.0
 contract=Counter[Counter\\:\\:reset()].JML operation contract.0
 class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
@@ -50,11 +50,12 @@ class=de.uka.ilkd.key.proof.init.FunctionalOperationContractPO
 
 \proof {
 (keyLog "0" (keyUser "samuelexferri" ) (keyVersion "cf2b4245b92fe9df2d6b7bd158dd83ee7308d9a6"))
+(keyLog "1" (keyUser "samuelexferri" ) (keyVersion "19f0b8c2a4fe689cd76be6cd1753b36e2e825a89"))
 
 (autoModeTime "185")
 
 (branch "dummy ID"
-(rule "instanceof_static_type" (formula "1") (term "0,0,0,1,1,0,0,1,1") (newnames "heapAtPre"))
+(rule "instanceof_static_type" (formula "1") (term "0,0,0,1,1,0,0,1,1") (newnames "self,exc,heapAtPre,o,f"))
 (rule "boolean_equal" (formula "1") (term "0,0,1,1,0,0,1,1"))
 (rule "concrete_impl_1" (formula "1") (term "0,1,1,0,0,1,1"))
 (rule "elementOfAllLocs" (formula "1") (term "0,0,0,0,1,0,1,1"))
