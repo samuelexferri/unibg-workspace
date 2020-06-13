@@ -1,25 +1,29 @@
 Model Form
 
 Parameters:
+// Form
 formValid: Boolean
-var1Valid: Boolean
-var1Length: {-100,-25,0,25, 50,100}
-var1ContainsChiocciola: Boolean
-var1Domain: {INVALID, DOTCOM, DOTORG}
-var1ChiocciolaBeforeDominio: Boolean
-var2Valid: Boolean
-var2Length: {-100,-25,0,25,100}
-var2ContainsChiocciola: Boolean
-var2Domain: {INVALID, DOTCOM, DOTORG}
-var2ChiocciolaBeforeDominio: Boolean
 
-// Iterare per ogni campo stringa
-// Campi numerici
+// Name
+nameValid: Boolean
+nameLength: {0, 25, 75}
+
+// Mail (Valid: PartA@PartB.com or PartA@PartB.org)
+mailValid: Boolean
+mailOrder: Boolean
+mailPartA: {0, 10}
+mailPartB: {0, 10}
+mailContainsChiocciola: Boolean
+mailDomain: {NULL, INVALID, DOTCOM, DOTORG}
 
 Constraints:
-# var1Valid => ((var1Length>0 and var1Length<=50) and var1ContainsChiocciola==true and (var1Domain=DOTCOM or var1Domain=DOTORG) and var1ChiocciolaBeforeDominio=true) # 
-# var2Valid => ((var2Length>0 and var2Length<=50) and var2ContainsChiocciola==true and (var2Domain=DOTCOM or var2Domain=DOTORG) and var2ChiocciolaBeforeDominio=true) # 
-# formValid => (var1Valid and var2Valid) #
+# mailOrder = true # // Right order between characters (Simplicity)
+# nameValid => (nameLength>0 and nameLength<=50) #
+# mailValid => (mailPartA > 0 and mailPartB > 0 and mailContainsChiocciola==true and (mailDomain=DOTCOM or mailDomain=DOTORG)) # 
+# formValid => (nameValid and mailValid and mailOrder) #
 
-// Fix only valid form
-# formValid = true #
+// One line
+// # formValid => (nameLength>0 and nameLength<=50)  and (mailPartA > 0 and mailPartB > 0 and mailContainsChiocciola==true and (mailDomain=DOTCOM or mailDomain=DOTORG)) # 
+
+// Fix to see only valid form
+// # formValid = true #
