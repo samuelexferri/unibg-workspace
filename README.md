@@ -12,7 +12,7 @@ Eclipse workspace backup
 
 ### Team
 
-- **Samuele Ferri**: [Site](https://samuelexferri.com), [GitHub](https://github.com/samuelexferri)
+-   **Samuele Ferri**: [Site](https://samuelexferri.com), [GitHub](https://github.com/samuelexferri)
 
 ## Version
 
