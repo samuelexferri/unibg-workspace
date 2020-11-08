@@ -1,7 +1,7 @@
 # Workspace
 
 <p align="center">
-<img src="https://github.com/samuelexferri/coding/blob/master/images/coding.png" width="400">
+<img src="https://github.com/samuelexferri/unibg-workspace/blob/master/images/workspace.png" width="400">
 </p>
 
 Eclipse workspace backup
